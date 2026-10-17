@@ -1,5 +1,11 @@
 # 30日60品 — Cooking60
 
+**公開サイト：[Cooking60](https://shinfrog.github.io/cooking60/)**
+
+[GitHubリポジトリ](https://github.com/ShinFROG/cooking60) · [公開ワークフロー](https://github.com/ShinFROG/cooking60/actions/workflows/pages.yml)
+
+2026年10月17日にGitHub Pagesへ公開しました。全60品の未試作表示を維持した公開準備版です。
+
 30日間の昼・夕食に異なる60料理を組み、作れる料理を増やすための日本語サイトです。丼、麺、カレー、主菜とご飯を含み、朝食は固定メニューを選べます。
 
 **現在は、60品すべてが未試作の公開準備版です。** 分量と時間は教材草稿の目安で、30分以内48品は実測結果ではありません。サイトの機能確認と実際の調理確認は分けて記録しています。
@@ -43,7 +49,18 @@ PREVIEW_BASE=/cooking60/ npm run preview
 
 ブラウザ検査は別途PlaywrightとChromeを使います。通常の公開ビルドには必要ありません。`PLAYWRIGHT_MODULE` にPlaywrightのモジュールパス、`BROWSER_CHANNEL=chrome`、`TEST_URL` に起動済みプレビューURLを指定して `npm run test:browser` を実行します。結果画像と印刷確認PDFは `.qa/` に保存され、公開対象から除外されます。
 
-## GitHub Pagesへ公開する
+## 公開済みサイトを更新する
+
+このリポジトリで教材や画面を編集し、`npm run check` を実行してから、変更した公開対象ファイルをコミットして `main` へpushします。GitHub Actionsの検査成功後、上記の公開URLへ自動反映されます。個人記録や確認用の `.qa/` はコミットしません。
+
+```sh
+npm run check
+git status --short
+# 変更した公開対象だけを git add してコミット
+git push origin main
+```
+
+## 別のリポジトリへGitHub Pagesで公開する場合
 
 この手順を進めると、未試作であることを明示した公開準備版がインターネット上で読める状態になります。以後、`main` へのpushは検査成功後に自動で公開内容へ反映されます。
 

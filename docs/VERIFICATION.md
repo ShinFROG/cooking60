@@ -18,7 +18,7 @@
 | 通信 | ブラウザのrequest監視 | テスト中の外部ネットワーク要求0件 |
 | A4印刷 | ChromeのPDF出力、Popplerで描画して確認 | 料理・献立・買物を確認。ページ内に収まり、材料と工程を確認可能 |
 
-ローカルNode.jsはv26.8.2。GitHub ActionsはNode.js 22を指定しているが、GitHub上の実行はまだ行っていない。
+ローカルNode.jsはv26.8.2。GitHub ActionsのNode.js 22でも31テスト、ビルド、公開物検査が成功した。初回公開コミットは `5a8588eddc6d91af91c012ea0d41b8c70286d717`。
 
 ## ブラウザで確認した動作
 
@@ -49,8 +49,16 @@
 
 `.github/workflows/pages.yml` はmainへのpushまたはmainを選んだ手動実行で、検査成功後にdistだけを公開する。PRは検査のみ。buildはcontents:read、deployはpages:writeとid-token:writeを使う。YAML構文を確認した。
 
-公開手順とActionの組合せは[GitHub公式文書](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)で確認した。GitHubリポジトリへの投入、Actionsの実行、実際のPages URLへの公開はまだ行っていない。公開先を設定した後に、READMEの手順で本番URLを確認する。
+公開手順とActionの組合せは[GitHub公式文書](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)で確認した。
+
+2026年10月17日に [ShinFROG/cooking60](https://github.com/ShinFROG/cooking60) へ公開ソース33ファイルを登録し、GitHub Actions方式のPagesを有効化した。[初回の検査・デプロイ](https://github.com/ShinFROG/cooking60/actions/runs/39026119015)は成功。HTTPSを強制する設定。
+
+公開URLは [https://shinfrog.github.io/cooking60/](https://shinfrog.github.io/cooking60/)。トップ、dish-01、dish-60、公開JSONがHTTP 200を返し、存在しないURLは独自404ページをHTTP 404で返すことを確認した。公開JSONは手元の検証済みビルドと完全一致し、60料理・30日の構成を保っている。
 
 実機のSafari・Firefox、スクリーンリーダー、紙への印刷は未確認。ブラウザ幅の確認はChromeによるもので、全端末の保証ではない。
 
 **全60品は実調理・時間計測とも未実施。** 自動検査は食味、栄養バランス、加熱結果、調理時間を実証するものではない。正式版として扱う前に試作結果を記録し、内容を修正する。
+
+## 本番URLでの最終確認
+
+公開URLを対象に `TEST_URL=https://shinfrog.github.io/cooking60/ npm run test:browser` を実行し、全項目が成功した。検索、人数換算、記録保存と再読込、献立交換、買物の再確認、JSONの書出し・拒否・取消・復元、JavaScript無効、保存拒否、将来形式データの保護、320〜1440pxの画面幅、印刷表示を確認。Chromeは155.0.8059.80。公開サイト以外へのネットワーク要求は0件だった。確認用の記録や出力ファイルは公開リポジトリへ追加していない。
