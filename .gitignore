@@ -1,0 +1,8 @@
+dist/
+node_modules/
+.qa/
+.env*
+*.local
+.DS_Store
+cooking60-records*.json
+cooking60-protected*.json

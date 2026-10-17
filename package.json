@@ -1,0 +1,21 @@
+{
+  "name": "cooking60",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "30日60品の料理学習ノート",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run validate && npm test && npm run build && npm run audit:build",
+    "preview": "node scripts/serve.mjs",
+    "test:browser": "node tests/browser.cjs",
+    "check:release": "node scripts/validate.mjs --release",
+    "audit:build": "node scripts/audit-build.mjs"
+  },
+  "license": "MIT"
+}

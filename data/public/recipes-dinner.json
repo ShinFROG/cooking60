@@ -1,0 +1,5156 @@
+[
+  {
+    "id": "dish-02",
+    "title": "豚のしょうが焼きとご飯",
+    "mealForm": "定食",
+    "skill": "薄切り肉を焼きたれを絡める",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 18,
+    "estimatedTotalMinutes": 20,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "フライパン",
+      "ボウル",
+      "計量器具",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "豚ロース薄切り肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "厚さ2〜3mm"
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 5,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 3,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツを細切りにし、洗って水気をよく切る。玉ねぎは5mm幅に切る。しょうがをすりおろし、しょうゆ・みりん・酒・砂糖と混ぜる。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "たれの砂糖が溶け、キャベツの水滴が少ない。"
+      },
+      {
+        "instruction": "豚肉を広げて大きければ半分に切る。生肉を切った器具を洗う。フライパンに油を入れ、玉ねぎを炒める。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "玉ねぎの縁が透き通る。"
+      },
+      {
+        "instruction": "玉ねぎを端に寄せ、肉を重ねず広げる。両面を焼き、厚い部分の中心75℃以上を確認して1分以上加熱する。",
+        "heat": "中火",
+        "durationMinutes": 5,
+        "cue": "肉は温度計で加熱を確認する。焦げそうなら火を弱める。"
+      },
+      {
+        "instruction": "たれを加え、肉を返しながら煮絡める。水分が少し残るところで火を止める。",
+        "heat": "中弱火",
+        "durationMinutes": 2,
+        "cue": "たれが軽くとろみを帯び、肉の表面に付く。"
+      },
+      {
+        "instruction": "清潔な皿にキャベツと肉を盛り、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "生肉に使った皿や箸を盛り付けに使わない。"
+      }
+    ],
+    "tips": [
+      "たれは肉に火が通ってから加えると、砂糖が焦げにくい。",
+      "玉ねぎを肉の下に敷きっぱなしにせず、肉を鍋肌に触れさせる。"
+    ],
+    "substitutions": [
+      "豚こま切れ肉でも作れる。厚い部分や重なりをほぐして加熱する。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-04",
+    "title": "鮭のホイル蒸しとご飯",
+    "mealForm": "定食",
+    "skill": "包んで蒸す",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 12,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ふた付き深型フライパン",
+      "アルミホイル",
+      "トング",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "生鮭",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "骨を除いた切り身"
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しめじ",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 30,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "バター",
+        "quantity": 8,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 150,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "フライパンの蒸し用。包みの中に入れない"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎは3mm幅、にんじんは2mm厚さの短冊切りにする。しめじは石づきを切り落としてほぐす。鮭の水気を紙で押さえ、骨があれば抜く。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "野菜の厚みがそろい、鮭の表面に余分な水がない。"
+      },
+      {
+        "instruction": "アルミホイルを二重にし、玉ねぎ、鮭、ほかの野菜の順に載せる。塩・酒・バターを加え、上と両端を折り重ねて閉じる。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "汁が漏れにくい包みになり、上に少し空間がある。"
+      },
+      {
+        "instruction": "深めのフライパンに包みを置き、周囲に水を注ぐ。ふたをして沸かし、沸騰後は静かに蒸す。水がなくなる前に補う。",
+        "heat": "中火→弱火",
+        "durationMinutes": 12,
+        "cue": "周囲の水が小さく沸き、空だきになっていない。"
+      },
+      {
+        "instruction": "火を弱め、蒸気に気を付けて包みを開ける。鮭の中心75℃以上を確認し、包みを閉じて1分以上加熱する。不足なら蒸し時間を延ばす。",
+        "heat": "弱火",
+        "durationMinutes": 2,
+        "cue": "温度計で加熱を確認し、にんじんも箸で切れる。"
+      },
+      {
+        "instruction": "包みごと皿に移してしょうゆをかけ、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "熱い汁をこぼさず、ホイルを手で直接つかまない。"
+      }
+    ],
+    "tips": [
+      "塩鮭を使う場合は追加の塩を省き、しょうゆも少量から試す。"
+    ],
+    "substitutions": [
+      "しめじはえのきや薄切りしいたけに置き換えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "ホイルを開けるときは顔や手に向けて蒸気を出さない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-06",
+    "title": "麻婆豆腐とご飯",
+    "mealForm": "定食",
+    "skill": "豆腐を崩さず煮てとろみを付ける",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 20,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "フライパン",
+      "ボウル",
+      "計量器具",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "木綿豆腐",
+        "quantity": 200,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "豚ひき肉",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": 30,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 5,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんにく",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "みそ",
+        "quantity": 10,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 3,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "豆板醤",
+        "quantity": 2,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "調味料",
+        "note": "辛さは好みで。省略可"
+      },
+      {
+        "name": "水",
+        "quantity": 150,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "煮汁用と片栗粉用に分ける（分量は作り方参照）"
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 5,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ごま油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "豆腐は2cm角に切り、ざるで軽く水を切る。長ねぎ・しょうが・にんにくをみじん切りにする。みそ・しょうゆ・砂糖と水120mlを混ぜる。片栗粉は別に水30mlで溶く。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "調味料と水溶き片栗粉が別々に準備できている。"
+      },
+      {
+        "instruction": "フライパンにごま油、しょうが、にんにくを入れて温める。香りが出たらひき肉を加え、へらで小さくほぐして炒める。",
+        "heat": "弱火→中火",
+        "durationMinutes": 5,
+        "cue": "ひき肉が大きな塊になっていない。"
+      },
+      {
+        "instruction": "豆板醤と長ねぎを加えて混ぜ、合わせた煮汁と豆腐を加える。静かに煮て、ほぐした肉が集まった部分の中心75℃以上を確認し1分以上加熱する。",
+        "heat": "中弱火",
+        "durationMinutes": 6,
+        "cue": "豆腐を大きく崩さず、煮汁が全体に回る。"
+      },
+      {
+        "instruction": "一度火を弱め、水溶き片栗粉を混ぜ直して細く加える。へらを底から大きく動かし、軽く沸かしてとろみを付ける。",
+        "heat": "弱火→中火",
+        "durationMinutes": 2,
+        "cue": "透明感のある煮汁が豆腐にまとわる。"
+      },
+      {
+        "instruction": "器に盛り、ご飯を別の茶碗に添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "豆腐は中まで熱いので、食べる際は少しずつ。"
+      }
+    ],
+    "tips": [
+      "片栗粉は沈むので、加える直前に必ず混ぜ直す。",
+      "辛さは豆板醤を省いて調整できる。"
+    ],
+    "substitutions": [
+      "木綿豆腐を絹ごし豆腐にすると崩れやすいため、鍋をゆすって混ぜる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "120ml",
+        "quantity": 120,
+        "unit": "ml"
+      },
+      {
+        "text": "30ml",
+        "quantity": 30,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "dish-08",
+    "title": "鶏の照り焼きとご飯",
+    "mealForm": "定食",
+    "skill": "皮目から焼きたれを煮詰める",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 18,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ふた付きフライパン",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": 150,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "厚みを1.5cm程度にそろえる"
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 3,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツを細切りにして洗い、水気を切る。調味料を混ぜる。鶏肉は皮を下に置き、厚い部分に横から切り込みを入れて開く。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "肉の厚みがおおむね1.5cmにそろう。"
+      },
+      {
+        "instruction": "油を入れたフライパンに鶏肉を皮から置く。へらで軽く押し、皮を鍋肌に付けて焼く。",
+        "heat": "中火",
+        "durationMinutes": 5,
+        "cue": "皮の広い面に焼き色が付く。"
+      },
+      {
+        "instruction": "裏返してふたをし、中まで加熱する。中心75℃以上を確認して1分以上加熱する。時間が足りなければ弱火で延長する。",
+        "heat": "弱火",
+        "durationMinutes": 7,
+        "cue": "中心温度が基準を満たす。焼き目だけでは判断しない。"
+      },
+      {
+        "instruction": "余分な脂を紙で取り、たれを加える。肉を返して表面に絡め、たれが薄くとろりとしたら火を止める。",
+        "heat": "中弱火",
+        "durationMinutes": 3,
+        "cue": "大きな水っぽい泡が減り、肉に照りが出る。"
+      },
+      {
+        "instruction": "清潔な包丁で食べやすく切り、キャベツとご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 2,
+        "cue": "生肉用のまな板を洗ってから使う。"
+      }
+    ],
+    "tips": [
+      "たれを加える前に脂を拭くと、味が薄まらず表面に絡む。"
+    ],
+    "substitutions": [
+      "鶏むね肉でも作れる。厚みを同じにそろえて加熱確認する。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-10",
+    "title": "チキンと野菜のカレーライス",
+    "mealForm": "ご飯",
+    "skill": "炒めて煮る",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 20,
+    "estimatedTotalMinutes": 40,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "厚手の鍋",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。煮込みを含め40分が目安。ルウの表示が異なる場合は表示に合わせる。",
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "カレールウ",
+        "quantity": 20,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "製品表示にある人数に応じたルウの量と水量を優先"
+      },
+      {
+        "name": "水",
+        "quantity": 250,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "ルウの製品表示に合わせて調整"
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎは1cm幅、にんじんは1cm厚さ、じゃがいもは2cm角に切る。鶏肉は2cm角に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "具の大きさがそろい、じゃがいもの芽や緑色の部分を除いている。"
+      },
+      {
+        "instruction": "鍋に油を温め、玉ねぎと鶏肉を炒める。肉の表面が固まったら、にんじんとじゃがいもを加えて混ぜる。",
+        "heat": "中火",
+        "durationMinutes": 5,
+        "cue": "焦がさず具の表面に油が回る。"
+      },
+      {
+        "instruction": "水を加えて沸かし、表面の泡を取る。ふたを少しずらして弱火で煮る。水が減りすぎたら少量補う。",
+        "heat": "中火→弱火",
+        "durationMinutes": 18,
+        "cue": "じゃがいもとにんじんに竹串がすっと入る。"
+      },
+      {
+        "instruction": "鶏肉の中心75℃以上を確認して1分以上加熱する。いったん火を止め、ルウを割り入れて溶かす。",
+        "heat": "弱火→消火",
+        "durationMinutes": 3,
+        "cue": "ルウの塊が残っていない。"
+      },
+      {
+        "instruction": "弱火に戻し、鍋底から混ぜてとろみを付ける。ご飯にかける。",
+        "heat": "弱火",
+        "durationMinutes": 5,
+        "cue": "焦げずに、すくったカレーがゆっくり流れる。"
+      }
+    ],
+    "tips": [
+      "とろみが付いた後は焦げやすい。強火にせず、鍋底を混ぜる。"
+    ],
+    "substitutions": [
+      "じゃがいもはかぼちゃに替えられるが、煮崩れやすいので後半に加える。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "カレーを鍋のまま長時間室温に置かない。保存時は浅い容器に小分けして速やかに冷やす。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-12",
+    "title": "サバのみそ煮とご飯",
+    "mealForm": "定食",
+    "skill": "魚の下処理と煮付け",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 15,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "小鍋",
+      "落としぶた",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "サバ",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "骨を除いた切り身"
+      },
+      {
+        "name": "しょうが",
+        "quantity": 8,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "みそ",
+        "quantity": 15,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 30,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 100,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "サバの骨を確認して取り、皮に浅く1本切り込みを入れる。しょうがは薄切りにする。サバの水気を紙で拭く。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "皮だけに切り込みが入り、身を深く切っていない。"
+      },
+      {
+        "instruction": "小鍋に水・酒・みりん・砂糖・しょうがを入れて沸かし、サバを皮を上にして並べる。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "煮汁が沸いてから魚を入れる。"
+      },
+      {
+        "instruction": "落としぶたをして静かに煮る。途中で煮汁を表面にかける。",
+        "heat": "中弱火",
+        "durationMinutes": 8,
+        "cue": "魚が激しく動かない程度に煮立っている。"
+      },
+      {
+        "instruction": "みそを煮汁で溶いて加える。サバの厚い部分が75℃以上になったら1分以上加熱し、さらに煮汁を軽く煮詰める。",
+        "heat": "弱火",
+        "durationMinutes": 5,
+        "cue": "みそが溶け、煮汁が少し濃くなる。中心温度を確認する。"
+      },
+      {
+        "instruction": "幅のあるへらで崩さず皿に移し、煮汁をかけ、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 2,
+        "cue": "皮と身が大きく崩れていない。"
+      }
+    ],
+    "tips": [
+      "魚は煮ている間に何度も返さず、煮汁をかけて仕上げる。"
+    ],
+    "substitutions": [
+      "みそは種類によって塩分が違うため、まず少し減らして味を見る。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-14",
+    "title": "焼き餃子とご飯",
+    "mealForm": "定食",
+    "skill": "包んで焼き蒸す",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "ふた付きフライパン",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。10個分。初めて包む場合は30分を超えることがある。",
+    "ingredients": [
+      {
+        "name": "豚ひき肉",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 70,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "ニラ",
+        "quantity": 15,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "餃子の皮",
+        "quantity": 10,
+        "unit": "枚",
+        "state": "冷蔵",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ごま油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 80,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "蒸し焼き用。包むときの水は別途少量"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツをみじん切りにして塩を混ぜ、5分置いて水気を絞る。ニラは5mm幅、しょうがはみじん切りにする。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "キャベツを握っても水が滴らない。"
+      },
+      {
+        "instruction": "ひき肉・野菜・しょうゆ・ごま油をボウルで混ぜる。10等分の目安を付け、皮の中央に載せる。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "肉だねに少し粘りが出て、皮の縁に余白がある。"
+      },
+      {
+        "instruction": "皮の縁を水で湿らせて半分に折り、空気を押し出して閉じる。ひだは付けなくてもよい。",
+        "heat": "火を使わない",
+        "durationMinutes": 8,
+        "cue": "具がはみ出さず、縁がしっかり閉じている。"
+      },
+      {
+        "instruction": "フライパンに油を入れて餃子を並べ、底を軽く焼く。水80mlを加えてすぐふたをし、蒸し焼きにする。",
+        "heat": "中火",
+        "durationMinutes": 7,
+        "cue": "水が沸き続け、餃子の皮が透き通ってくる。"
+      },
+      {
+        "instruction": "中心の肉だねが75℃以上になったことを確認して1分以上加熱する。ふたを取り、水を飛ばして底を焼く。ご飯と盛る。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "肉だねの加熱を温度計で確認し、底に薄い焼き色が付く。"
+      }
+    ],
+    "tips": [
+      "10個を平たく作ると包みやすく、火も通りやすい。"
+    ],
+    "substitutions": [
+      "ニラは長ねぎに置き換えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "10等分",
+        "quantity": 10,
+        "unit": "等分"
+      },
+      {
+        "text": "80ml",
+        "quantity": 80,
+        "unit": "ml"
+      },
+      {
+        "text": "10個",
+        "quantity": 10,
+        "unit": "個"
+      }
+    ]
+  },
+  {
+    "id": "dish-16",
+    "title": "鶏肉のトマト煮とご飯",
+    "mealForm": "定食",
+    "skill": "肉を焼き付けて煮る",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 18,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ふた付きフライパン",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": 150,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 70,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しめじ",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんにく",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": 150,
+        "unit": "g",
+        "state": "加熱済み",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 50,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "洋風顆粒スープの素",
+        "quantity": 2,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎは5mm幅、にんにくはみじん切りにする。しめじをほぐす。鶏肉は3cm角、厚さ1.5cm程度に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "肉の大きさと厚みがそろう。"
+      },
+      {
+        "instruction": "フライパンに油を温め、鶏肉を皮から焼く。軽く焼き色が付いたら返して、玉ねぎ・にんにくを加える。",
+        "heat": "中火",
+        "durationMinutes": 6,
+        "cue": "玉ねぎの縁が透き通り、肉の表面が固まる。"
+      },
+      {
+        "instruction": "しめじ・トマト缶・水・コンソメを加える。ふたを少しずらして煮る。時々鍋底を混ぜる。",
+        "heat": "中弱火",
+        "durationMinutes": 12,
+        "cue": "ソースが少し煮詰まり、しめじがしんなりする。"
+      },
+      {
+        "instruction": "鶏肉の厚い部分の中心75℃以上を確認し、1分以上加熱する。塩・こしょうで味を整える。",
+        "heat": "弱火",
+        "durationMinutes": 2,
+        "cue": "肉は温度で確認し、ソースに水っぽさが少ない。"
+      },
+      {
+        "instruction": "器に盛り、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "ソースも一緒に盛り付ける。"
+      }
+    ],
+    "tips": [
+      "煮詰まりすぎたら水を大さじ1ずつ加える。"
+    ],
+    "substitutions": [
+      "しめじは薄切りマッシュルームでもよい。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-18",
+    "title": "回鍋肉とご飯",
+    "mealForm": "定食",
+    "skill": "肉と野菜を手早く炒める",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 18,
+    "estimatedTotalMinutes": 20,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "フライパン",
+      "ボウル",
+      "計量器具",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "豚バラ薄切り肉",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "ピーマン",
+        "quantity": 40,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": 20,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんにく",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "みそ",
+        "quantity": 10,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 4,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "豆板醤",
+        "quantity": 2,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "調味料",
+        "note": "省略可"
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツは4cm角、ピーマンは種を除いて2cm幅、長ねぎは斜め薄切りにする。にんにくを刻む。みそ・しょうゆ・砂糖・酒を混ぜる。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "野菜の水気がよく切れ、合わせだれができている。"
+      },
+      {
+        "instruction": "豚肉は4cm幅に切る。油を温めたフライパンで肉を広げて焼き、厚い部分の中心75℃以上を確認して1分以上加熱する。",
+        "heat": "中火",
+        "durationMinutes": 5,
+        "cue": "肉の重なりがなく、温度で加熱確認できている。"
+      },
+      {
+        "instruction": "にんにく・長ねぎ・豆板醤を加えて混ぜ、キャベツとピーマンを加える。底から返すように炒める。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "キャベツのかさが少し減り、芯もかめる硬さになる。"
+      },
+      {
+        "instruction": "たれを加えて全体に絡める。汁がたまらなくなったら火を止め、ご飯と盛る。",
+        "heat": "中火",
+        "durationMinutes": 2,
+        "cue": "野菜と肉に薄くたれが付く。"
+      }
+    ],
+    "tips": [
+      "調味料を先に混ぜておくと、野菜を炒めすぎずに仕上げられる。"
+    ],
+    "substitutions": [
+      "豚バラ肉は豚こま切れ肉に、ピーマンはパプリカに替えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-20",
+    "title": "肉じゃがとご飯",
+    "mealForm": "定食",
+    "skill": "煮崩れを抑える",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 18,
+    "estimatedTotalMinutes": 40,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "鍋",
+      "落としぶた",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。煮込みと短い休ませ時間を含め40分が目安。",
+    "ingredients": [
+      {
+        "name": "牛薄切り肉",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": 150,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 70,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 180,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 12,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "じゃがいもは芽と皮を除き3cm角、にんじんは1cm厚さ、玉ねぎは2cm幅に切る。牛肉は4cm幅に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "じゃがいもの大きさがそろい、緑色の部分が残っていない。"
+      },
+      {
+        "instruction": "鍋に油を温め、牛肉をほぐして炒める。野菜を加え、全体を軽く混ぜる。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "肉が大きな塊にならず、野菜に油が回る。"
+      },
+      {
+        "instruction": "水・酒・みりん・砂糖を加えて沸かし、表面の泡を取る。しょうゆを加え、落としぶたをして煮る。",
+        "heat": "中火→弱火",
+        "durationMinutes": 20,
+        "cue": "じゃがいもに竹串がすっと入る。強く混ぜない。"
+      },
+      {
+        "instruction": "肉の中心75℃以上を確認して1分以上加熱する。煮汁が多ければ落としぶたを取り、鍋をゆすりながら少し煮詰める。",
+        "heat": "弱火",
+        "durationMinutes": 4,
+        "cue": "鍋底に煮汁が少量残り、具が崩れていない。"
+      },
+      {
+        "instruction": "火を止めて3分ほど置き、ご飯と盛り付ける。",
+        "heat": "余熱",
+        "durationMinutes": 3,
+        "cue": "煮汁が具の表面に落ち着く。"
+      }
+    ],
+    "tips": [
+      "木べらで何度もかき混ぜるとじゃがいもが崩れる。鍋ごと軽くゆする。"
+    ],
+    "substitutions": [
+      "牛肉は豚薄切り肉に置き換えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-22",
+    "title": "白身魚のムニエルとご飯",
+    "mealForm": "定食",
+    "skill": "粉をまぶして焼く",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 18,
+    "estimatedTotalMinutes": 20,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ふた付きフライパン",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "タラ",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "骨を除いた切り身"
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 70,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 8,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.6,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "バター",
+        "quantity": 10,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "レモン汁",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツは2cm幅に切る。タラは骨を確認し、水気を紙で拭く。両面に塩・こしょうを振り、薄力粉を薄くまぶす。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "粉の厚い塊がなく、余分な粉を落としている。"
+      },
+      {
+        "instruction": "フライパンに油とバターの半量を入れ、溶けたら魚を置く。触りすぎず焼く。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "底面の粉が固まり、薄い焼き色が付く。"
+      },
+      {
+        "instruction": "幅のあるへらで返し、キャベツを空いている場所に入れる。火を弱めてふたをし、魚の中心75℃以上を確認して1分以上加熱する。",
+        "heat": "弱火",
+        "durationMinutes": 6,
+        "cue": "魚の加熱を温度計で確認し、キャベツがしんなりする。"
+      },
+      {
+        "instruction": "魚とキャベツを皿に移す。残りのバターとレモン汁をフライパンで短く温め、魚にかける。ご飯を添える。",
+        "heat": "弱火",
+        "durationMinutes": 2,
+        "cue": "バターが焦げる前に火を止める。"
+      }
+    ],
+    "tips": [
+      "粉は焼く直前にまぶすと、べたつきにくい。"
+    ],
+    "substitutions": [
+      "タラは骨を除いたカレイやタイの切り身に替えられる。厚みに合わせて加熱を延ばす。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-24",
+    "title": "ハンバーグとご飯",
+    "mealForm": "定食",
+    "skill": "肉だねの成形と火入れ",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "電子レンジ",
+      "耐熱容器",
+      "ふた付きフライパン",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "合いびき肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "パン粉",
+        "quantity": 10,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "牛乳",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "冷蔵",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.8,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": 15,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "中濃ソース",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 45,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "蒸し焼き用とソース用に分ける（分量は作り方参照）"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎをみじん切りにし、耐熱容器に入れてふんわり覆い、600Wで約1分半加熱する。平らに広げて粗熱を取る。キャベツは細切りにする。",
+        "heat": "電子レンジ600W",
+        "durationMinutes": 5,
+        "cue": "玉ねぎが熱いまま肉に加えない。"
+      },
+      {
+        "instruction": "パン粉を牛乳で湿らせる。冷たいひき肉に塩・こしょうを混ぜ、玉ねぎとパン粉を加えて粘りが出るまで混ぜる。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "材料がまとまり、べたつく程度の粘りがある。"
+      },
+      {
+        "instruction": "2等分して空気を抜き、厚さ1.5cmの小判形にする。油を入れたフライパンで片面を焼き、裏返す。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "縁が崩れず、焼き色が付いて返せる。"
+      },
+      {
+        "instruction": "水30mlを加えてふたをし、弱火で蒸し焼きにする。2個とも中心75℃以上を確認し、1分以上加熱する。不足なら延長する。",
+        "heat": "弱火",
+        "durationMinutes": 9,
+        "cue": "肉汁の色ではなく中心温度で確認できている。"
+      },
+      {
+        "instruction": "肉を清潔な皿に取り出す。余分な脂を拭き、ケチャップ・ソース・水15mlをフライパンで温める。",
+        "heat": "弱火",
+        "durationMinutes": 2,
+        "cue": "ソースが一体になり、少しとろみが出る。"
+      },
+      {
+        "instruction": "ハンバーグにソースをかけ、キャベツとご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "生の肉だねに使った手や器具を洗っている。"
+      }
+    ],
+    "tips": [
+      "肉だねを大きくまとめず、厚さ1.5cmの小判形にそろえると、中心まで火を通しやすい。"
+    ],
+    "substitutions": [
+      "牛乳は水に替えられる。乳製品を避ける場合はパン粉の原材料も確認する。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "15ml",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "text": "30ml",
+        "quantity": 30,
+        "unit": "ml"
+      },
+      {
+        "text": "2等分",
+        "quantity": 2,
+        "unit": "等分"
+      },
+      {
+        "text": "2個",
+        "quantity": 2,
+        "unit": "個"
+      }
+    ]
+  },
+  {
+    "id": "dish-26",
+    "title": "鶏大根とご飯",
+    "mealForm": "定食",
+    "skill": "下ゆでと煮含め",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 20,
+    "estimatedTotalMinutes": 45,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "電子レンジ",
+      "耐熱容器",
+      "鍋",
+      "落としぶた",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。下加熱と煮込みを含め45分が目安。",
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": 150,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "大根",
+        "quantity": 200,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 5,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 250,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 12,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "大根は皮をむき、厚さ1.5cmの半月切りにする。しょうがは薄切り、鶏肉は3cm角に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "大根の厚さがそろう。"
+      },
+      {
+        "instruction": "大根を耐熱容器に入れ、分量の水から15mlを加えてふんわり覆う。600Wで約5分を目安に加熱する。人数を増やした場合は容器に余裕を持たせ、加熱不足なら位置を入れ替えて追加加熱する。取り出す際は蒸気に注意する。",
+        "heat": "電子レンジ600W",
+        "durationMinutes": 5,
+        "cue": "大根の縁に透明感が出る。まだ完全に軟らかくなくてよい。"
+      },
+      {
+        "instruction": "鍋に油を入れ、鶏肉を皮から焼く。裏返したら大根・しょうが・残りの水・調味料を加える。",
+        "heat": "中火",
+        "durationMinutes": 5,
+        "cue": "肉の表面が固まり、煮汁が沸いている。"
+      },
+      {
+        "instruction": "落としぶたをして静かに煮る。途中で大根を一度返し、水がなくなりそうなら少し足す。",
+        "heat": "弱火",
+        "durationMinutes": 22,
+        "cue": "大根の中心に竹串が抵抗なく入る。"
+      },
+      {
+        "instruction": "鶏肉の中心75℃以上を確認して1分以上加熱する。ふたを外して煮汁を少し煮詰め、ご飯を添える。",
+        "heat": "弱火",
+        "durationMinutes": 4,
+        "cue": "煮汁が大根の表面に薄く絡む。"
+      }
+    ],
+    "tips": [
+      "大根の厚みをそろえることが、煮え方の差を減らす近道。"
+    ],
+    "substitutions": [
+      "電子レンジがなければ大根を別鍋で10〜15分下ゆでし、その分の時間を追加する。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "15ml",
+        "quantity": 15,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "dish-28",
+    "title": "豚肉と白菜の重ね蒸しとご飯",
+    "mealForm": "定食",
+    "skill": "重ねて蒸す",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 12,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ふた付き小鍋",
+      "トング",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "豚バラ薄切り肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "白菜",
+        "quantity": 200,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 5,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 20,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 50,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ポン酢しょうゆ",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "白菜を洗って水気を切り、芯の厚い部分はそぐように薄くする。しょうがは細切りにする。豚肉と白菜を交互に重ねる。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "肉が一か所で厚く重ならない。"
+      },
+      {
+        "instruction": "重ねたものを4cm幅に切り、小さめの鍋に切り口を上にして並べる。しょうが・酒・水を加える。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "鍋にほどよく詰まり、倒れにくい。"
+      },
+      {
+        "instruction": "ふたをして加熱し、蒸気が出たら火を弱める。水がなくなりそうなら少量補う。",
+        "heat": "中火→弱火",
+        "durationMinutes": 12,
+        "cue": "白菜の芯が半透明になり、鍋底が乾いていない。"
+      },
+      {
+        "instruction": "中央にある肉の中心75℃以上を確認して1分以上加熱する。鍋底の肉の重なりも確認し、不足なら延長する。",
+        "heat": "弱火",
+        "durationMinutes": 2,
+        "cue": "見た目だけでなく温度で加熱を確認する。"
+      },
+      {
+        "instruction": "器に取り、ポン酢しょうゆを付け、ご飯と食べる。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "熱い蒸気と煮汁に触れないよう取り分ける。"
+      }
+    ],
+    "tips": [
+      "白菜の芯を薄くそぐと、葉だけがくたくたになる前に仕上がる。"
+    ],
+    "substitutions": [
+      "豚バラ肉は豚ロース薄切り肉に替えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-30",
+    "title": "チキン南蛮とご飯",
+    "mealForm": "定食",
+    "skill": "衣を付けて揚げ甘酢を絡める",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "小鍋",
+      "揚げ物対応の鍋",
+      "油温計",
+      "中心温度計",
+      "網・バット"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "鶏むね肉",
+        "quantity": 150,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 10,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "卵",
+        "quantity": 0.5,
+        "unit": "個",
+        "state": "生",
+        "aisle": "卵・乳",
+        "note": "溶きほぐして必要量を使う。使わない分があれば別料理ですぐ加熱する"
+      },
+      {
+        "name": "サラダ油",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "揚げ鍋と熱源の指定量。深さ2〜3cmを目安に適合器具を使う"
+      },
+      {
+        "name": "酢",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 6,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "タルタルソース",
+        "quantity": 25,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "調味料",
+        "note": "市販品。原材料表示を確認"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツを細切りにして洗い、水気を切る。酢・しょうゆ・砂糖・水を小鍋でひと煮立ちさせ、火を止める。",
+        "heat": "中火",
+        "durationMinutes": 5,
+        "cue": "砂糖が溶け、甘酢ができている。"
+      },
+      {
+        "instruction": "鶏肉を厚さ1cmのそぎ切りにする。水気を拭き、薄力粉をまぶしてから溶き卵を薄く付ける。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "肉の厚さがそろい、衣が厚くたまっていない。"
+      },
+      {
+        "instruction": "揚げ物対応の鍋で油を170℃に温め、肉を静かに入れる。重ならないようにし、途中で返しながら揚げる。",
+        "heat": "油温170℃",
+        "durationMinutes": 7,
+        "cue": "衣が固まり、薄いきつね色になる。加熱完了は色だけで決めない。"
+      },
+      {
+        "instruction": "一切れを取り上げて厚い部分の中心温度を確認する。75℃以上で1分以上加熱できるまで油に戻して加熱を続ける。油を切る。",
+        "heat": "油温170℃",
+        "durationMinutes": 3,
+        "cue": "中心加熱を確認できている。温度計は油にも使える製品を用いる。"
+      },
+      {
+        "instruction": "温かい肉を甘酢にさっとくぐらせ、キャベツと盛る。タルタルソースをかけ、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 2,
+        "cue": "衣に甘酢が付き、長く漬けすぎていない。"
+      }
+    ],
+    "tips": [
+      "タルタルソースを市販品にして、衣と揚げ方に集中する。"
+    ],
+    "substitutions": [
+      "鶏もも肉でも作れる。厚みを同じ1cmにそろえる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "油の量と鍋は熱源の説明書に従う。加熱中は離れず、油に水を入れない。肉に触れた衣・溶き卵は生で再利用しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-32",
+    "title": "サバの竜田揚げとご飯",
+    "mealForm": "定食",
+    "skill": "下味とでんぷんの衣",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 22,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "揚げ物対応の鍋",
+      "油温計",
+      "中心温度計",
+      "網・バット"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "サバ",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "骨を除いた切り身"
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 5,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 15,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "揚げ鍋と熱源の指定量。深さ2〜3cmを目安に適合器具を使う"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツは細切りにして洗い、水気を切る。しょうがをすりおろす。サバの骨を確認し、厚さ1.5cm程度の食べやすい大きさに切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "魚に大きな骨が残っていない。"
+      },
+      {
+        "instruction": "サバにしょうゆ・酒・しょうがを絡め、冷蔵庫で10分置く。その間に網とバットを用意する。",
+        "heat": "火を使わない",
+        "durationMinutes": 10,
+        "cue": "下味の液が全体に付いている。室温に放置しない。"
+      },
+      {
+        "instruction": "サバの汁気を紙で軽く押さえ、片栗粉を薄くまぶす。揚げ物対応の鍋で油を170℃に温める。",
+        "heat": "油温170℃",
+        "durationMinutes": 3,
+        "cue": "粉が湿って固まる前に揚げる準備ができている。"
+      },
+      {
+        "instruction": "サバを少量ずつ静かに入れ、途中で返しながら揚げる。中心75℃以上を確認し、1分以上加熱する。",
+        "heat": "油温170℃",
+        "durationMinutes": 7,
+        "cue": "衣は乾いてカリッとし、身は温度計で加熱確認できる。"
+      },
+      {
+        "instruction": "網で油を切り、キャベツとご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 2,
+        "cue": "バットに直接寝かせず、網に載せて蒸れを逃がす。"
+      }
+    ],
+    "tips": [
+      "漬け汁を落としてから粉を付けると、衣が厚い塊になりにくい。"
+    ],
+    "substitutions": [
+      "サバは骨を除いた鮭やアジの切り身に替えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "油の量と鍋は熱源の説明書に従う。水気をよく取り、加熱中はその場を離れない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-34",
+    "title": "ロールキャベツとご飯",
+    "mealForm": "定食",
+    "skill": "葉で包み煮る",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 55,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "葉をゆでる鍋",
+      "ふた付き小鍋",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。巻く作業と煮込みを含め55分が目安。",
+    "ingredients": [
+      {
+        "name": "キャベツ",
+        "quantity": 160,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": "包める大きな葉を肉だねの個数分用意する。硬い芯も薄く削って使う"
+      },
+      {
+        "name": "合いびき肉",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 40,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "パン粉",
+        "quantity": 8,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "牛乳",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "冷蔵",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.6,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "カットトマト缶",
+        "quantity": 150,
+        "unit": "g",
+        "state": "加熱済み",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 150,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "煮汁用。葉をゆでる湯は別途"
+      },
+      {
+        "name": "洋風顆粒スープの素",
+        "quantity": 2,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツの葉を洗い、芯を薄く削る。沸騰した湯で2〜3分ゆで、取り出して広げて冷ます。玉ねぎはみじん切りにする。",
+        "heat": "中火",
+        "durationMinutes": 8,
+        "cue": "葉が曲げても割れない程度に軟らかい。"
+      },
+      {
+        "instruction": "パン粉を牛乳で湿らせる。ひき肉・玉ねぎ・パン粉・塩・こしょうを混ぜ、粘りが出たら2等分する。",
+        "heat": "火を使わない",
+        "durationMinutes": 4,
+        "cue": "肉だねがまとまり、葉は触れる温度になっている。"
+      },
+      {
+        "instruction": "葉の手前に肉だねを俵形に置き、ひと巻きする。左右を折り込み、最後まで巻いて巻き終わりを下にする。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "肉だねが完全に葉で覆われ、端が開いていない。"
+      },
+      {
+        "instruction": "小鍋に巻き終わりを下にして並べる。トマト缶・水・コンソメを加え、沸いたらふたをして静かに煮る。",
+        "heat": "中火→弱火",
+        "durationMinutes": 30,
+        "cue": "葉が軟らかくなり、鍋の中で激しく動かない。"
+      },
+      {
+        "instruction": "肉だねの中心75℃以上を確認して1分以上加熱する。汁が水っぽければふたを外して少し煮詰める。",
+        "heat": "弱火",
+        "durationMinutes": 4,
+        "cue": "中心温度が基準を満たし、葉に味がなじんでいる。"
+      },
+      {
+        "instruction": "大きめのスプーンですくって盛り、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 2,
+        "cue": "巻き終わりがほどけないよう下から支える。"
+      }
+    ],
+    "tips": [
+      "葉が破れたら、小さな別の葉を内側に重ねて補う。",
+      "鍋は2個が並んで動きにくい小さめを使う。"
+    ],
+    "substitutions": [
+      "牛乳は同量の水に替えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "2等分",
+        "quantity": 2,
+        "unit": "等分"
+      },
+      {
+        "text": "2個",
+        "quantity": 2,
+        "unit": "個"
+      }
+    ]
+  },
+  {
+    "id": "dish-36",
+    "title": "厚揚げと小松菜の煮物とご飯",
+    "mealForm": "定食",
+    "skill": "短時間で煮含める",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 12,
+    "estimatedTotalMinutes": 20,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "小鍋",
+      "計量器具"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "厚揚げ",
+        "quantity": 150,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "小松菜",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 30,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 150,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "和風顆粒だし",
+        "quantity": 1,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 3,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "小松菜を根元まで洗い、4cm長さに切って茎と葉を分ける。にんじんは2mm厚さの短冊切りにする。厚揚げは3cm角に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "小松菜の根元に土がなく、葉と茎が別になっている。"
+      },
+      {
+        "instruction": "鍋に水・だし・しょうゆ・みりん・砂糖とにんじんを入れて沸かす。厚揚げを加え、静かに煮る。",
+        "heat": "中火→中弱火",
+        "durationMinutes": 6,
+        "cue": "にんじんが軟らかくなり、厚揚げの中心まで温まる。"
+      },
+      {
+        "instruction": "小松菜の茎を加えて2分煮た後、葉を加えてさらに1〜2分煮る。",
+        "heat": "中弱火",
+        "durationMinutes": 4,
+        "cue": "茎がかめる硬さになり、葉がしんなりする。"
+      },
+      {
+        "instruction": "煮汁と一緒に盛り、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "野菜を長く煮すぎず、厚揚げの中は熱い。"
+      }
+    ],
+    "tips": [
+      "葉と茎を入れる時刻をずらすと、葉だけが煮えすぎるのを防げる。"
+    ],
+    "substitutions": [
+      "小松菜はチンゲンサイに替えられる。厚い茎は縦に切る。"
+    ],
+    "safetyNotes": [
+      "調理前に手を洗い、清潔な器具で盛り付ける。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-38",
+    "title": "酢豚とご飯",
+    "mealForm": "定食",
+    "skill": "複数食材を合わせ甘酢あんを作る",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "電子レンジ",
+      "耐熱容器",
+      "フライパン",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "豚ロース肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "厚さ1cm程度"
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "ピーマン",
+        "quantity": 40,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 40,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 10,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": "肉の衣用とたれ用に分ける（分量は作り方参照）"
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": 15,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酢",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 50,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "たれ用。にんじんの加熱用は別途少量"
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎとピーマンを2cm角、にんじんを5mm厚さの半月切りにする。にんじんは水少量と耐熱容器に入れ、ふんわり覆って600Wで約2分加熱する。",
+        "heat": "電子レンジ600W",
+        "durationMinutes": 7,
+        "cue": "にんじんに竹串が入り始める。"
+      },
+      {
+        "instruction": "豚肉を2cm角、厚さ1cmに切り、片栗粉7gをまぶす。ケチャップ・酢・しょうゆ・砂糖・水・残りの片栗粉3gを混ぜる。",
+        "heat": "火を使わない",
+        "durationMinutes": 4,
+        "cue": "衣が薄く均一に付き、たれが混ざっている。"
+      },
+      {
+        "instruction": "フライパンに油を温め、豚肉を重ねず焼く。返しながら中心75℃以上を確認して1分以上加熱し、清潔な皿に取り出す。",
+        "heat": "中火→中弱火",
+        "durationMinutes": 7,
+        "cue": "衣の色だけでなく中心温度で確認する。"
+      },
+      {
+        "instruction": "同じフライパンで玉ねぎ・ピーマン・にんじんを炒める。玉ねぎが透き通ったら肉を戻す。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "野菜の表面に油が回り、玉ねぎに火が通る。"
+      },
+      {
+        "instruction": "たれを混ぜ直して加え、全体を返しながら軽く煮立てる。とろみが付いたらご飯と盛る。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "透明感のあるあんが肉と野菜に絡む。"
+      }
+    ],
+    "tips": [
+      "揚げずに多めの油で焼く作り方。肉を厚くすると時間が延びる。"
+    ],
+    "substitutions": [
+      "ピーマンはパプリカでもよい。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "3g",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "text": "7g",
+        "quantity": 7,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "dish-40",
+    "title": "チキンクリームシチューとご飯",
+    "mealForm": "定食",
+    "skill": "ホワイトソースを作る",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 22,
+    "estimatedTotalMinutes": 40,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "厚手の鍋",
+      "へら",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。根菜の煮込みを含め40分が目安。",
+    "ingredients": [
+      {
+        "name": "鶏もも肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "じゃがいも",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 40,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "ブロッコリー",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "バター",
+        "quantity": 10,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 12,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "牛乳",
+        "quantity": 150,
+        "unit": "ml",
+        "state": "冷蔵",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 150,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "洋風顆粒スープの素",
+        "quantity": 2,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "じゃがいもは芽と皮を除いて2cm角、にんじんは1cm厚さ、玉ねぎは1cm幅に切る。ブロッコリーを小房に分ける。鶏肉は2cm角に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "煮る具材の大きさがそろう。"
+      },
+      {
+        "instruction": "厚手の鍋でバターを溶かし、玉ねぎと鶏肉を炒める。じゃがいも・にんじんを加え、全体にバターを回す。",
+        "heat": "中弱火",
+        "durationMinutes": 5,
+        "cue": "バターが焦げず、玉ねぎが少し透き通る。"
+      },
+      {
+        "instruction": "弱火にして薄力粉を振り入れ、粉っぽさが消えるまで混ぜる。水を3回に分け、加えるたびに鍋底から混ぜる。",
+        "heat": "弱火",
+        "durationMinutes": 4,
+        "cue": "白い粉の塊が残っていない。"
+      },
+      {
+        "instruction": "コンソメを加えて静かに煮る。具が軟らかくなったらブロッコリーを加え、鶏肉の中心75℃以上を確認して1分以上加熱する。",
+        "heat": "弱火",
+        "durationMinutes": 15,
+        "cue": "にんじんとじゃがいもに竹串が入り、肉の加熱を温度で確認できる。"
+      },
+      {
+        "instruction": "牛乳を加え、底から混ぜながら温める。塩・こしょうで味を整える。ぐらぐら沸かさず、ご飯と盛る。",
+        "heat": "弱火",
+        "durationMinutes": 5,
+        "cue": "スプーンを薄く覆う程度のとろみが付く。"
+      }
+    ],
+    "tips": [
+      "粉を具にまぶしてから液体を少しずつ加えると、だまを作りにくい。"
+    ],
+    "substitutions": [
+      "ブロッコリーは冷凍品でもよい。袋の加熱表示に合わせる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "シチューを鍋のまま長時間室温に置かず、保存時は小分けして速やかに冷やす。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-42",
+    "title": "鶏ささみのピカタとご飯",
+    "mealForm": "定食",
+    "skill": "卵の衣で焼く",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 20,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "ふた付きフライパン",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "鶏ささみ",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "卵",
+        "quantity": 1,
+        "unit": "個",
+        "state": "生",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "粉チーズ",
+        "quantity": 8,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 8,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": 10,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツは細切りにして洗い、水気を切る。ささみは白い筋を包丁で切り取り、厚い部分を開いて1cm程度にそろえる。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "肉が破れすぎず、厚みがそろっている。"
+      },
+      {
+        "instruction": "ささみに塩・こしょうを振り、薄力粉を薄くまぶす。卵を溶いて粉チーズを混ぜ、肉をくぐらせる。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "肉全体に薄く卵液が付く。"
+      },
+      {
+        "instruction": "フライパンに油を温め、ささみを並べて焼く。卵の衣が固まったら裏返す。",
+        "heat": "中弱火",
+        "durationMinutes": 4,
+        "cue": "衣が破れずに返せる。焦げそうなら弱火にする。"
+      },
+      {
+        "instruction": "ふたをして弱火で加熱する。肉の中心75℃以上を確認して1分以上加熱する。残った卵液は生で再利用しない。",
+        "heat": "弱火",
+        "durationMinutes": 6,
+        "cue": "肉は中心温度、衣は液状部分がないことを確認する。"
+      },
+      {
+        "instruction": "キャベツと一緒に盛り、ケチャップとご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "盛り付けには清潔な箸を使う。"
+      }
+    ],
+    "tips": [
+      "卵の衣は焦げやすいため、強火で焼かない。"
+    ],
+    "substitutions": [
+      "ささみは厚さ1cmに開いた鶏むね肉でもよい。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-44",
+    "title": "焼売とご飯",
+    "mealForm": "定食",
+    "skill": "包んで蒸す",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 23,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "蒸し器",
+      "蒸し器用シート",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。8個分。初めて包む場合は30分を超えることがある。",
+    "ingredients": [
+      {
+        "name": "豚ひき肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "焼売の皮",
+        "quantity": 8,
+        "unit": "枚",
+        "state": "冷蔵",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 8,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 3,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ごま油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "蒸し器の指定量。受け皿に水が触れない量"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎとしょうがをみじん切りにする。玉ねぎに片栗粉をまぶす。蒸し器に所定の水を入れ、加熱の準備をする。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "玉ねぎに白い粉が薄く付いている。"
+      },
+      {
+        "instruction": "ひき肉・しょうが・しょうゆ・砂糖・ごま油・塩を混ぜ、粘りが出たら玉ねぎを加える。8等分する。",
+        "heat": "火を使わない",
+        "durationMinutes": 4,
+        "cue": "肉だねが一体になり、8個がほぼ同じ量になる。"
+      },
+      {
+        "instruction": "皮の中央に肉だねを載せ、指で周囲を寄せる。底を平らにし、厚さ2.5cm以内を目安に形を整える。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "自立し、上面が平らになっている。"
+      },
+      {
+        "instruction": "蒸気が十分上がった蒸し器に、蒸し器用シートを敷いて焼売を離して並べる。ふたをして蒸す。",
+        "heat": "中火",
+        "durationMinutes": 10,
+        "cue": "蒸気が途切れず、焼売同士がくっついていない。"
+      },
+      {
+        "instruction": "肉だねの中心75℃以上を確認して1分以上加熱する。不足なら蒸し時間を延ばす。清潔な器具で取り出し、ご飯と盛る。",
+        "heat": "中火",
+        "durationMinutes": 2,
+        "cue": "皮の透け方だけではなく、中心温度で確認できる。"
+      }
+    ],
+    "tips": [
+      "皮の縁を無理に閉じなくてよい。底を平らにすると倒れにくい。"
+    ],
+    "substitutions": [
+      "しょうがは同量のすりおろししょうがでもよい。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "蒸し器の水を切らさない。ふたは顔と反対側へ開ける。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "8等分",
+        "quantity": 8,
+        "unit": "等分"
+      },
+      {
+        "text": "8個",
+        "quantity": 8,
+        "unit": "個"
+      }
+    ]
+  },
+  {
+    "id": "dish-46",
+    "title": "ニラ玉とご飯",
+    "mealForm": "定食",
+    "skill": "卵と野菜を炒める",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 12,
+    "estimatedTotalMinutes": 15,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "フライパン",
+      "へら"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "卵",
+        "quantity": 2,
+        "unit": "個",
+        "state": "生",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "ニラ",
+        "quantity": 70,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "もやし",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "ニラを洗って4cm長さに切る。もやしを洗って水気を切る。卵を溶き、しょうゆとオイスターソースを別に混ぜる。",
+        "heat": "火を使わない",
+        "durationMinutes": 4,
+        "cue": "野菜の水気が少なく、卵の白身がほぐれている。"
+      },
+      {
+        "instruction": "フライパンに油の半量を温め、卵を流し入れる。へらで大きく混ぜ、全体が固まったら清潔な皿に取り出す。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "液状の卵が残らず、大きな塊になる。"
+      },
+      {
+        "instruction": "残りの油を入れ、もやし、ニラの順に炒める。調味料とこしょうを加える。",
+        "heat": "中火",
+        "durationMinutes": 3,
+        "cue": "もやし全体が熱くなり、ニラがしんなりする。"
+      },
+      {
+        "instruction": "卵を戻し、底から返して温め直す。ご飯と盛り付ける。",
+        "heat": "中火",
+        "durationMinutes": 2,
+        "cue": "卵と野菜が均一に混ざり、卵に液状部分がない。"
+      }
+    ],
+    "tips": [
+      "卵を一度取り出すと、野菜を炒める間に硬くなりすぎない。"
+    ],
+    "substitutions": [
+      "オイスターソースはしょうゆ少量と砂糖ひとつまみでも代用できる。塩気を見て調整する。"
+    ],
+    "safetyNotes": [
+      "調理前に手を洗い、清潔な器具で盛り付ける。",
+      "卵は十分に加熱し、生卵が付いた器や箸をそのまま盛り付けに使わない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-48",
+    "title": "エビチリとご飯",
+    "mealForm": "定食",
+    "skill": "エビの下処理ととろみ",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 23,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "ボウル",
+      "フライパン",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。冷凍エビの解凍時間は含めない。冷蔵庫で事前に解凍する。",
+    "ingredients": [
+      {
+        "name": "むきエビ",
+        "quantity": 150,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "背わたを除く。冷凍なら冷蔵庫で解凍済み"
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": 30,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しょうが",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんにく",
+        "quantity": 3,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 10,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": "衣用ととろみ用に分ける（分量は作り方参照）"
+      },
+      {
+        "name": "ケチャップ",
+        "quantity": 20,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "豆板醤",
+        "quantity": 2,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "調味料",
+        "note": "省略可"
+      },
+      {
+        "name": "砂糖",
+        "quantity": 3,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 80,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "煮汁用と片栗粉用に分ける（分量は作り方参照）"
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "エビに背わたがあれば取り、流水でさっと洗って水気をしっかり拭く。長ねぎ・しょうが・にんにくを刻む。片栗粉3gを水15mlで溶く。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "エビに水滴が残らず、刻み野菜がそろう。"
+      },
+      {
+        "instruction": "エビに片栗粉7gを薄くまぶす。フライパンに油を温めてエビを並べ、両面を軽く焼く。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "表面の衣が固まる。この段階で加熱完了とは判断しない。"
+      },
+      {
+        "instruction": "火を弱め、長ねぎ・しょうが・にんにく・豆板醤を加えて炒める。ケチャップ・砂糖・しょうゆ・水65mlを加える。",
+        "heat": "弱火→中火",
+        "durationMinutes": 3,
+        "cue": "香りが出て、調味料が全体に混ざる。"
+      },
+      {
+        "instruction": "静かに煮て、エビの厚い部分の中心75℃以上を確認し1分以上加熱する。水溶き片栗粉を混ぜ直して加える。",
+        "heat": "中弱火",
+        "durationMinutes": 5,
+        "cue": "見た目の色だけでなく温度で確認する。"
+      },
+      {
+        "instruction": "へらで返して軽く煮立て、とろみが付いたらご飯と盛る。",
+        "heat": "中火",
+        "durationMinutes": 2,
+        "cue": "あんがエビの表面に薄く絡む。"
+      }
+    ],
+    "tips": [
+      "香味野菜は焦げやすいので、加える前に火を弱める。"
+    ],
+    "substitutions": [
+      "辛さを抑える場合は豆板醤を省く。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "15ml",
+        "quantity": 15,
+        "unit": "ml"
+      },
+      {
+        "text": "65ml",
+        "quantity": 65,
+        "unit": "ml"
+      },
+      {
+        "text": "3g",
+        "quantity": 3,
+        "unit": "g"
+      },
+      {
+        "text": "7g",
+        "quantity": 7,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "dish-50",
+    "title": "とんかつとご飯",
+    "mealForm": "定食",
+    "skill": "パン粉の衣と揚げ方",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 30,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "衣用の皿",
+      "揚げ物対応の鍋",
+      "油温計",
+      "中心温度計",
+      "網・バット"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "豚ロース肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "とんかつ用、厚さ1〜1.5cm"
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.6,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 10,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "卵",
+        "quantity": 0.5,
+        "unit": "個",
+        "state": "生",
+        "aisle": "卵・乳",
+        "note": "溶きほぐして必要量を使う。使わない分があれば別料理ですぐ加熱する"
+      },
+      {
+        "name": "パン粉",
+        "quantity": 20,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "揚げ鍋と熱源の指定量。深さ3cmを目安に適合器具を使う"
+      },
+      {
+        "name": "とんかつソース",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツを細切りにして洗い、水気を切る。豚肉は赤身と脂の境目に包丁の先で数か所切り込みを入れる。塩・こしょうを振る。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "肉の反り返りを防ぐ切り込みが入っている。"
+      },
+      {
+        "instruction": "肉に薄力粉、溶き卵、パン粉の順に付ける。粉と卵は余分を落とし、パン粉を軽く押さえる。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "端までパン粉が付き、衣の塊がない。"
+      },
+      {
+        "instruction": "揚げ物対応の鍋に油を入れて170℃にする。肉を手前から奥へ静かに入れ、衣が固まってから裏返す。",
+        "heat": "油温170℃",
+        "durationMinutes": 8,
+        "cue": "両面に均一な焼き色が付く。安全な火通りは次で確認する。"
+      },
+      {
+        "instruction": "肉を取り上げ、側面から温度計を刺して中心を測る。75℃以上で1分以上加熱できるまで必要に応じて油に戻す。",
+        "heat": "油温170℃",
+        "durationMinutes": 3,
+        "cue": "中心温度を確認している。余熱だけに任せない。"
+      },
+      {
+        "instruction": "網で油を切る。清潔な包丁とまな板で切り、キャベツ・ソース・ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 4,
+        "cue": "衣をつぶしすぎず切れている。"
+      }
+    ],
+    "tips": [
+      "肉が厚い場合は30分に収めようとせず、火を弱めて中心加熱を優先する。"
+    ],
+    "substitutions": [
+      "脂を控えたい場合は同程度の厚さに切った豚ヒレ肉でもよい。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "油の量と鍋は熱源の説明書に従う。加熱中は離れず、油に水を入れない。肉に触れた衣は生で再利用しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-52",
+    "title": "肉豆腐とご飯",
+    "mealForm": "定食",
+    "skill": "煮汁と煮る順序",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 15,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "小鍋",
+      "落としぶた",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "牛薄切り肉",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "木綿豆腐",
+        "quantity": 150,
+        "unit": "g",
+        "state": "冷蔵",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "長ねぎ",
+        "quantity": 70,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 120,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 12,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "みりん",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 5,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "豆腐は3cm角に切って軽く水を切る。長ねぎは1cm厚さの斜め切り、牛肉は4cm幅に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 5,
+        "cue": "豆腐の水気が軽く切れ、肉の重なりがほぐれている。"
+      },
+      {
+        "instruction": "小鍋に水・しょうゆ・みりん・酒・砂糖を入れて沸かす。牛肉を1枚ずつ広げて入れる。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "肉が固まりにならず、煮汁に広がっている。"
+      },
+      {
+        "instruction": "豆腐と長ねぎを加え、落としぶたをして静かに煮る。煮汁を時々上からかける。",
+        "heat": "中弱火",
+        "durationMinutes": 10,
+        "cue": "長ねぎが軟らかく、豆腐の中心まで温まる。"
+      },
+      {
+        "instruction": "肉の中心75℃以上を確認し1分以上加熱する。豆腐を崩さないよう盛り、ご飯を添える。",
+        "heat": "弱火",
+        "durationMinutes": 3,
+        "cue": "肉の加熱が確認でき、豆腐が大きく崩れていない。"
+      }
+    ],
+    "tips": [
+      "豆腐を入れた後はかき混ぜすぎず、鍋を軽くゆすって煮汁を回す。"
+    ],
+    "substitutions": [
+      "牛肉は豚薄切り肉に置き換えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-54",
+    "title": "青椒肉絲とご飯",
+    "mealForm": "定食",
+    "skill": "材料を細切りにそろえる",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 22,
+    "estimatedTotalMinutes": 25,
+    "readyRiceAssumed": true,
+    "difficulty": "基本",
+    "equipment": [
+      "包丁・まな板",
+      "フライパン",
+      "ボウル",
+      "計量器具",
+      "中心温度計"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。",
+    "ingredients": [
+      {
+        "name": "豚ロース薄切り肉",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "ピーマン",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "たけのこ水煮",
+        "quantity": 60,
+        "unit": "g",
+        "state": "水煮",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 6,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酒",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 2,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 15,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "ピーマンは種を除き、たけのことともに5mm幅の細切りにする。豚肉も繊維を断つ向きに5mm幅に切る。",
+        "heat": "火を使わない",
+        "durationMinutes": 8,
+        "cue": "肉と野菜の幅がそろい、炒め時間に差が出にくい。"
+      },
+      {
+        "instruction": "肉に酒と片栗粉を絡める。しょうゆ・オイスターソース・砂糖・水を別の器で混ぜる。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "肉の表面に薄く衣が付き、調味料の準備ができている。"
+      },
+      {
+        "instruction": "フライパンに油を温めて肉をほぐしながら焼く。重なりの厚い部分の中心75℃以上を確認し、1分以上加熱する。",
+        "heat": "中火",
+        "durationMinutes": 6,
+        "cue": "細切り肉が大きな塊にならず、加熱を温度で確認できる。"
+      },
+      {
+        "instruction": "ピーマンとたけのこを加え、底から返して炒める。合わせたたれを加えて絡める。",
+        "heat": "中火",
+        "durationMinutes": 4,
+        "cue": "ピーマンに火が通り、あんが具に薄く付く。"
+      },
+      {
+        "instruction": "皿に盛り、ご飯を添える。",
+        "heat": "火を使わない",
+        "durationMinutes": 1,
+        "cue": "鍋に水っぽい汁が大量に残っていない。"
+      }
+    ],
+    "tips": [
+      "細く切るほど調理は速いが、切る作業を急がず幅をそろえる。"
+    ],
+    "substitutions": [
+      "たけのこ水煮は細切りのパプリカで置き換えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-56",
+    "title": "春巻きとご飯",
+    "mealForm": "定食",
+    "skill": "具の水分を飛ばし包んで揚げる",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 35,
+    "estimatedTotalMinutes": 55,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "フライパン",
+      "浅い皿",
+      "揚げ物対応の鍋",
+      "油温計",
+      "中心温度計",
+      "網・バット"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。具を冷ます時間を含め55分が目安。",
+    "ingredients": [
+      {
+        "name": "豚ひき肉",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "キャベツ",
+        "quantity": 80,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 30,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "たけのこ水煮",
+        "quantity": 40,
+        "unit": "g",
+        "state": "水煮",
+        "aisle": "豆・加工品",
+        "note": ""
+      },
+      {
+        "name": "春巻きの皮",
+        "quantity": 4,
+        "unit": "枚",
+        "state": "冷蔵",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "オイスターソース",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 2,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 50,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "具用・片栗粉用・のり用に分ける（分量は作り方参照）"
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 5,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 5,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": "皮を閉じるのり用"
+      },
+      {
+        "name": "ごま油",
+        "quantity": 5,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "揚げ鍋と熱源の指定量。深さ3cmを目安に適合器具を使う"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "キャベツ・にんじん・たけのこを細切りにする。片栗粉は水10ml、薄力粉は別の器で水10mlと混ぜる。しょうゆ・オイスターソース・砂糖・水30mlを合わせる。",
+        "heat": "火を使わない",
+        "durationMinutes": 7,
+        "cue": "片栗粉の液とのりが別々に用意できている。"
+      },
+      {
+        "instruction": "フライパンでごま油を温め、ひき肉をほぐして炒める。野菜と合わせ調味料を加えて炒め煮にする。肉を含む具の中心75℃以上を確認し、1分以上加熱する。",
+        "heat": "中火",
+        "durationMinutes": 8,
+        "cue": "にんじんに火が通り、肉の加熱も温度で確認できる。"
+      },
+      {
+        "instruction": "水溶き片栗粉を混ぜ直して加え、軽く沸かして強めのとろみを付ける。浅い清潔な皿に薄く広げ、粗熱を取り、必要なら冷蔵庫で冷やす。",
+        "heat": "中火→火を使わない",
+        "durationMinutes": 15,
+        "cue": "具が温かくなくなり、汁が流れ出ない。"
+      },
+      {
+        "instruction": "具を皮の枚数に合わせて等分する。皮をひし形に置き、手前に1個分の具を横長に載せる。手前から巻き、左右を折り込み、最後を薄力粉のりで閉じる。残りも同じように包む。",
+        "heat": "火を使わない",
+        "durationMinutes": 8,
+        "cue": "隙間がなく、具を詰めすぎていない。"
+      },
+      {
+        "instruction": "揚げ物対応の鍋で油を170℃に温め、春巻きを静かに入れる。途中で返して全体を揚げる。",
+        "heat": "油温170℃",
+        "durationMinutes": 7,
+        "cue": "皮がきつね色に乾き、破れていない。"
+      },
+      {
+        "instruction": "具の中心75℃以上を確認し、1分以上加熱できるまで必要に応じて油に戻す。網で油を切り、ご飯と盛る。",
+        "heat": "油温170℃→火を使わない",
+        "durationMinutes": 3,
+        "cue": "中の具とあんは熱いので、食べる際は少しずつ。"
+      }
+    ],
+    "tips": [
+      "具を冷ましてから包むと、皮が蒸れて破れるのを防げる。",
+      "のりは最後の縁に薄く塗り、押さえて閉じる。"
+    ],
+    "substitutions": [
+      "たけのこは細切りのしいたけで置き換えられる。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "具を室温で長く放置しない。油の量と鍋は熱源の説明書に従い、水気が付いた春巻きを油に入れない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": [
+      {
+        "text": "10ml",
+        "quantity": 10,
+        "unit": "ml"
+      },
+      {
+        "text": "30ml",
+        "quantity": 30,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "dish-58",
+    "title": "アジの南蛮漬けとご飯",
+    "mealForm": "定食",
+    "skill": "魚を揚げて漬ける",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 30,
+    "estimatedTotalMinutes": 45,
+    "readyRiceAssumed": true,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "小鍋",
+      "浅い耐熱容器",
+      "揚げ物対応の鍋",
+      "油温計",
+      "中心温度計",
+      "網・バット"
+    ],
+    "prepNote": "炊飯済みのご飯を用意する。骨を除いたアジを使用。揚げた後に味をなじませる時間を含む。",
+    "ingredients": [
+      {
+        "name": "アジ",
+        "quantity": 120,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": "三枚おろし。骨を除いたもの"
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 50,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "にんじん",
+        "quantity": 30,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "片栗粉",
+        "quantity": 12,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "酢",
+        "quantity": 25,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "しょうゆ",
+        "quantity": 10,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "砂糖",
+        "quantity": 8,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": 40,
+        "unit": "ml",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "サラダ油",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "揚げ鍋と熱源の指定量。深さ2〜3cmを目安に適合器具を使う"
+      },
+      {
+        "name": "ご飯",
+        "quantity": 150,
+        "unit": "g",
+        "state": "炊飯済み",
+        "aisle": "米・麺・パン",
+        "note": "温かいもの。炊飯時間は総時間に含めない"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎを薄切り、にんじんを細い千切りにする。小鍋に酢・しょうゆ・砂糖・水を入れて沸かし、野菜を加えて2分煮る。清潔な浅い耐熱容器に移す。",
+        "heat": "中火",
+        "durationMinutes": 8,
+        "cue": "砂糖が溶け、野菜が少ししんなりする。"
+      },
+      {
+        "instruction": "アジの骨を確認して除き、1切れを2〜3等分する。水気を紙で拭いて片栗粉を薄くまぶす。",
+        "heat": "火を使わない",
+        "durationMinutes": 6,
+        "cue": "骨と水気が少なく、粉の塊がない。"
+      },
+      {
+        "instruction": "揚げ物対応の鍋で油を170℃に温め、アジを少量ずつ入れて揚げる。中心75℃以上を確認して1分以上加熱する。",
+        "heat": "油温170℃",
+        "durationMinutes": 8,
+        "cue": "衣の色だけで判断せず、魚の中心加熱を確認する。"
+      },
+      {
+        "instruction": "網で油を切り、温かいうちに南蛮酢へ入れる。清潔な箸で返し、全体にたれを付ける。",
+        "heat": "火を使わない",
+        "durationMinutes": 3,
+        "cue": "容器に魚が重なりすぎず、たれが回る。"
+      },
+      {
+        "instruction": "10分ほど味をなじませてご飯と盛る。すぐ食べない場合は、浅い容器のまま速やかに冷やして冷蔵する。",
+        "heat": "火を使わない",
+        "durationMinutes": 10,
+        "cue": "熱いまま密閉せず、長時間室温に置かない。"
+      }
+    ],
+    "tips": [
+      "三枚おろしを購入すると、魚をおろす工程を省いて揚げ方に集中できる。"
+    ],
+    "substitutions": [
+      "アジは骨を除いたサバや鮭でも作れる。魚の厚みに合わせて加熱する。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "酢に漬けても常温保存はできない。油の量と鍋は熱源の説明書に従い、加熱中はその場を離れない。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  },
+  {
+    "id": "dish-60",
+    "title": "チキンマカロニグラタン",
+    "mealForm": "麺",
+    "skill": "ソースを合わせ焼き目を付ける",
+    "baseServings": 1,
+    "estimatedActiveMinutes": 25,
+    "estimatedTotalMinutes": 45,
+    "readyRiceAssumed": false,
+    "difficulty": "応用",
+    "equipment": [
+      "包丁・まな板",
+      "ゆで鍋・ざる",
+      "フライパン",
+      "オーブン",
+      "オーブン対応耐熱皿",
+      "ミトン",
+      "中心温度計"
+    ],
+    "prepNote": "乾燥マカロニのゆで時間とオーブンの焼成時間を含む。ご飯は添えない。",
+    "ingredients": [
+      {
+        "name": "マカロニ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": "ゆで時間は袋の表示に従う"
+      },
+      {
+        "name": "鶏もも肉",
+        "quantity": 100,
+        "unit": "g",
+        "state": "生",
+        "aisle": "肉・魚",
+        "note": ""
+      },
+      {
+        "name": "玉ねぎ",
+        "quantity": 60,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "しめじ",
+        "quantity": 40,
+        "unit": "g",
+        "state": "生",
+        "aisle": "野菜",
+        "note": ""
+      },
+      {
+        "name": "バター",
+        "quantity": 10,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "薄力粉",
+        "quantity": 12,
+        "unit": "g",
+        "state": "乾燥",
+        "aisle": "米・麺・パン",
+        "note": ""
+      },
+      {
+        "name": "牛乳",
+        "quantity": 200,
+        "unit": "ml",
+        "state": "冷蔵",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "ピザ用チーズ",
+        "quantity": 30,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "卵・乳",
+        "note": ""
+      },
+      {
+        "name": "塩",
+        "quantity": 0.7,
+        "unit": "g",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "こしょう",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": ""
+      },
+      {
+        "name": "水",
+        "quantity": null,
+        "unit": "適量",
+        "state": "製品",
+        "aisle": "調味料",
+        "note": "マカロニをゆでる湯。袋の表示量"
+      }
+    ],
+    "steps": [
+      {
+        "instruction": "玉ねぎを薄切り、しめじを小房、鶏肉を2cm角に切る。オーブンを200℃に予熱する。鍋で湯を沸かす。",
+        "heat": "オーブン200℃・中火",
+        "durationMinutes": 7,
+        "cue": "具の準備ができ、湯が沸いている。"
+      },
+      {
+        "instruction": "マカロニを袋の表示時間ゆで、ざるに上げる。同時にフライパンでバターを溶かし、鶏肉・玉ねぎ・しめじを炒める。",
+        "heat": "中火→中弱火",
+        "durationMinutes": 8,
+        "cue": "玉ねぎが透き通る。マカロニは表示時間を優先する。"
+      },
+      {
+        "instruction": "火を弱めて薄力粉を加え、粉っぽさが消えるまで混ぜる。牛乳を3回に分けて加え、その都度なめらかになるまで混ぜる。",
+        "heat": "弱火",
+        "durationMinutes": 5,
+        "cue": "白い粉の塊がなく、なめらかなソースになる。"
+      },
+      {
+        "instruction": "底から混ぜながら静かに煮る。鶏肉の中心75℃以上を確認して1分以上加熱する。塩・こしょうを加え、マカロニを混ぜる。",
+        "heat": "弱火",
+        "durationMinutes": 6,
+        "cue": "ソースに軽いとろみが付き、肉の中心加熱も確認できる。"
+      },
+      {
+        "instruction": "オーブン対応の耐熱皿に入れ、チーズを広げる。予熱した200℃のオーブンで焼く。",
+        "heat": "オーブン200℃",
+        "durationMinutes": 12,
+        "cue": "表面のチーズに焼き色が付く。焦げそうなら早めに確認する。"
+      },
+      {
+        "instruction": "ミトンで取り出し、鍋敷きに載せる。器ごと食卓へ運ぶときは熱いことを伝える。",
+        "heat": "火を使わない",
+        "durationMinutes": 2,
+        "cue": "皿と中のソースが非常に熱い。"
+      }
+    ],
+    "tips": [
+      "具を炒めてから粉を加えると、別鍋でホワイトソースを作らずに済む。"
+    ],
+    "substitutions": [
+      "オーブントースターを使う場合は対応する皿を使い、機器の表示に従って表面を焼く。肉の加熱はフライパンで終える。"
+    ],
+    "safetyNotes": [
+      "生の肉・魚に触れた手と器具は洗い、盛り付けには清潔な器具を使う。",
+      "加熱時間は目安。肉・魚は厚い部分の中心温度を確認し、75℃以上で1分以上加熱する。色や焼き目だけで判断しない。",
+      "耐熱ガラスでもオーブン非対応の容器がある。容器と機器の説明書を確認する。",
+      "出来上がりは早めに食べる。残す場合は浅い容器に分けて速やかに冷やし、冷蔵・冷凍する。"
+    ],
+    "validation": {
+      "status": "untested",
+      "note": "未試作。時間と分量は草稿の目安です。"
+    },
+    "rights": {
+      "status": "original",
+      "license": "CC-BY-4.0"
+    },
+    "sources": [
+      {
+        "label": "農林水産省：食中毒予防のポイント（安全情報の参考）",
+        "url": "https://www.maff.go.jp/j/syouan/seisaku/foodpoisoning/point.html",
+        "kind": "reference-only"
+      },
+      {
+        "label": "農林水産省：料理時に気を付けたいポイント（中心温度の参考）",
+        "url": "https://www.maff.go.jp/kinki/syouhi/mn/foodpoisoning/ryouriji.html",
+        "kind": "reference-only"
+      }
+    ],
+    "scales": []
+  }
+]

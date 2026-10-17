@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Cookpad",
+    "url": "https://cookpad.com/jp",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "デリッシュキッチン",
+    "url": "https://delishkitchen.tv/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "クラシル",
+    "url": "https://www.kurashiru.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Nadia",
+    "url": "https://oceans-nadia.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "楽天レシピ",
+    "url": "https://recipe.rakuten.co.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "みんなのきょうの料理",
+    "url": "https://www.kyounoryouri.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "オレンジページnet",
+    "url": "https://www.orangepage.net/recipes/weekly-menu",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "白ごはん.com",
+    "url": "https://www.sirogohan.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "macaroni",
+    "url": "https://macaro-ni.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "フーディストノート",
+    "url": "https://foodistnote.recipe-blog.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "FOODIE",
+    "url": "https://mi-journey.jp/foodie/list/?recipe=method",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "dancyu",
+    "url": "https://dancyu.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "ソラレピ",
+    "url": "https://recipe.shidax.co.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "つくおき",
+    "url": "https://cookien.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "週末の作り置きレシピ",
+    "url": "https://mayukitchen.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "ぽかぽかびより",
+    "url": "https://pokapokabiyori.net/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "しにゃごはん",
+    "url": "https://www.shinya-gohan.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "山本ゆり syunkon",
+    "url": "https://ameblo.jp/syunkon/entry-11920776181.html",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Mizuki 奇跡のキッチン",
+    "url": "https://mizuki-recipe.blog.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "榎本美沙 ふたりごはん",
+    "url": "https://www.futari-gohan.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "remy",
+    "url": "https://remy.jp/recipe",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "トイロノート",
+    "url": "https://toiro-note.com/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "おいしいLEEレシピ",
+    "url": "https://lee.hpplus.jp/leerecipe/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "栗原はるみ ゆとりの空間",
+    "url": "https://www.yutori.co.jp/shop/rpc/rpc0/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Yuu おうちバル",
+    "url": "https://yuu-stylish-bar.blog.jp/",
+    "category": "国内レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "味の素パーク",
+    "url": "https://park.ajinomoto.co.jp/recipe/card/703024/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "キッコーマン ホームクッキング",
+    "url": "https://www.kikkoman.co.jp/homecook/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ヤマサ Happy Recipe",
+    "url": "https://www.yamasa.com/happy-recipe/search/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ミツカン おうちレシピ",
+    "url": "https://www.mizkan.co.jp/ouchirecipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ヒガシマル醤油 ヒガシマルレシピ",
+    "url": "https://www.higashimaru.co.jp/recipe/index.html",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "桃屋 かんたんレシピ",
+    "url": "https://www.momoya.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "エバラ食品 おいしいレシピ",
+    "url": "https://www.ebarafoods.com/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "モランボン おすすめレシピ",
+    "url": "https://www.moranbong.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ハウス食品 レシピ",
+    "url": "https://housefoods.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "エスビー食品 レシピ",
+    "url": "https://www.sbfoods.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "カゴメ レシピ",
+    "url": "https://www.kagome.co.jp/products/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "キユーピー とっておきレシピ",
+    "url": "https://www.kewpie.co.jp/recipes/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ケンコーマヨネーズ すべてのレシピ",
+    "url": "https://www.kenkomayo.com/pro/c/c20/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "日清製粉ウェルナ レシピ",
+    "url": "https://www.nisshin-seifun-welna.com/index/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ニップン おいしいレシピ",
+    "url": "https://www.nippn.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "マルコメ レシピ",
+    "url": "https://www.marukome.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ハナマルキ ハナマルレシピ",
+    "url": "https://www.hanamaruki.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "旭松食品 レシピ",
+    "url": "https://www.asahimatsu.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "雪印メグミルク お料理レシピ",
+    "url": "https://www.meg-snow.com/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "明治 食を知る・楽しむ レシピ",
+    "url": "https://www.meiji.co.jp/learned/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "森永乳業 レシピ",
+    "url": "https://www.morinagamilk.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "オタフクソース レシピ",
+    "url": "https://www.otafuku.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "ニッスイ レシピ",
+    "url": "https://www.nissui.co.jp/recipe/index.html",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "Umios レシピ（旧マルハニチロURLから転送）",
+    "url": "https://www.umios.com/jp/recipe/index",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "はごろもフーズ レシピ",
+    "url": "https://www.hagoromofoods.co.jp/recipe/",
+    "category": "メーカー公式",
+    "status": "本文確認"
+  },
+  {
+    "name": "Good Food（旧 BBC Good Food）",
+    "url": "https://www.bbcgoodfood.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Allrecipes",
+    "url": "https://www.allrecipes.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Serious Eats",
+    "url": "https://www.seriouseats.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Simply Recipes",
+    "url": "https://www.simplyrecipes.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "The Kitchn",
+    "url": "https://www.thekitchn.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "EatingWell",
+    "url": "https://www.eatingwell.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Food Network UK",
+    "url": "https://foodnetwork.co.uk/recipes",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Delish",
+    "url": "https://www.delish.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Bon Appétit",
+    "url": "https://www.bonappetit.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Martha Stewart",
+    "url": "https://www.marthastewart.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Budget Bytes",
+    "url": "https://www.budgetbytes.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "RecipeTin Eats",
+    "url": "https://www.recipetineats.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Just One Cookbook",
+    "url": "https://www.justonecookbook.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Just Hungry",
+    "url": "https://justhungry.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Chopstick Chronicles",
+    "url": "https://www.chopstickchronicles.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "The Woks of Life",
+    "url": "https://thewoksoflife.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Maangchi",
+    "url": "https://www.maangchi.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Korean Bapsang",
+    "url": "https://www.koreanbapsang.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Hebbar’s Kitchen",
+    "url": "https://hebbarskitchen.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Cookie and Kate",
+    "url": "https://cookieandkate.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Love and Lemons",
+    "url": "https://www.loveandlemons.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Smitten Kitchen",
+    "url": "https://smittenkitchen.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Minimalist Baker",
+    "url": "https://minimalistbaker.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Natasha’s Kitchen",
+    "url": "https://natashaskitchen.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Pinch of Yum",
+    "url": "https://pinchofyum.com/",
+    "category": "海外レシピ",
+    "status": "本文確認"
+  },
+  {
+    "name": "Mealime",
+    "url": "https://www.mealime.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Eat This Much",
+    "url": "https://www.eatthismuch.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Plan to Eat",
+    "url": "https://www.plantoeat.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Paprika",
+    "url": "https://www.paprikaapp.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Pepperplate",
+    "url": "https://www.pepperplate.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "SideChef",
+    "url": "https://www.sidechef.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Samsung Food",
+    "url": "https://samsungfood.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "AnyList",
+    "url": "https://www.anylist.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "eMeals",
+    "url": "https://emeals.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Cook Smarts",
+    "url": "https://www.cooksmarts.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "The Dinner Daily",
+    "url": "https://thedinnerdaily.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Recipe Keeper",
+    "url": "https://recipekeeperonline.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "CookBook",
+    "url": "https://cookbookmanager.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Prepear",
+    "url": "https://www.prepear.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Mealie",
+    "url": "https://mealie.io/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Tandoor",
+    "url": "https://tandoor.dev/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Grocy",
+    "url": "https://grocy.info/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Intent",
+    "url": "https://www.intentapp.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "おいしい健康",
+    "url": "https://oishi-kenko.com/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "me:new",
+    "url": "https://menew.jp/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "ヨシケイ",
+    "url": "https://yoshikei-dvlp.co.jp/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "ReciMe",
+    "url": "https://www.recime.app/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "Bring!",
+    "url": "https://www.getbring.com/en/home",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "OurGroceries",
+    "url": "https://www.ourgroceries.com/overview",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  },
+  {
+    "name": "NoWaste",
+    "url": "https://www.nowasteapp.com/home/",
+    "category": "献立管理と買物",
+    "status": "本文確認"
+  }
+]

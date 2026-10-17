@@ -1,0 +1,947 @@
+{
+  "schemaVersion": 1,
+  "title": "30日60品の候補",
+  "status": "proposal",
+  "scope": "主菜とご飯を含む昼夕食全般。初心者・普段の食材・30分以内を中心にする条件は確認済み。",
+  "notes": [
+    "全品未試作。確定レシピ・栄養献立ではない。",
+    "60品中48品を総時間30分以内に収めることを目標とする。現時点で実測値はない。",
+    "炊飯済みのご飯を前提にする候補は明示し、生米から作る料理には炊飯時間を含める。",
+    "味付けだけでなく主材料・調理法・完成形の違いを教材編集時に確認する。",
+    "同じ食材の再利用と、調理済み食品の保存条件は別に検証する。"
+  ],
+  "recipes": [
+    {
+      "id": "dish-01",
+      "canonicalDishId": "dish-01",
+      "title": "卵チャーハン",
+      "mealForm": "ご飯",
+      "skill": "炒める順序と水分調整",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-02",
+      "canonicalDishId": "dish-02",
+      "title": "豚のしょうが焼きとご飯",
+      "mealForm": "定食",
+      "skill": "薄切り肉を焼きたれを絡める",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-03",
+      "canonicalDishId": "dish-03",
+      "title": "焼きうどん",
+      "mealForm": "麺",
+      "skill": "具と麺を炒め合わせる",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-04",
+      "canonicalDishId": "dish-04",
+      "title": "鮭のホイル蒸しとご飯",
+      "mealForm": "定食",
+      "skill": "包んで蒸す",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-05",
+      "canonicalDishId": "dish-05",
+      "title": "親子丼",
+      "mealForm": "ご飯",
+      "skill": "煮汁と卵の火入れ",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-06",
+      "canonicalDishId": "dish-06",
+      "title": "麻婆豆腐とご飯",
+      "mealForm": "定食",
+      "skill": "豆腐を崩さず煮てとろみを付ける",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-07",
+      "canonicalDishId": "dish-07",
+      "title": "ナポリタン",
+      "mealForm": "麺",
+      "skill": "麺をゆでソースを炒める",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-08",
+      "canonicalDishId": "dish-08",
+      "title": "鶏の照り焼きとご飯",
+      "mealForm": "定食",
+      "skill": "皮目から焼きたれを煮詰める",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-09",
+      "canonicalDishId": "dish-09",
+      "title": "ツナと野菜のサンドイッチ",
+      "mealForm": "パン",
+      "skill": "水気を切って挟む",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-10",
+      "canonicalDishId": "dish-10",
+      "title": "チキンと野菜のカレーライス",
+      "mealForm": "ご飯",
+      "skill": "炒めて煮る",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-11",
+      "canonicalDishId": "dish-11",
+      "title": "オムライス",
+      "mealForm": "ご飯",
+      "skill": "卵で包む",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-12",
+      "canonicalDishId": "dish-12",
+      "title": "サバのみそ煮とご飯",
+      "mealForm": "定食",
+      "skill": "魚の下処理と煮付け",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-13",
+      "canonicalDishId": "dish-13",
+      "title": "豚汁うどん",
+      "mealForm": "麺",
+      "skill": "具材の火の通りをそろえる",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-14",
+      "canonicalDishId": "dish-14",
+      "title": "焼き餃子とご飯",
+      "mealForm": "定食",
+      "skill": "包んで焼き蒸す",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-15",
+      "canonicalDishId": "dish-15",
+      "title": "ビビンバ",
+      "mealForm": "ご飯",
+      "skill": "複数の具を順序よく準備する",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-16",
+      "canonicalDishId": "dish-16",
+      "title": "鶏肉のトマト煮とご飯",
+      "mealForm": "定食",
+      "skill": "肉を焼き付けて煮る",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-17",
+      "canonicalDishId": "dish-17",
+      "title": "和風きのこパスタ",
+      "mealForm": "麺",
+      "skill": "きのこの炒め方",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-18",
+      "canonicalDishId": "dish-18",
+      "title": "回鍋肉とご飯",
+      "mealForm": "定食",
+      "skill": "肉と野菜を手早く炒める",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-19",
+      "canonicalDishId": "dish-19",
+      "title": "天津飯",
+      "mealForm": "ご飯",
+      "skill": "卵を焼きあんを作る",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-20",
+      "canonicalDishId": "dish-20",
+      "title": "肉じゃがとご飯",
+      "mealForm": "定食",
+      "skill": "煮崩れを抑える",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-21",
+      "canonicalDishId": "dish-21",
+      "title": "チキンと野菜のラップサンド",
+      "mealForm": "パン",
+      "skill": "鶏肉を焼いて巻く",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-22",
+      "canonicalDishId": "dish-22",
+      "title": "白身魚のムニエルとご飯",
+      "mealForm": "定食",
+      "skill": "粉をまぶして焼く",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-23",
+      "canonicalDishId": "dish-23",
+      "title": "ソース焼きそば",
+      "mealForm": "麺",
+      "skill": "麺をほぐして焼く",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-24",
+      "canonicalDishId": "dish-24",
+      "title": "ハンバーグとご飯",
+      "mealForm": "定食",
+      "skill": "肉だねの成形と火入れ",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-25",
+      "canonicalDishId": "dish-25",
+      "title": "中華丼",
+      "mealForm": "ご飯",
+      "skill": "具材の加熱順ととろみ",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-26",
+      "canonicalDishId": "dish-26",
+      "title": "鶏大根とご飯",
+      "mealForm": "定食",
+      "skill": "下ゆでと煮含め",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-27",
+      "canonicalDishId": "dish-27",
+      "title": "ミートソーススパゲティ",
+      "mealForm": "麺",
+      "skill": "ひき肉を炒めソースを煮詰める",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-28",
+      "canonicalDishId": "dish-28",
+      "title": "豚肉と白菜の重ね蒸しとご飯",
+      "mealForm": "定食",
+      "skill": "重ねて蒸す",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-29",
+      "canonicalDishId": "dish-29",
+      "title": "焼きおにぎりのだし茶漬け",
+      "mealForm": "ご飯",
+      "skill": "成形して焼く",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-30",
+      "canonicalDishId": "dish-30",
+      "title": "チキン南蛮とご飯",
+      "mealForm": "定食",
+      "skill": "衣を付けて揚げ甘酢を絡める",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-31",
+      "canonicalDishId": "dish-31",
+      "title": "タコライス",
+      "mealForm": "ご飯",
+      "skill": "ひき肉の味付けと盛り付け",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-32",
+      "canonicalDishId": "dish-32",
+      "title": "サバの竜田揚げとご飯",
+      "mealForm": "定食",
+      "skill": "下味とでんぷんの衣",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-33",
+      "canonicalDishId": "dish-33",
+      "title": "あんかけかた焼きそば",
+      "mealForm": "麺",
+      "skill": "麺の焼き付けとあん",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-34",
+      "canonicalDishId": "dish-34",
+      "title": "ロールキャベツとご飯",
+      "mealForm": "定食",
+      "skill": "葉で包み煮る",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-35",
+      "canonicalDishId": "dish-35",
+      "title": "卵と野菜のホットサンド",
+      "mealForm": "パン",
+      "skill": "挟んだパンを焼く",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-36",
+      "canonicalDishId": "dish-36",
+      "title": "厚揚げと小松菜の煮物とご飯",
+      "mealForm": "定食",
+      "skill": "短時間で煮含める",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-37",
+      "canonicalDishId": "dish-37",
+      "title": "五目炊き込みご飯",
+      "mealForm": "ご飯",
+      "skill": "具材の下準備と水加減",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-38",
+      "canonicalDishId": "dish-38",
+      "title": "酢豚とご飯",
+      "mealForm": "定食",
+      "skill": "複数食材を合わせ甘酢あんを作る",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-39",
+      "canonicalDishId": "dish-39",
+      "title": "カレーうどん",
+      "mealForm": "麺",
+      "skill": "だしとルウの調整",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-40",
+      "canonicalDishId": "dish-40",
+      "title": "チキンクリームシチューとご飯",
+      "mealForm": "定食",
+      "skill": "ホワイトソースを作る",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-41",
+      "canonicalDishId": "dish-41",
+      "title": "サバ缶のトマトパスタ",
+      "mealForm": "麺",
+      "skill": "缶詰を使う煮込みソース",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-42",
+      "canonicalDishId": "dish-42",
+      "title": "鶏ささみのピカタとご飯",
+      "mealForm": "定食",
+      "skill": "卵の衣で焼く",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-43",
+      "canonicalDishId": "dish-43",
+      "title": "ガパオライス",
+      "mealForm": "ご飯",
+      "skill": "強めの火で炒め合わせる",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-44",
+      "canonicalDishId": "dish-44",
+      "title": "焼売とご飯",
+      "mealForm": "定食",
+      "skill": "包んで蒸す",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-45",
+      "canonicalDishId": "dish-45",
+      "title": "とろろそば",
+      "mealForm": "麺",
+      "skill": "麺をゆでて締める",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-46",
+      "canonicalDishId": "dish-46",
+      "title": "ニラ玉とご飯",
+      "mealForm": "定食",
+      "skill": "卵と野菜を炒める",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-47",
+      "canonicalDishId": "dish-47",
+      "title": "フライパンピザ",
+      "mealForm": "パン",
+      "skill": "生地を伸ばし蒸し焼きにする",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-48",
+      "canonicalDishId": "dish-48",
+      "title": "エビチリとご飯",
+      "mealForm": "定食",
+      "skill": "エビの下処理ととろみ",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-49",
+      "canonicalDishId": "dish-49",
+      "title": "ツナとコーンのピラフ",
+      "mealForm": "ご飯",
+      "skill": "米を炒めて炊く",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-50",
+      "canonicalDishId": "dish-50",
+      "title": "とんかつとご飯",
+      "mealForm": "定食",
+      "skill": "パン粉の衣と揚げ方",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-51",
+      "canonicalDishId": "dish-51",
+      "title": "豆乳担々麺",
+      "mealForm": "麺",
+      "skill": "肉そぼろとスープを作る",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-52",
+      "canonicalDishId": "dish-52",
+      "title": "肉豆腐とご飯",
+      "mealForm": "定食",
+      "skill": "煮汁と煮る順序",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-53",
+      "canonicalDishId": "dish-53",
+      "title": "チキンパエリア",
+      "mealForm": "ご飯",
+      "skill": "浅い鍋で米を炊く",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-54",
+      "canonicalDishId": "dish-54",
+      "title": "青椒肉絲とご飯",
+      "mealForm": "定食",
+      "skill": "材料を細切りにそろえる",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-55",
+      "canonicalDishId": "dish-55",
+      "title": "冷やし中華",
+      "mealForm": "麺",
+      "skill": "具の切り方とたれ",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-56",
+      "canonicalDishId": "dish-56",
+      "title": "春巻きとご飯",
+      "mealForm": "定食",
+      "skill": "具の水分を飛ばし包んで揚げる",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-57",
+      "canonicalDishId": "dish-57",
+      "title": "キーマカレー",
+      "mealForm": "ご飯",
+      "skill": "ひき肉と野菜の水分を調整する",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "総時間30分以内を目標",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-58",
+      "canonicalDishId": "dish-58",
+      "title": "アジの南蛮漬けとご飯",
+      "mealForm": "定食",
+      "skill": "魚を揚げて漬ける",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": true
+    },
+    {
+      "id": "dish-59",
+      "canonicalDishId": "dish-59",
+      "title": "トマトリゾット",
+      "mealForm": "ご飯",
+      "skill": "米に水分を足しながら煮る",
+      "slotSuggestion": "lunch",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    },
+    {
+      "id": "dish-60",
+      "canonicalDishId": "dish-60",
+      "title": "チキンマカロニグラタン",
+      "mealForm": "麺",
+      "skill": "ソースを合わせ焼き目を付ける",
+      "slotSuggestion": "dinner",
+      "contentStatus": "candidate",
+      "cookingValidation": "not_tested",
+      "timeTarget": "時間をかける候補",
+      "measuredTotalMinutes": null,
+      "readyRiceAssumed": false
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "lunchRecipeId": "dish-01",
+      "dinnerRecipeId": "dish-02"
+    },
+    {
+      "day": 2,
+      "lunchRecipeId": "dish-03",
+      "dinnerRecipeId": "dish-04"
+    },
+    {
+      "day": 3,
+      "lunchRecipeId": "dish-05",
+      "dinnerRecipeId": "dish-06"
+    },
+    {
+      "day": 4,
+      "lunchRecipeId": "dish-07",
+      "dinnerRecipeId": "dish-08"
+    },
+    {
+      "day": 5,
+      "lunchRecipeId": "dish-09",
+      "dinnerRecipeId": "dish-10"
+    },
+    {
+      "day": 6,
+      "lunchRecipeId": "dish-11",
+      "dinnerRecipeId": "dish-12"
+    },
+    {
+      "day": 7,
+      "lunchRecipeId": "dish-13",
+      "dinnerRecipeId": "dish-14"
+    },
+    {
+      "day": 8,
+      "lunchRecipeId": "dish-15",
+      "dinnerRecipeId": "dish-16"
+    },
+    {
+      "day": 9,
+      "lunchRecipeId": "dish-17",
+      "dinnerRecipeId": "dish-18"
+    },
+    {
+      "day": 10,
+      "lunchRecipeId": "dish-19",
+      "dinnerRecipeId": "dish-20"
+    },
+    {
+      "day": 11,
+      "lunchRecipeId": "dish-21",
+      "dinnerRecipeId": "dish-22"
+    },
+    {
+      "day": 12,
+      "lunchRecipeId": "dish-23",
+      "dinnerRecipeId": "dish-24"
+    },
+    {
+      "day": 13,
+      "lunchRecipeId": "dish-25",
+      "dinnerRecipeId": "dish-26"
+    },
+    {
+      "day": 14,
+      "lunchRecipeId": "dish-27",
+      "dinnerRecipeId": "dish-28"
+    },
+    {
+      "day": 15,
+      "lunchRecipeId": "dish-29",
+      "dinnerRecipeId": "dish-30"
+    },
+    {
+      "day": 16,
+      "lunchRecipeId": "dish-31",
+      "dinnerRecipeId": "dish-32"
+    },
+    {
+      "day": 17,
+      "lunchRecipeId": "dish-33",
+      "dinnerRecipeId": "dish-34"
+    },
+    {
+      "day": 18,
+      "lunchRecipeId": "dish-35",
+      "dinnerRecipeId": "dish-36"
+    },
+    {
+      "day": 19,
+      "lunchRecipeId": "dish-37",
+      "dinnerRecipeId": "dish-38"
+    },
+    {
+      "day": 20,
+      "lunchRecipeId": "dish-39",
+      "dinnerRecipeId": "dish-40"
+    },
+    {
+      "day": 21,
+      "lunchRecipeId": "dish-41",
+      "dinnerRecipeId": "dish-42"
+    },
+    {
+      "day": 22,
+      "lunchRecipeId": "dish-43",
+      "dinnerRecipeId": "dish-44"
+    },
+    {
+      "day": 23,
+      "lunchRecipeId": "dish-45",
+      "dinnerRecipeId": "dish-46"
+    },
+    {
+      "day": 24,
+      "lunchRecipeId": "dish-47",
+      "dinnerRecipeId": "dish-48"
+    },
+    {
+      "day": 25,
+      "lunchRecipeId": "dish-49",
+      "dinnerRecipeId": "dish-50"
+    },
+    {
+      "day": 26,
+      "lunchRecipeId": "dish-51",
+      "dinnerRecipeId": "dish-52"
+    },
+    {
+      "day": 27,
+      "lunchRecipeId": "dish-53",
+      "dinnerRecipeId": "dish-54"
+    },
+    {
+      "day": 28,
+      "lunchRecipeId": "dish-55",
+      "dinnerRecipeId": "dish-56"
+    },
+    {
+      "day": 29,
+      "lunchRecipeId": "dish-57",
+      "dinnerRecipeId": "dish-58"
+    },
+    {
+      "day": 30,
+      "lunchRecipeId": "dish-59",
+      "dinnerRecipeId": "dish-60"
+    }
+  ]
+}

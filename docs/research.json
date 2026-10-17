@@ -1,0 +1,1116 @@
+{
+  "checkedAt": "2026-10-17",
+  "method": "公式の公開本文・機能説明・分類の確認。アプリ操作、視覚UI評価、試作、転載許諾の確認は含まない。",
+  "sites": [
+    {
+      "id": "JP01",
+      "category": "国内レシピ",
+      "name": "Cookpad",
+      "url": "https://cookpad.com/jp",
+      "status": "本文確認",
+      "observation": "使いたい食材からの検索と、ごはんもの・麺などのカテゴリを併設し、無料で見られる項目とプレミアム項目の表示がある。",
+      "implication": "60品は全件無料閲覧にし、食材名と料理名の両方から探せる検索を付ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP02",
+      "category": "国内レシピ",
+      "name": "デリッシュキッチン",
+      "url": "https://delishkitchen.tv/",
+      "status": "本文確認",
+      "observation": "材料から探す入口と料理名から探す入口があり、主材料2つ・時短・基本といった条件を料理紹介に示している。",
+      "implication": "料理カードに主要食材数、所要時間、習得する基本技術を表示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP03",
+      "category": "国内レシピ",
+      "name": "クラシル",
+      "url": "https://www.kurashiru.com/",
+      "status": "本文確認",
+      "observation": "食材・料理名・目的やシーンの入口を分け、公式レシピ・記事・レシピカード・短い動画を別導線にしている。",
+      "implication": "60品の一覧と料理の基本を分け、昼向き・夜向き・短時間のフィルタを設ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP04",
+      "category": "国内レシピ",
+      "name": "Nadia",
+      "url": "https://oceans-nadia.com/",
+      "status": "本文確認",
+      "observation": "料理の基礎として下ごしらえ・切り方・用語集を用意し、一覧に調理時間が記載されている。",
+      "implication": "手順中の『みじん切り』『弱火』などから独自の短い基本解説へリンクする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP05",
+      "category": "国内レシピ",
+      "name": "楽天レシピ",
+      "url": "https://recipe.rakuten.co.jp/",
+      "status": "本文確認",
+      "observation": "Pickupレシピに調理時間と費用区分があり、丼・炊き込みご飯・パスタ・うどんなど主食の分類が細かい。",
+      "implication": "主食を米・麺・パンや粉ものに整理し、時間と予算の目安は根拠がある場合だけ表示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP06",
+      "category": "国内レシピ",
+      "name": "みんなのきょうの料理",
+      "url": "https://www.kyounoryouri.jp/",
+      "status": "本文確認",
+      "observation": "ビギナーズを独立した入口にし、動画付き・工程写真付きの初心者向け特集を案内している。",
+      "implication": "初心者向けの順番を設け、難しい工程には自作の補助図や確認ポイントを付ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP07",
+      "category": "国内レシピ",
+      "name": "オレンジページnet",
+      "url": "https://www.orangepage.net/recipes/weekly-menu",
+      "status": "本文確認",
+      "observation": "献立カレンダーで日付ごとに主菜・主食・副菜・汁物を区別し、1週間分の買い物リストと印刷を案内している。",
+      "implication": "30日×昼晩の60枠を中心画面にし、週ごとの買い物リストと印刷表示を用意する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP08",
+      "category": "国内レシピ",
+      "name": "白ごはん.com",
+      "url": "https://www.sirogohan.com/",
+      "status": "本文確認",
+      "observation": "米とだしの基本、下ごしらえ、調理のコツを分類し、調理時間や包丁不要・レンジ活用でも探せる。",
+      "implication": "必要器具と調理方法をデータに持ち、持っている器具で作れる料理に絞れるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP09",
+      "category": "国内レシピ",
+      "name": "macaroni",
+      "url": "https://macaro-ni.jp/",
+      "status": "本文確認",
+      "observation": "レシピ・レシピ動画に加え、下ごしらえや下処理、食材の選び方・保存方法の記事への入口がある。",
+      "implication": "食材を買う前・調理中・余った後に必要な情報を料理詳細から参照できるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP10",
+      "category": "国内レシピ",
+      "name": "フーディストノート",
+      "url": "https://foodistnote.recipe-blog.jp/",
+      "status": "本文確認",
+      "observation": "料理家名を添えた連載と、包丁不要・5分など条件が分かる記事見出しを掲載している。",
+      "implication": "各料理の参考資料には媒体名・作者名・原典URLを記録し、紹介文は独自に作成する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP11",
+      "category": "国内レシピ",
+      "name": "FOODIE",
+      "url": "https://mi-journey.jp/foodie/list/?recipe=method",
+      "status": "本文確認",
+      "observation": "レシピを食材・料理の種類・調理法で探す入口を持ち、調理法の専用記事一覧がある。",
+      "implication": "焼く・煮る・炒める・蒸すなどの技術で60品を横断し、同じ技術を使う次の料理へ案内する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP12",
+      "category": "国内レシピ",
+      "name": "dancyu",
+      "url": "https://dancyu.jp/",
+      "status": "本文確認",
+      "observation": "プロが教えるレシピと食のストーリーを分け、複数キーワード検索の入力例を示している。",
+      "implication": "検索欄に『鶏肉 パスタ』のような具体例を付け、料理手順と読み物を別の情報として扱う。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP13",
+      "category": "国内レシピ",
+      "name": "ソラレピ",
+      "url": "https://recipe.shidax.co.jp/",
+      "status": "本文確認",
+      "observation": "一覧にカロリー・工程数・所要時間を記載し、主菜や料理ジャンルなどで分類している。",
+      "implication": "習得の負担を判断できるよう工程数と時間を表示する。栄養値は検証された根拠がなければ掲載しない。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP14",
+      "category": "国内レシピ",
+      "name": "つくおき",
+      "url": "https://cookien.com/",
+      "status": "本文確認",
+      "observation": "一覧の各料理に調理時間、冷蔵保存の目安、使用する鍋・フライパンなどの情報が併記されている。",
+      "implication": "カードに時間と器具を載せ、保存情報は条件と確認済み出典を伴う専用欄にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP15",
+      "category": "国内レシピ",
+      "name": "週末の作り置きレシピ",
+      "url": "https://mayukitchen.com/",
+      "status": "本文確認",
+      "observation": "保存期間・調理時間・調理方法を別の分類として用意し、下味冷凍や包丁いらずからも探せる。",
+      "implication": "当日調理と事前準備を区別し、献立を組み替えても重複料理数が増えないデータ構造にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP16",
+      "category": "国内レシピ",
+      "name": "ぽかぽかびより",
+      "url": "https://pokapokabiyori.net/",
+      "status": "本文確認",
+      "observation": "検索欄に食材と器具を組み合わせる入力例があり、火を使わない・電子レンジといった分類がある。",
+      "implication": "『使いたい食材＋使える器具』を同時に指定できる絞り込みを用意する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP17",
+      "category": "国内レシピ",
+      "name": "しにゃごはん",
+      "url": "https://www.shinya-gohan.com/",
+      "status": "本文確認",
+      "observation": "トップ掲載レシピで人数・材料・番号付き工程・ポイントを分け、火加減と加熱時間も工程内に記載している。",
+      "implication": "料理詳細を材料→準備→番号付き手順→失敗しやすい点の共通形式にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP18",
+      "category": "国内レシピ",
+      "name": "山本ゆり syunkon",
+      "url": "https://ameblo.jp/syunkon/entry-11920776181.html",
+      "status": "本文確認",
+      "observation": "つくねの記事で、少量の卵を使う代わりの材料や、手元にない調味料の代替案を本文に説明している。",
+      "implication": "特別な食材を減らし、置換できる材料・省略可能な材料を明示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP19",
+      "category": "国内レシピ",
+      "name": "Mizuki 奇跡のキッチン",
+      "url": "https://mizuki-recipe.blog.jp/",
+      "status": "本文確認",
+      "observation": "簡単・時短・節約を方針として明示し、主菜の食材や副菜などのカテゴリを各記事に付けている。",
+      "implication": "60品の採用基準を『一般的な材料・無理のない時間・基本器具』として公開する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP20",
+      "category": "国内レシピ",
+      "name": "榎本美沙 ふたりごはん",
+      "url": "https://www.futari-gohan.jp/",
+      "status": "本文確認",
+      "observation": "ごはん・麺、発酵食品、季節の手仕事などを区別し、季節別の料理特集を設けている。",
+      "implication": "季節に依存する材料は代替案を用意し、60品を年間を通して作りやすくする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP21",
+      "category": "国内レシピ",
+      "name": "remy",
+      "url": "https://remy.jp/recipe",
+      "status": "本文確認",
+      "observation": "ごはん・パンとパスタ・麺を分け、丼・チャーハン・カレー・リゾットなどの小分類を持つ。",
+      "implication": "60品の構成比をカテゴリ別に確認し、丼やパスタだけに偏らない献立を作る。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP22",
+      "category": "国内レシピ",
+      "name": "トイロノート",
+      "url": "https://toiro-note.com/",
+      "status": "本文確認",
+      "observation": "レシピ・日々のつぶやき・調理の知恵袋を分け、主菜とご飯・パン・麺類を別カテゴリにしている。",
+      "implication": "公開用の料理データと個人的な日記や学習記録を分け、後者は端末内だけに保存する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP23",
+      "category": "国内レシピ",
+      "name": "おいしいLEEレシピ",
+      "url": "https://lee.hpplus.jp/leerecipe/",
+      "status": "本文確認",
+      "observation": "料理家一覧を設け、主役の一皿を作るコツや炊き込みごはんをまとめた特集を掲載している。",
+      "implication": "料理ごとに『今回覚えるコツ』を1つ設定し、60品を学習テーマでも一覧できるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP24",
+      "category": "国内レシピ",
+      "name": "栗原はるみ ゆとりの空間",
+      "url": "https://www.yutori.co.jp/shop/rpc/rpc0/",
+      "status": "本文確認",
+      "observation": "食材・メニュー・料理カテゴリの入口と今週のレシピを備え、だしのような基本項目も扱っている。",
+      "implication": "ご飯を炊く・だしを扱うなどの共通技術を独立した基本ページにして複数レシピから再利用する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "JP25",
+      "category": "国内レシピ",
+      "name": "Yuu おうちバル",
+      "url": "https://yuu-stylish-bar.blog.jp/",
+      "status": "本文確認",
+      "observation": "簡単・時短・節約を明示し、レンジ・下味冷凍・お弁当などの条件を記事名に付けている。",
+      "implication": "低負担な料理を前半に配置し、未習得→作った→再現できるの進捗をブラウザ内で管理する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR01",
+      "category": "メーカー公式",
+      "name": "味の素パーク",
+      "url": "https://park.ajinomoto.co.jp/recipe/card/703024/",
+      "status": "本文確認",
+      "observation": "親子丼の詳細に2人分の材料、1/2個と100gの併記、3段階の手順、1人分の栄養値、印刷リンクがある。",
+      "implication": "人数・重量・個数を構造化し、材料と手順への移動、印刷を用意する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR02",
+      "category": "メーカー公式",
+      "name": "キッコーマン ホームクッキング",
+      "url": "https://www.kikkoman.co.jp/homecook/",
+      "status": "本文確認",
+      "observation": "一覧で調理時間・塩分を表示し、週の献立、切り方・計量の基本、食材の使い切り記事へ案内している。",
+      "implication": "料理カードに時間と基礎技法を表示し、1週間の献立を材料の使い切りと結びつける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR03",
+      "category": "メーカー公式",
+      "name": "ヤマサ Happy Recipe",
+      "url": "https://www.yamasa.com/happy-recipe/search/",
+      "status": "本文確認",
+      "observation": "料理区分、食材、時間帯、ジャンルに加えて、煮る・焼く・蒸す・炊く等の調理方法で検索できる。",
+      "implication": "技法タグと学習順序を設け、60品の技法の偏りを確認できるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR04",
+      "category": "メーカー公式",
+      "name": "ミツカン おうちレシピ",
+      "url": "https://www.mizkan.co.jp/ouchirecipe/",
+      "status": "本文確認",
+      "observation": "料理名・食材の検索、旬の食材、夕食特集、サバ缶・ツナ缶を含む素材別入口がある。",
+      "implication": "昼・晩と主材料の組合せで絞り込み、缶詰を使う日も月間計画に含める。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR05",
+      "category": "メーカー公式",
+      "name": "ヒガシマル醤油 ヒガシマルレシピ",
+      "url": "https://www.higashimaru.co.jp/recipe/index.html",
+      "status": "本文確認",
+      "observation": "人気・おすすめの一覧に分数、エネルギー、塩分、使用調味料が並ぶ。",
+      "implication": "一覧だけで所要時間を判断できるようにし、栄養値を載せる場合は算定根拠も持たせる。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR06",
+      "category": "メーカー公式",
+      "name": "桃屋 かんたんレシピ",
+      "url": "https://www.momoya.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "パスタ・炒飯・丼・炊き込みご飯などの分類と、朝食・昼食・夕食のシーン分類を併用する。",
+      "implication": "料理の種類と食事枠を別々の属性にし、朝食は固定枠として扱う。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR07",
+      "category": "メーカー公式",
+      "name": "エバラ食品 おいしいレシピ",
+      "url": "https://www.ebarafoods.com/recipe/",
+      "status": "本文確認",
+      "observation": "料理名・食材名から検索でき、週のおすすめと、たれを使った炒飯や肉野菜炒めの特集がある。",
+      "implication": "市販のたれを使う簡便版と一般調味料で作る基本版の扱いを分け、買い足し負担を示す。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR08",
+      "category": "メーカー公式",
+      "name": "モランボン おすすめレシピ",
+      "url": "https://www.moranbong.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "鶏むね・鶏もも・豚こま等の肉の部位や形態、調理方法、包丁いらず・ワンパンを選べる。",
+      "implication": "買物リストは豚肉などの大分類だけでなく部位・切り方を保持し、器具条件でも検索する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR09",
+      "category": "メーカー公式",
+      "name": "ハウス食品 レシピ",
+      "url": "https://housefoods.jp/recipe/",
+      "status": "本文確認",
+      "observation": "カレーやごはんものを細分類し、カレー・シチューのリメイクも独立した料理群にしている。",
+      "implication": "同じ料理の具材違いで60品を水増しせず、基本料理と派生版に共通IDを設ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR10",
+      "category": "メーカー公式",
+      "name": "エスビー食品 レシピ",
+      "url": "https://www.sbfoods.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "レシピ検索と並んでスパイス・ハーブの分類、使い方のコツ、動画への入口がある。",
+      "implication": "レシピから調味料の役割を説明する基本ページへリンクし、任意の香辛料を区別する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR11",
+      "category": "メーカー公式",
+      "name": "カゴメ レシピ",
+      "url": "https://www.kagome.co.jp/products/recipe/",
+      "status": "本文確認",
+      "observation": "食材からの検索と、時間・塩分・たんぱく質等による並べ替えがある。",
+      "implication": "標準の並び順を学習順にし、時間が短い順にも切り替えられるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR12",
+      "category": "メーカー公式",
+      "name": "キユーピー とっておきレシピ",
+      "url": "https://www.kewpie.co.jp/recipes/",
+      "status": "本文確認",
+      "observation": "レシピに加え、旬・選び方・保存の素材知識と、切り方・下ごしらえの基本を案内する。",
+      "implication": "材料辞典に購入単位、下ごしらえ、保存の出典を持たせて買物から調理へつなぐ。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR13",
+      "category": "メーカー公式",
+      "name": "ケンコーマヨネーズ すべてのレシピ",
+      "url": "https://www.kenkomayo.com/pro/c/c20/",
+      "status": "本文確認",
+      "observation": "家庭向け・外食向けの区分と、1人前の参考原価帯で絞り込める。",
+      "implication": "初心者が家庭で作れる内容を選び、価格は地域・時点に依存する目安として別管理する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR14",
+      "category": "メーカー公式",
+      "name": "日清製粉ウェルナ レシピ",
+      "url": "https://www.nisshin-seifun-welna.com/index/recipe/",
+      "status": "本文確認",
+      "observation": "主食をパン・ピザ、パスタ、乾麺、粉もの等で分類し、生地から作る料理と時短料理も分ける。",
+      "implication": "主食種類の配分を定義し、生地作りなど長い工程は通常の平日料理と難度を分ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR15",
+      "category": "メーカー公式",
+      "name": "ニップン おいしいレシピ",
+      "url": "https://www.nippn.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "新着・人気レシピに時間とエネルギーを表示し、料理と使用商品それぞれの入口がある。",
+      "implication": "料理名で探す導線を優先し、商品名は任意の補足として保持する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR16",
+      "category": "メーカー公式",
+      "name": "マルコメ レシピ",
+      "url": "https://www.marukome.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "下味冷凍、電子レンジ、ワンパン、時短の注目語と、基本レシピの入口がある。",
+      "implication": "作る日と下準備の日を区別できるようにし、冷凍の可否は確認済み根拠を付ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR17",
+      "category": "メーカー公式",
+      "name": "ハナマルキ ハナマルレシピ",
+      "url": "https://www.hanamaruki.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "2人分の材料と段階的手順を示し、電子レンジの出力・加熱分数や調味料を加える理由を記す。",
+      "implication": "各工程に器具・火力や出力・時間・仕上がりの目印を持たせる。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR18",
+      "category": "メーカー公式",
+      "name": "旭松食品 レシピ",
+      "url": "https://www.asahimatsu.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "高野豆腐を含むカレー・ガパオ・炒め物・鍋を一覧化し、作り置きのリメイクも掲載する。",
+      "implication": "乾物・豆類も主材料に含め、同じ保存食を複数の異なる料理に使える計画を作る。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR19",
+      "category": "メーカー公式",
+      "name": "雪印メグミルク お料理レシピ",
+      "url": "https://www.meg-snow.com/recipe/",
+      "status": "本文確認",
+      "observation": "主食を米・パン・パスタに分け、主菜を肉・魚・卵・豆に分け、5分刻みの時間条件も用意する。",
+      "implication": "主食と主菜を混同しない分類にし、60枠で何を数えるかをサイト冒頭に明示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR20",
+      "category": "メーカー公式",
+      "name": "明治 食を知る・楽しむ レシピ",
+      "url": "https://www.meiji.co.jp/learned/recipe/",
+      "status": "本文確認",
+      "observation": "基本ワザ、世界の家庭料理、余り食材の使い切りに進める入口がある。",
+      "implication": "基本技法と世界の料理を段階的に組み込み、食材共有と料理の多様性を両立する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR21",
+      "category": "メーカー公式",
+      "name": "森永乳業 レシピ",
+      "url": "https://www.morinagamilk.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "季節のレシピと乳製品の活用動画、牛乳・ヨーグルト・チーズ等の商品分類で案内する。",
+      "implication": "乳製品等を使い切れる料理を週内に配置し、使わない選択肢もデータ上で区別する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR22",
+      "category": "メーカー公式",
+      "name": "オタフクソース レシピ",
+      "url": "https://www.otafuku.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "広島・関西お好み焼、焼そば、たこ焼、チヂミの焼き方を動画や写真で案内する。",
+      "implication": "粉ものの代表料理を60品に含め、裏返し・焼き上がり等の失敗しやすい場面を説明する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR23",
+      "category": "メーカー公式",
+      "name": "ニッスイ レシピ",
+      "url": "https://www.nissui.co.jp/recipe/index.html",
+      "status": "本文確認",
+      "observation": "10分以内、食材3品以下の検索入口と、お魚料理を動画・写真で説明するFish Kitchenがある。",
+      "implication": "時間に加え材料数でも絞り込み、魚料理の基礎に到達できる導線を用意する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR24",
+      "category": "メーカー公式",
+      "name": "Umios レシピ（旧マルハニチロURLから転送）",
+      "url": "https://www.umios.com/jp/recipe/index",
+      "status": "本文確認",
+      "observation": "商品・ジャンル・季節・調理方法で検索でき、世界各国の魚介料理を別企画として紹介する。",
+      "implication": "魚介料理を日本風だけに偏らせず、リンクの転送先と最終確認日を記録する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "BR25",
+      "category": "メーカー公式",
+      "name": "はごろもフーズ レシピ",
+      "url": "https://www.hagoromofoods.co.jp/recipe/",
+      "status": "本文確認",
+      "observation": "炊き込みご飯などの缶詰活用に加え、オーブンがなくてもフライパンで仕上げるグラタンを案内する。",
+      "implication": "必須器具と代替器具を定義し、缶の液汁を使うか捨てるかも材料欄に明示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL01",
+      "category": "海外レシピ",
+      "name": "Good Food（旧 BBC Good Food）",
+      "url": "https://www.bbcgoodfood.com/",
+      "status": "本文確認",
+      "observation": "料理一覧に調理時間と Easy などの難易度を併記。取得時は同社 tollbit サブドメインへ転送。",
+      "implication": "60品一覧に所要時間・難易度を常時表示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL02",
+      "category": "海外レシピ",
+      "name": "Allrecipes",
+      "url": "https://www.allrecipes.com/",
+      "status": "本文確認",
+      "observation": "料理名・所要時間・評価数に加えて保存導線を掲載。",
+      "implication": "公開評価より先に、自分用の「作りたい・作った」を実装する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL03",
+      "category": "海外レシピ",
+      "name": "Serious Eats",
+      "url": "https://www.seriouseats.com/",
+      "status": "本文確認",
+      "observation": "Food Science と Equipment の案内をレシピと別に設けている。",
+      "implication": "手順に「なぜそうするか」を短く添え、基本技術へリンクする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL04",
+      "category": "海外レシピ",
+      "name": "Simply Recipes",
+      "url": "https://www.simplyrecipes.com/",
+      "status": "本文確認",
+      "observation": "料理ごとに Why Make This として簡単さ・残り食材利用などを説明。",
+      "implication": "各料理に「この料理で覚えること」「作りやすい理由」を設ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL05",
+      "category": "海外レシピ",
+      "name": "The Kitchn",
+      "url": "https://www.thekitchn.com/",
+      "status": "本文確認",
+      "observation": "30分以内・鍋一つの分類と、代用食材・包丁技術・保存の案内がある。",
+      "implication": "時間・調理器具と初心者向け基礎記事を結び付ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL06",
+      "category": "海外レシピ",
+      "name": "EatingWell",
+      "url": "https://www.eatingwell.com/",
+      "status": "本文確認",
+      "observation": "週間献立と買い物リストを組にした記事への案内がある。",
+      "implication": "30日計画から週単位の材料確認へ進める構成にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL07",
+      "category": "海外レシピ",
+      "name": "Food Network UK",
+      "url": "https://foodnetwork.co.uk/recipes",
+      "status": "本文確認",
+      "observation": "食事区分・主材料・食事条件別に分類。米国URLから英国版へ転送。",
+      "implication": "昼・夜と主材料を独立した項目にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL08",
+      "category": "海外レシピ",
+      "name": "Delish",
+      "url": "https://www.delish.com/",
+      "status": "本文確認",
+      "observation": "Fast、Budget、One-Pan など生活上の条件から料理へ進める。",
+      "implication": "初心者の選択条件を「短時間・材料少なめ・洗い物少なめ」にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL09",
+      "category": "海外レシピ",
+      "name": "Bon Appétit",
+      "url": "https://www.bonappetit.com/",
+      "status": "本文確認",
+      "observation": "月の平日夕食特集と、料理ごとの短い説明を掲載。",
+      "implication": "月間計画と、各料理を選ぶ理由を同時に見せる。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL10",
+      "category": "海外レシピ",
+      "name": "Martha Stewart",
+      "url": "https://www.marthastewart.com/",
+      "status": "本文確認",
+      "observation": "基本調理やソースの失敗修正記事への案内がある。",
+      "implication": "「失敗しやすい点・戻し方」を料理ページの項目にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL11",
+      "category": "海外レシピ",
+      "name": "Budget Bytes",
+      "url": "https://www.budgetbytes.com/",
+      "status": "本文確認",
+      "observation": "レシピ全体の費用と1人分の費用を併記。",
+      "implication": "費用を載せるなら人数・調査日・対象地域を明記した独自概算にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL12",
+      "category": "海外レシピ",
+      "name": "RecipeTin Eats",
+      "url": "https://www.recipetineats.com/",
+      "status": "本文確認",
+      "observation": "材料・料理地域・鍋一つ・米料理・パスタなど複数の分類を用意。",
+      "implication": "主食の種類と調理法を別タグにし、偏りを確認できるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL13",
+      "category": "海外レシピ",
+      "name": "Just One Cookbook",
+      "url": "https://www.justonecookbook.com/",
+      "status": "本文確認",
+      "observation": "Start Here、初心者向け5品、切り方、食材、常備調味料の案内がある。",
+      "implication": "60品一覧とは別に「初めての人向け」の開始導線を設ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL14",
+      "category": "海外レシピ",
+      "name": "Just Hungry",
+      "url": "https://justhungry.com/",
+      "status": "本文確認",
+      "observation": "料理名による索引と Japanese Cooking 101 の学習案内がある。",
+      "implication": "料理名索引に加えて、順番に学べる基本講座を置く。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL15",
+      "category": "海外レシピ",
+      "name": "Chopstick Chronicles",
+      "url": "https://www.chopstickchronicles.com/",
+      "status": "本文確認",
+      "observation": "丼・麺・米などの料理種別と、蒸す・揚げるなどの調理法を分離。",
+      "implication": "60品の重複判定は料理IDで行い、分類は複数持たせる。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL16",
+      "category": "海外レシピ",
+      "name": "The Woks of Life",
+      "url": "https://thewoksoflife.com/",
+      "status": "本文確認",
+      "observation": "調理法・道具・中華食材辞典をそれぞれ案内。",
+      "implication": "初見の食材・道具は料理から説明へ進めるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL17",
+      "category": "海外レシピ",
+      "name": "Maangchi",
+      "url": "https://www.maangchi.com/",
+      "status": "本文確認",
+      "observation": "レシピ、食材、調理器具を分け、料理記事と動画への案内を掲載。",
+      "implication": "必要な動作だけ補助説明を置き、本文だけでも作れる形を基本にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL18",
+      "category": "海外レシピ",
+      "name": "Korean Bapsang",
+      "url": "https://www.koreanbapsang.com/",
+      "status": "本文確認",
+      "observation": "初めての人向け Start Here と、辛さの穏やかな料理分類がある。",
+      "implication": "初回案内と、辛さ・苦手食材による差し替えを考慮する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL19",
+      "category": "海外レシピ",
+      "name": "Hebbar’s Kitchen",
+      "url": "https://hebbarskitchen.com/",
+      "status": "本文確認",
+      "observation": "米料理をビリヤニ・プラオに、昼食をロティ・パラタなどに分類。",
+      "implication": "「ご飯・麺・パン」だけでなく、違う調理技術を学べる内訳を設ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL20",
+      "category": "海外レシピ",
+      "name": "Cookie and Kate",
+      "url": "https://cookieandkate.com/",
+      "status": "本文確認",
+      "observation": "週の夕食5品を提示し、料理・地域・食材・食事条件・季節から探せる。",
+      "implication": "30日を一度に扱う画面に加え、今週の範囲を切り出す。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL21",
+      "category": "海外レシピ",
+      "name": "Love and Lemons",
+      "url": "https://www.loveandlemons.com/",
+      "status": "本文確認",
+      "observation": "調理時間を併記し、当月の Cooking Club 課題を掲載。",
+      "implication": "月間目標と、今作る1品への導線を用意する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL22",
+      "category": "海外レシピ",
+      "name": "Smitten Kitchen",
+      "url": "https://smittenkitchen.com/",
+      "status": "本文確認",
+      "observation": "一つの記事に Budget・Chicken・Quick・Weeknight Favorite など複数タグ。",
+      "implication": "「料理の種類」と「日常で作りやすい条件」を分けて管理する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL23",
+      "category": "海外レシピ",
+      "name": "Minimalist Baker",
+      "url": "https://minimalistbaker.com/",
+      "status": "本文確認",
+      "observation": "30分・鍋一つといった条件を料理名に示し、食事条件の略号に凡例を用意。",
+      "implication": "タグの意味を明示し、難解な略語を避ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL24",
+      "category": "海外レシピ",
+      "name": "Natasha’s Kitchen",
+      "url": "https://natashaskitchen.com/",
+      "status": "本文確認",
+      "observation": "Saved Recipes と Cooking Challenge の入口を設置。",
+      "implication": "料理を集める機能より、課題と達成状況を中心に据える。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "GL25",
+      "category": "海外レシピ",
+      "name": "Pinch of Yum",
+      "url": "https://pinchofyum.com/",
+      "status": "本文確認",
+      "observation": "Meal Prep・Quick and Easy の分類と冷凍準備の記事を掲載。",
+      "implication": "まとめて仕込めるものと、食べる直前に仕上げるものを区別する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL01",
+      "category": "献立管理と買物",
+      "name": "Mealime",
+      "url": "https://www.mealime.com/",
+      "status": "本文確認",
+      "observation": "計画・買物・調理の3段階と、2026年10月21日の終了予告を掲載。",
+      "implication": "導線をつなぎ、外部サービスを必須依存にしない。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL02",
+      "category": "献立管理と買物",
+      "name": "Eat This Much",
+      "url": "https://www.eatthismuch.com/",
+      "status": "本文確認",
+      "observation": "食事条件・予算・予定に応じた献立と在庫優先の説明。",
+      "implication": "条件選択を先に置く。栄養の自動最適化は初版から外す。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL03",
+      "category": "献立管理と買物",
+      "name": "Plan to Eat",
+      "url": "https://www.plantoeat.com/",
+      "status": "本文確認",
+      "observation": "献立カレンダーから買物リストを作成すると説明。",
+      "implication": "計画と買物リストを同じデータから作る。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL04",
+      "category": "献立管理と買物",
+      "name": "Paprika",
+      "url": "https://www.paprikaapp.com/",
+      "status": "本文確認",
+      "observation": "同じ材料の合算、分量調整、工程の選択、月間計画を説明。",
+      "implication": "材料IDと単位を統一する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL05",
+      "category": "献立管理と買物",
+      "name": "Pepperplate",
+      "url": "https://www.pepperplate.com/",
+      "status": "本文確認",
+      "observation": "週の予定、分量調整、複数タイマー、調理モードを紹介。",
+      "implication": "調理中は工程を大きく表示する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL06",
+      "category": "献立管理と買物",
+      "name": "SideChef",
+      "url": "https://www.sidechef.com/",
+      "status": "本文確認",
+      "observation": "料理・食材・調理器具別の入口と、材料追加の導線。",
+      "implication": "器具と時間で絞り込む。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL07",
+      "category": "献立管理と買物",
+      "name": "Samsung Food",
+      "url": "https://samsungfood.com/",
+      "status": "本文確認",
+      "observation": "保存、週の献立、買物、共有を紹介。",
+      "implication": "献立編集から買物へつなぐ。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL08",
+      "category": "献立管理と買物",
+      "name": "AnyList",
+      "url": "https://www.anylist.com/",
+      "status": "本文確認",
+      "observation": "売場別の自動分類と週・月のカレンダーを説明。",
+      "implication": "買物リストを売場別に分ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL09",
+      "category": "献立管理と買物",
+      "name": "eMeals",
+      "url": "https://emeals.com/",
+      "status": "本文確認",
+      "observation": "週の料理を選んでから買物へ進む構成。",
+      "implication": "月間全体と今週を切り替える。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL10",
+      "category": "献立管理と買物",
+      "name": "Cook Smarts",
+      "url": "https://www.cooksmarts.com/",
+      "status": "本文確認",
+      "observation": "料理学習と献立を結び、実作業時間を説明。",
+      "implication": "総時間と手を動かす時間を分ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL11",
+      "category": "献立管理と買物",
+      "name": "The Dinner Daily",
+      "url": "https://thedinnerdaily.com/",
+      "status": "本文確認",
+      "observation": "店の特売に応じた週間献立と買物リストを紹介。",
+      "implication": "初版では固定価格を断定しない。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL12",
+      "category": "献立管理と買物",
+      "name": "Recipe Keeper",
+      "url": "https://recipekeeperonline.com/",
+      "status": "本文確認",
+      "observation": "週・月の献立、分量変更、買物分類、料理本出力を説明。",
+      "implication": "料理と買物を印刷できるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL13",
+      "category": "献立管理と買物",
+      "name": "CookBook",
+      "url": "https://cookbookmanager.com/",
+      "status": "本文確認",
+      "observation": "料理モードに大きい文字、タイマー、分量変更、調理日記録を説明。",
+      "implication": "調理画面から作った記録へ続ける。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL14",
+      "category": "献立管理と買物",
+      "name": "Prepear",
+      "url": "https://www.prepear.com/",
+      "status": "本文確認",
+      "observation": "献立に残り物や外食、予定変更の余地を残すと説明。",
+      "implication": "予定の入替・保留を認める。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL15",
+      "category": "献立管理と買物",
+      "name": "Mealie",
+      "url": "https://mealie.io/",
+      "status": "本文確認",
+      "observation": "朝昼夕のカレンダーと世帯別の献立・買物分離を説明。",
+      "implication": "朝食と昼夕の60料理を別に集計する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL16",
+      "category": "献立管理と買物",
+      "name": "Tandoor",
+      "url": "https://tandoor.dev/",
+      "status": "本文確認",
+      "observation": "手動・自動献立、買物の売場順、標準形式への出力を説明。",
+      "implication": "初版は手動入替とデータ出力に絞る。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL17",
+      "category": "献立管理と買物",
+      "name": "Grocy",
+      "url": "https://grocy.info/",
+      "status": "本文確認",
+      "observation": "在庫を料理と照合し、不足品を買物へ追加する説明。",
+      "implication": "まず「家にある」チェックを採用する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL18",
+      "category": "献立管理と買物",
+      "name": "Intent",
+      "url": "https://www.intentapp.com/",
+      "status": "本文確認",
+      "observation": "目標や好みに合わせた献立を簡潔に案内。公開説明は短い。",
+      "implication": "初回設定を目的と必要条件に絞る。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL19",
+      "category": "献立管理と買物",
+      "name": "おいしい健康",
+      "url": "https://oishi-kenko.com/",
+      "status": "本文確認",
+      "observation": "食材検索、献立検索、印刷と栄養情報の出典を掲載。",
+      "implication": "検索と印刷を採用。根拠がない栄養数値は載せない。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL20",
+      "category": "献立管理と買物",
+      "name": "me:new",
+      "url": "https://menew.jp/",
+      "status": "本文確認",
+      "observation": "数日分の献立、買物リスト、家にある材料のチェックを説明。",
+      "implication": "買物期間を選び、朝食材料も任意で追加できるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL21",
+      "category": "献立管理と買物",
+      "name": "ヨシケイ",
+      "url": "https://yoshikei-dvlp.co.jp/",
+      "status": "本文確認",
+      "observation": "初めての人向け案内、メニュー紹介、レシピへの入口を分けている。",
+      "implication": "初回の準備から30日計画へ案内する。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL22",
+      "category": "献立管理と買物",
+      "name": "ReciMe",
+      "url": "https://www.recime.app/",
+      "status": "本文確認",
+      "observation": "買物リストを売場別またはレシピ別に整理できると説明。",
+      "implication": "合算材料から元の料理をたどれるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL23",
+      "category": "献立管理と買物",
+      "name": "Bring!",
+      "url": "https://www.getbring.com/en/home",
+      "status": "本文確認",
+      "observation": "共有買物リストとレシピ材料の追加を説明。",
+      "implication": "買物チェックを大きくし容易に戻せるようにする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL24",
+      "category": "献立管理と買物",
+      "name": "OurGroceries",
+      "url": "https://www.ourgroceries.com/overview",
+      "status": "本文確認",
+      "observation": "数量やメモ、売場別分類、料理からの材料追加を紹介。",
+      "implication": "数量・単位・補足を別項目にする。",
+      "checkedAt": "2026-10-17"
+    },
+    {
+      "id": "PL25",
+      "category": "献立管理と買物",
+      "name": "NoWaste",
+      "url": "https://www.nowasteapp.com/home/",
+      "status": "本文確認",
+      "observation": "冷蔵・冷凍・食品庫別の在庫と在庫に応じた料理を案内。",
+      "implication": "保存場所は追加候補。詳細な在庫管理は初版から外す。",
+      "checkedAt": "2026-10-17"
+    }
+  ],
+  "excluded": [
+    {
+      "category": "国内レシピ",
+      "name": "E・レシピ",
+      "url": "https://erecipe.woman.excite.co.jp/",
+      "reason": "web openは403 Forbidden。本文未取得のため25件には含めず、他サイトに置換。"
+    },
+    {
+      "category": "国内レシピ",
+      "name": "レタスクラブ",
+      "url": "https://www.lettuceclub.net/recipe/",
+      "reason": "web openは404 Not Found。トップURLでも404となった。このツールでの取得結果でありサービス終了の断定ではない。"
+    },
+    {
+      "category": "国内レシピ",
+      "name": "旧レシピブログ",
+      "url": "https://foodistnote.recipe-blog.jp/recipeblog-closed/",
+      "reason": "https://www.recipe-blog.jp/をweb openすると公式終了案内へ転送。2025年6月30日の終了とフーディストノートへの移行を本文確認。現行サイトのみ1件に計上。"
+    },
+    {
+      "category": "国内レシピ",
+      "name": "リュウジ バズレシピ",
+      "url": "https://bazurecipe.com/",
+      "reason": "web openは403 Forbidden。本文未取得のため件数に含めない。"
+    },
+    {
+      "category": "国内レシピ",
+      "name": "栗原はるみ旧レシピURL",
+      "url": "https://www.yutori.co.jp/shop/rp/rp.aspx",
+      "reason": "このURLはツールで取得不能。/recipe/から転送される現行/shop/rpc/rpc0/を別途web openで本文確認済み。"
+    },
+    {
+      "category": "メーカー公式",
+      "name": "ニチレイフーズ ほほえみごはん",
+      "url": "https://www.nichireifoods.co.jp/media/",
+      "reason": "公式の検索結果は取得できたが、トップ・別URL・検索結果URLのopenが取得エラー。成功25サイトには含めずオタフクソースで補充。"
+    },
+    {
+      "category": "メーカー公式",
+      "name": "七福醸造 季節のレシピ",
+      "url": "https://7fukuj.co.jp/recipe_type/list/",
+      "reason": "公式一覧の本文は確認したが、個別レシピはCookpadへの外部リンク。自社レシピ本文の調査対象としては件数外とし桃屋で補充。"
+    },
+    {
+      "category": "海外レシピ",
+      "name": "BBC Food",
+      "url": "https://www.bbc.co.uk/food",
+      "reason": "robots.txt による取得拒否"
+    },
+    {
+      "category": "海外レシピ",
+      "name": "Food52",
+      "url": "https://food52.com/",
+      "reason": "取得失敗"
+    },
+    {
+      "category": "海外レシピ",
+      "name": "Epicurious",
+      "url": "https://www.epicurious.com/",
+      "reason": "本文サイズ上限で取得失敗"
+    },
+    {
+      "category": "海外レシピ",
+      "name": "NYT Cooking",
+      "url": "https://cooking.nytimes.com/",
+      "reason": "取得失敗。有料壁の有無・内容はこの結果から判断不可"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "Copy Me That",
+      "url": "https://www.copymethat.com/",
+      "reason": "403"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "BigOven",
+      "url": "https://www.bigoven.com/",
+      "reason": "403"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "Tasty",
+      "url": "https://tasty.co/",
+      "reason": "robots.txtによる取得拒否"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "Kitchen Stories",
+      "url": "https://www.kitchenstories.com/en",
+      "reason": "利用規約本文を取得。料理機能の比較から除外"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "Forks Over Knives",
+      "url": "https://www.forksoverknives.com/",
+      "reason": "ショップへ転送。献立ページ本文は取得できず"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "SuperCook",
+      "url": "https://www.supercook.com/",
+      "reason": "JavaScript未実行時の代替文のみ"
+    },
+    {
+      "category": "献立管理と買物",
+      "name": "Lifesum",
+      "url": "https://www.lifesum.com/",
+      "reason": "取得失敗"
+    }
+  ]
+}
