@@ -1,0 +1,69 @@
+{
+  "sourceCommit": "47d54ca1ebb14fd864695f1d39dc734f39017c33",
+  "sourceFiles": [
+    "data/public/candidates.json",
+    "data/public/recipes-dinner.json",
+    "data/public/recipes-lunch.json",
+    "data/public/references.json",
+    "scripts/build.mjs",
+    "src/app.mjs",
+    "src/core.mjs",
+    "src/guide.html",
+    "src/render.mjs",
+    "src/style.css"
+  ],
+  "fonts": [
+    {
+      "filename": "inter-latin.woff2",
+      "bytes": 107044,
+      "characters": 300,
+      "glyphs": 788,
+      "axes": [
+        {
+          "tag": "opsz",
+          "min": 14.0,
+          "default": 14.0,
+          "max": 32.0
+        },
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "default": 400.0,
+          "max": 900.0
+        }
+      ],
+      "sha256": "8bec3df099d62aba484cbb3207a30fdb83b7eb7a74920d712c62f0b261a6766d",
+      "sourceSha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "sourceUrl": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+      "licenseFile": "OFL-Inter.txt"
+    },
+    {
+      "filename": "noto-sans-jp.woff2",
+      "bytes": 409604,
+      "characters": 1313,
+      "glyphs": 2118,
+      "axes": [
+        {
+          "tag": "wght",
+          "min": 100.0,
+          "default": 100.0,
+          "max": 900.0
+        }
+      ],
+      "sha256": "f6640ed1efc0b99fec73fa88e06a1c4f5b93427f74406b38f0d895c3dd9472d2",
+      "sourceSha256": "c2f3b4d463500a2ddcd3849cded1fceeb9fd6d1c32e6cbecd568453ba50fc68f",
+      "sourceUrl": "https://raw.githubusercontent.com/google/fonts/47d54ca1ebb14fd864695f1d39dc734f39017c33/ofl/notosansjp/NotoSansJP%5Bwght%5D.ttf",
+      "licenseFile": "OFL-NotoSansJP.txt"
+    }
+  ],
+  "retrievedAt": "2026-10-17",
+  "transformation": {
+    "format": "WOFF2",
+    "fontTools": "4.60.2",
+    "brotli": "1.2.0",
+    "subset": true,
+    "preserveVariableAxes": true,
+    "preserveNameMetadata": true,
+    "preserveHinting": true
+  }
+}

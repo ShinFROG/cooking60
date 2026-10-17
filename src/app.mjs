@@ -1,5 +1,5 @@
 import * as core from './core.mjs';
-import {esc,qty,status,card,recipeBody} from './render.mjs';
+import {esc,qty,status,card,recipeBody,icon} from './render.mjs';
 
 const root = new URL('../', import.meta.url);
 const app = document.querySelector('#app');
@@ -30,7 +30,7 @@ function stats(){
 }
 function home(){
  const d=activeDay(),n=dayNumber();
- return '<section class="hero"><div><p class="eyebrow">30 DAYS · 60 DISHES</p><h1>毎日のごはんを、<br>自分の得意に。</h1><p class="lead">昼と夜にひとつずつ。いつもの食材で、<br>作れる料理を少しずつ増やす30日。</p><div class="toolbar"><a class="button primary" href="'+link('plan/')+'">30日の献立を見る <span aria-hidden="true">→</span></a><a href="'+link('guide/')+'">はじめての方へ</a></div><p class="fine">1〜4人分に対応 · 記録はこの端末内に保存</p></div><div class="hero-art"><img src="'+link('assets/plate.svg')+'" alt="ご飯、卵、野菜を盛り付けた食卓のイラスト" width="500" height="400"></div></section>'+stats()+'<section><div class="section-heading"><div><p class="eyebrow">YOUR NEXT MEAL</p><h2>'+(n<1?'開始日の献立':n>30?'30日目の献立':'今日の献立')+' <small>DAY '+String(d).padStart(2,'0')+'</small></h2></div><a href="'+link('plan/')+'">献立を調整する →</a></div><div class="grid two">'+state.slots.filter(s=>s.day===d).map(s=>'<div><p class="meal-status">'+(s.meal==='lunch'?'昼ごはん':'夜ごはん')+(s.mode!=='cook'?' · '+(s.mode==='hold'?'保留':'外食'):'')+'</p>'+card(byId(s.recipeId),root.pathname,state.progress[s.recipeId])+'</div>').join('')+'</div></section><section class="inset"><h2>作る前に、買うものをひとまとめ。</h2><p>献立と人数から材料を集計します。家にあるものはチェックして、必要な分だけ買い物へ。</p><a class="button quiet" href="'+link('shopping/')+'">買物リストを開く →</a></section><div class="notice"><strong>公開準備版</strong> 60品の材料・手順を公開情報と照合して見直しました。実際の調理は未試作で、時間・分量は目安です。<a href="'+link('about/')+'">内容と検証状況</a></div>';
+ return '<section class="hero"><div><p class="eyebrow">30 DAYS · 60 DISHES</p><h1>毎日のごはんを、<br>自分の得意に。</h1><p class="lead">昼と夜にひとつずつ。いつもの食材で、<br>作れる料理を少しずつ増やす30日。</p><div class="toolbar"><a class="button primary" href="'+link('plan/')+'">30日の献立を見る <span aria-hidden="true">→</span></a><a href="'+link('guide/')+'">はじめての方へ</a></div><p class="fine">1〜4人分に対応 · 記録はこの端末内に保存</p></div><div class="hero-art" aria-hidden="true"><div class="hero-poster"><span class="poster-kicker">A LITTLE EVERY DAY.</span><strong>60<span>RECIPES</span></strong><div class="poster-bottom"><span>30 DAYS<br>LUNCH + DINNER</span>'+icon('rice')+'</div></div></div></section>'+stats()+'<section><div class="section-heading"><div><p class="eyebrow">YOUR NEXT MEAL</p><h2>'+(n<1?'開始日の献立':n>30?'30日目の献立':'今日の献立')+' <small>DAY '+String(d).padStart(2,'0')+'</small></h2></div><a href="'+link('plan/')+'">献立を調整する →</a></div><div class="grid two">'+state.slots.filter(s=>s.day===d).map(s=>'<div><p class="meal-status">'+(s.meal==='lunch'?'昼ごはん':'夜ごはん')+(s.mode!=='cook'?' · '+(s.mode==='hold'?'保留':'外食'):'')+'</p>'+card(byId(s.recipeId),root.pathname,state.progress[s.recipeId])+'</div>').join('')+'</div></section><section class="inset"><h2>作る前に、買うものをひとまとめ。</h2><p>献立と人数から材料を集計します。家にあるものはチェックして、必要な分だけ買い物へ。</p><a class="button quiet" href="'+link('shopping/')+'">買物リストを開く →</a></section><div class="notice"><strong>公開準備版</strong> 60品の材料・手順を公開情報と照合して見直しました。実際の調理は未試作で、時間・分量は目安です。<a href="'+link('about/')+'">内容と検証状況</a></div>';
 }
 function plan(){
  const start=planView==='all'?1:planView==='today'?activeDay():Number(planView);
@@ -80,7 +80,7 @@ function dialog(title,body,confirmLabel,onConfirm){
 }
 window.addEventListener('beforeunload',e=>{if(unsaved){e.preventDefault();e.returnValue='';}});
 const printedDetails=new Map();
-window.addEventListener('beforeprint',()=>{document.querySelectorAll('.recipe-layout details').forEach(el=>{printedDetails.set(el,el.open);el.open=true;});});
+window.addEventListener('beforeprint',()=>{document.querySelectorAll('.recipe-layout details, .recipe-disclosure').forEach(el=>{printedDetails.set(el,el.open);el.open=true;});});
 window.addEventListener('afterprint',()=>{for(const [el,open] of printedDetails)el.open=open;printedDetails.clear();});
 document.addEventListener('input',e=>{if(e.target.id==='search'){filter.q=e.target.value;filterRecipes();}});
 document.addEventListener('change',async e=>{
@@ -116,7 +116,7 @@ document.addEventListener('click',e=>{
  const a=el.dataset.action;
  try{
  if(a==='print')window.print();
- if(a==='cook-mode'){const on=document.body.classList.toggle('cook-mode');el.textContent=on?'通常表示に戻す':'調理表示にする';}
+ if(a==='cook-mode'){const on=document.body.classList.toggle('cook-mode');el.innerHTML=icon(on?'recipes':'play')+(on?'通常表示に戻す':'調理表示にする');}
  if(a==='clear-filter'){Object.keys(filter).forEach(k=>filter[k]='');render();}
  if(a==='range'){toDay=Math.min(30,fromDay+Number(el.dataset.days)-1);render();}
  if(a==='remove-date'){const id=document.body.dataset.recipeId;commit(core.updateProgress(state,id,{dates:state.progress[id].dates.filter(d=>d!==el.dataset.date)}),'記録日を削除しました。');}

@@ -60,6 +60,9 @@ async function readDownload(download) {
 
 async function mainFlow(page) {
   await goto(page);
+  await page.evaluate(() => document.fonts.ready);
+  const loadedFonts = await page.evaluate(() => [...document.fonts].filter(font => font.status === 'loaded').map(font => font.family));
+  assert.ok(loadedFonts.includes('Inter') && loadedFonts.includes('Noto Sans JP'), 'Both self-hosted fonts load under the site CSP.');
   assert.match(await page.locator('h1').textContent(), /毎日のごはん/);
   assert.equal(await page.locator('.overview .stat').count(), 3);
   await noOverflow(page, 'Desktop home');
