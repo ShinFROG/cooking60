@@ -11,7 +11,8 @@ test('the actual public data passes the preview gate with all 60 distinct meals'
   assert.equal(result.ok, true);
   assert.equal(result.stats.recipeCount, 60);
   assert.equal(result.stats.dayCount, 30);
-  assert.ok(result.stats.estimatedWithin30 >= 48, 'The intended preview has at least 48 dishes with an estimated duration of 30 minutes or less.');
+  assert.equal(result.stats.sourceReviewedCount, 60);
+  assert.equal(result.stats.estimatedWithin30, data.recipes.filter(recipe => recipe.estimatedTotalMinutes <= 30).length, 'Estimated durations are counted from the reviewed content, never forced to meet a target.');
 });
 
 test('all 30 days use each public recipe exactly once and round-trip through state validation', () => {
@@ -42,6 +43,7 @@ test('all current recipes remain explicitly untested and the release gate preven
   assert.equal(result.ok, false);
   assert.equal(result.stats.verifiedCount, 0);
   assert.equal(result.stats.measuredWithin30, 0);
+  assert.equal(result.stats.sourceReviewedCount, 60, 'A public-source comparison does not count as an actual cooking trial.');
   assert.ok(result.errors.some(error => error.includes('全60品に実調理')));
   assert.ok(result.errors.some(error => error.includes('48品で実測')));
 });
@@ -76,6 +78,9 @@ test('public content validation catches missing rice, duplicate menus, unsafe UR
     changed => { changed.recipes[0].rights.license = 'unknown'; },
     changed => { changed.recipes[0].validation = { status: 'untested', note: '公開版です' }; },
     changed => { changed.recipes[0].prepNote = '/Users/private-user/secrets.json'; },
+    changed => { delete changed.recipes[0].sourceReview; },
+    changed => { changed.recipes[0].sourceReview.sourceUrls = ['https://example.com/unlinked-reference']; },
+    changed => { changed.recipes[0].sources.find(source => source.purpose === 'recipe-comparison').checkedAt = '2026-02-30'; },
   ];
   for (const change of cases) {
     const changed = structuredClone(data);

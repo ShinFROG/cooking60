@@ -146,7 +146,7 @@
       "canonicalDishId": "dish-11",
       "title": "オムライス",
       "mealForm": "ご飯",
-      "skill": "卵で包む",
+      "skill": "卵の焼き方と盛り付け",
       "slotSuggestion": "lunch",
       "contentStatus": "candidate",
       "cookingValidation": "not_tested",

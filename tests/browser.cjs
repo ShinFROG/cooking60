@@ -7,6 +7,9 @@ const base = new URL(process.env.TEST_URL || 'http://127.0.0.1:4173/cooking60/')
 if (!base.pathname.endsWith('/')) base.pathname += '/';
 const storageKey = `cooking60:${base.pathname}:v1`;
 const qa = resolve(__dirname, '../.qa');
+const fs = require('node:fs');
+const publicRecipes=['lunch','dinner'].flatMap(part=>JSON.parse(fs.readFileSync(resolve(__dirname,'../data/public/recipes-'+part+'.json'),'utf8')));
+const within30=publicRecipes.filter(r=>r.estimatedTotalMinutes<=30).length;
 const errors = [];
 const externalRequests = new Set();
 let browser;
@@ -64,10 +67,10 @@ async function mainFlow(page) {
   await goto(page, 'recipes/');
   assert.equal(await page.locator('#recipe-grid .recipe-card').count(), 60);
   await page.locator('[data-filter="time"]').selectOption('30');
-  assert.equal(await page.locator('#recipe-grid .recipe-card').count(), 48);
+  assert.equal(await page.locator('#recipe-grid .recipe-card').count(), within30);
   await page.locator('#search').fill('うどん');
   const filteredCount = await page.locator('#recipe-grid .recipe-card').count();
-  assert.ok(filteredCount > 0 && filteredCount < 48);
+  assert.ok(filteredCount > 0 && filteredCount < within30);
   assert.ok((await page.locator('#recipe-grid h3').allTextContents()).every(title => title.includes('うどん')));
   await page.locator('#search').fill('該当しないテスト料理名');
   assert.equal(await page.locator('#recipe-grid .recipe-card').count(), 0);
@@ -81,6 +84,13 @@ async function mainFlow(page) {
   await page.waitForURL(new URL('recipes/dish-01/', base).href);
   await page.locator('#record-form').waitFor();
   assert.match(await page.locator('h1').textContent(), /卵チャーハン/);
+  assert.match(await page.locator('.review-status').textContent(), /公開情報と照合しました/);
+  await page.locator('.review-status a').click();
+  assert.match(page.url(), /#source-review$/);
+  await page.locator('#source-review details summary').click();
+  assert.equal(await page.locator('#source-review details').getAttribute('open'), '');
+  assert.match(await page.locator('#source-review').textContent(), /実際の調理、味、加熱結果、所要時間は未検証/);
+  assert.ok(await page.locator('#source-review a[href^="https://"]').count() >= 2);
   await page.locator('#servings').selectOption('2');
   assert.match(await page.locator('.ingredient-list li').filter({ hasText: 'ご飯' }).locator('strong').textContent(), /^400g$/);
   assert.equal(await page.locator('[data-action="mastered"]').isDisabled(), true);

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { recipeBody, scaleText } from '../src/render.mjs';
+import { recipeBody, reviewBody, scaleText } from '../src/render.mjs';
 
 const read = part => JSON.parse(readFileSync(new URL('../data/public/recipes-'+part+'.json',import.meta.url),'utf8'));
 const recipes = [...read('lunch'),...read('dinner')];
@@ -40,6 +40,11 @@ test('rice cooker quantity and total wrapped portions scale; individual portions
  assert.ok(recipeBody(recipe('dish-56'),4).includes('具を皮の枚数に合わせて等分する'));
  assert.ok(recipeBody(recipe('dish-47'),4).includes('生地を人数分に分け、1枚ずつ焼く'));
  assert.ok(recipeBody(recipe('dish-21'),4).includes('具とソースを生地の枚数に合わせて分け'));
+ // Steam water follows pan depth rather than the ingredient multiplier.
+ for(const id of ['dish-04','dish-14']){
+  assert.equal(recipe(id).ingredients.find(i=>i.name==='水').quantity,null,id);
+  assert.ok(recipeBody(recipe(id),4).includes(id==='dish-04'?'約1cmの深さ':'高さの3分の1〜半分'),id);
+ }
 });
 
 test('replacements are explicit, numeric-boundary safe and single pass',()=>{
@@ -47,6 +52,24 @@ test('replacements are explicit, numeric-boundary safe and single pass',()=>{
  assert.equal(scaleText('5g、20g、125g、1.5g、75℃、5分、1cm',r,4),'20g、80g、125g、1.5g、75℃、5分、1cm');
  assert.equal(scaleText('水10ml',{baseServings:2,scales:[{text:'10ml',quantity:10,unit:'ml'}]},4),'水20ml');
  assert.equal(scaleText('未指定の10ml',{baseServings:1},4),'未指定の10ml');
+});
+
+test('source comparison has traceable links and remains distinct from a cooking trial',()=>{
+ const r=structuredClone(recipe('dish-01'));
+ r.sourceReview={status:'reviewed',checkedAt:'2026-10-17',checks:['比率の比較'],changes:['<script>unsafe</script>']};
+ r.sources=[
+  {label:'調理資料',url:'https://example.com/recipe',purpose:'recipe-comparison'},
+  {label:'食品の扱い',url:'https://example.com/safety'}
+ ];
+ const html=reviewBody(r);
+ assert.match(html,/公開情報との照合：2026-10-17/);
+ assert.match(html,/実際の調理、味、加熱結果、所要時間は未検証/);
+ assert.match(html,/<h3>材料・手順の照合先<\/h3><ul><li><a href="https:\/\/example.com\/recipe"/);
+ assert.match(html,/<h3>食品の取り扱いの参考<\/h3><ul><li><a href="https:\/\/example.com\/safety"/);
+ assert.ok(html.includes('&lt;script&gt;unsafe&lt;/script&gt;'));
+ assert.ok(!html.includes('<script>'));
+ delete r.sourceReview;
+ assert.match(reviewBody(r),/個別照合は未記録/);
 });
 
 test('scaled prose is HTML escaped before insertion',()=>{

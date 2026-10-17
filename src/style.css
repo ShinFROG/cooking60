@@ -7,3 +7,5 @@
 @page{size:A4;margin:14mm}@media print{h1,h2,h3{break-after:avoid}.ingredients{break-inside:avoid}.shopping-group h2{break-after:avoid}.recipe-layout{align-items:start}.steps .step-check input{min-width:13px}}
 
 @media print{.skip{display:none!important}}
+
+.review-status{font-size:13px;color:var(--muted);padding:10px 14px;background:var(--soft);border-radius:8px}.source-note h3{font-size:15px}.source-note details{max-width:850px}@media print{.review-status{font-size:9pt;background:white}.source-note details{display:none}}

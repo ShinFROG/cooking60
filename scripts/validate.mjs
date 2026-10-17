@@ -27,7 +27,7 @@ export async function readPublicData(root = projectRoot) {
 export function validateData(data, { release = false } = {}) {
   const errors = [];
   const warnings = [];
-  const stats = { recipeCount: 0, dayCount: 0, estimatedWithin30: 0, verifiedCount: 0, untestedCount: 0, measuredWithin30: 0 };
+  const stats = { recipeCount: 0, dayCount: 0, estimatedWithin30: 0, verifiedCount: 0, untestedCount: 0, measuredWithin30: 0, sourceReviewedCount: 0 };
   const check = (condition, message) => { if (!condition) errors.push(message); };
   if (!isObject(data)) return { ok: false, errors: ['公開データはオブジェクトである必要があります。'], warnings, stats };
   const recipes = Array.isArray(data.recipes) ? data.recipes : [];
@@ -89,6 +89,15 @@ export function validateData(data, { release = false } = {}) {
     const sources = Array.isArray(recipe.sources) ? recipe.sources : [];
     check(sources.length > 0, `${label}: 安全情報の参照先が必要です。`);
     for (const source of sources) check(isObject(source) && text(source.label) && isPublicHttps(source.url) && source.kind === 'reference-only', `${label}: 参照先は公開HTTPS URLとreference-onlyの区分が必要です。`);
+    const review = recipe.sourceReview;
+    const recipeReferences=sources.filter(source=>source?.purpose==='recipe-comparison');
+    check(isObject(review) && review.status==='reviewed' && dateValid(review.checkedAt), `${label}: 公開情報の照合日・区分が必要です。`);
+    if(isObject(review)){
+      check(Array.isArray(review.sourceUrls) && review.sourceUrls.length>0 && review.sourceUrls.every(url=>isPublicHttps(url)&&recipeReferences.some(source=>source.url===url)), `${label}: 照合先を材料・手順の参照リンクと対応させてください。`);
+      for(const field of ['checks','changes'])check(Array.isArray(review[field])&&review[field].length>0&&review[field].every(text),`${label}: 照合した観点と見直し内容を記録してください。`);
+      check(recipeReferences.every(source=>dateValid(source.checkedAt)&&source.checkedAt===review.checkedAt),`${label}: 料理の参照先の確認日が照合日と一致しません。`);
+      if(review.status==='reviewed' && dateValid(review.checkedAt))stats.sourceReviewedCount++;
+    }
     const validation = recipe.validation;
     check(isObject(validation) && ['untested', 'verified'].includes(validation.status) && text(validation.note), `${label}: 試作状況と説明が必要です。`);
     if (validation?.status === 'untested') {
@@ -139,7 +148,7 @@ async function main() {
   const release = process.argv.includes('--release');
   try {
     const result = validateData(await readPublicData(), { release });
-    console.log(`${release ? '正式版' : 'プレビュー'}検証: 料理${result.stats.recipeCount}品 / 献立${result.stats.dayCount}日 / 目安30分以内${result.stats.estimatedWithin30}品 / 実調理検証${result.stats.verifiedCount}品 / 実測30分以内${result.stats.measuredWithin30}品`);
+    console.log(`${release ? '正式版' : 'プレビュー'}検証: 料理${result.stats.recipeCount}品 / 献立${result.stats.dayCount}日 / 目安30分以内${result.stats.estimatedWithin30}品 / 公開情報照合${result.stats.sourceReviewedCount}品 / 実調理検証${result.stats.verifiedCount}品 / 実測30分以内${result.stats.measuredWithin30}品`);
     for (const warning of result.warnings) console.warn(`注意: ${warning}`);
     for (const error of result.errors) console.error(`エラー: ${error}`);
     if (!release) console.log('未試作の明示を伴うプレビューを検査しています。正式版の条件は --release で確認できます。');
