@@ -300,6 +300,111 @@ async function ingredientShoppingFlow() {
   }
 }
 
+async function remainingShoppingFlow() {
+  const context = await browser.newContext({ viewport: { width: 320, height: 740 } });
+  const page = watch(await context.newPage(), 'Remaining shopping');
+  const rows = () => page.locator('.shopping-row');
+  const ingredientRows = () => rows().filter({ has: page.locator('[data-action="shopping-check"]') });
+  const rowFor = name => rows().filter({ has: page.locator('.item-name > strong', { hasText: new RegExp('^' + name + '$') }) });
+  const view = mode => page.locator('[data-action="shopping-view"][data-view="' + mode + '"]');
+  const extraDraft = '入力途中の保存袋';
+  try {
+    await goto(page, 'shopping/?recipe=dish-02');
+    assert.equal(await view('all').getAttribute('aria-pressed'), 'true', 'The initial list shows every item.');
+    const ingredientCount = await ingredientRows().count();
+    await page.locator('#extra-form input[name="name"]').fill('台所用スポンジ');
+    await page.locator('#extra-form button').click();
+    const extra = () => rows().filter({ has: page.locator('[data-action="extra-done"]') });
+    await rowFor('玉ねぎ').locator('[data-kind="bought"]').check();
+    await rowFor('ご飯').locator('[data-kind="pantry"]').check();
+    await page.locator('#extra-form input[name="name"]').fill(extraDraft);
+    const beforeView = await saved(page);
+    await view('remaining').click();
+    assert.equal(await view('remaining').getAttribute('aria-pressed'), 'true');
+    assert.equal(new URL(page.url()).searchParams.get('remaining'), '1');
+    assert.equal(new URL(page.url()).searchParams.get('recipe'), 'dish-02', 'Changing the view retains the single-dish scope.');
+    assert.deepEqual(await saved(page), beforeView, 'Changing the view does not modify purchase or recipe records.');
+    assert.equal(await rowFor('玉ねぎ').isVisible(), false, 'Bought ingredients are hidden.');
+    assert.equal(await rowFor('ご飯').isVisible(), false, 'Ingredients already at home are hidden.');
+    assert.equal(await ingredientRows().count(), ingredientCount, 'Hidden rows remain available in the DOM for restoration.');
+    assert.equal(await page.locator('#extra-form input[name="name"]').inputValue(), extraDraft, 'The view switch preserves an unfinished extra-item entry.');
+    await extra().locator('[data-action="extra-done"]').focus();
+    await page.keyboard.press('Space');
+    assert.equal(await extra().isVisible(), false, 'An extra item disappears as soon as it is checked.');
+    assert.equal(await page.locator('#extra-form input[name="name"]').inputValue(), extraDraft, 'Checking an extra item preserves the unfinished entry.');
+    assert.equal(await page.evaluate(() => {
+      const focused = document.activeElement;
+      return !!focused?.closest('.shopping-row:not([hidden])') || focused?.matches('[data-action="shopping-view"][data-view="all"]');
+    }), true, 'Hiding the focused extra item moves focus to a visible shopping action.');
+    await noOverflow(page, '320px remaining shopping list');
+    await page.screenshot({ path: resolve(qa, 'mobile-320-remaining-shopping.png'), fullPage: true });
+
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await view('remaining').getAttribute('aria-pressed'), 'true', 'The remaining-only URL restores the view after reload.');
+    assert.equal(await rowFor('玉ねぎ').isVisible(), false);
+    assert.equal(await rowFor('ご飯').isVisible(), false);
+    assert.equal(await extra().isVisible(), false);
+    await page.locator('[data-action="servings"]').selectOption('2');
+    assert.equal(await rowFor('玉ねぎ').isVisible(), true, 'Increasing the required quantity brings an insufficient purchase back into view.');
+    assert.equal(await rowFor('ご飯').isVisible(), true, 'Increasing the required quantity also rechecks pantry items.');
+    assert.match(await rowFor('玉ねぎ').locator('.review-tag').textContent(), /再確認/);
+    await rowFor('玉ねぎ').locator('[data-kind="bought"]').focus();
+    await page.keyboard.press('Space');
+    assert.equal(await rowFor('玉ねぎ').isVisible(), false);
+    assert.equal(await page.evaluate(() => !!document.activeElement?.closest('.shopping-row:not([hidden])')), true, 'Checking with the keyboard moves focus to another visible item.');
+
+    const beforeShowAll = await saved(page);
+    await view('all').click();
+    assert.equal(await view('all').getAttribute('aria-pressed'), 'true');
+    assert.equal(new URL(page.url()).searchParams.has('remaining'), false);
+    assert.deepEqual(await saved(page), beforeShowAll);
+    assert.equal(await rowFor('玉ねぎ').isVisible(), true, 'Show all restores checked rows for correcting a check.');
+    assert.equal(await extra().isVisible(), true);
+    await rowFor('玉ねぎ').locator('[data-kind="bought"]').uncheck();
+    await view('remaining').click();
+    assert.equal(await rowFor('玉ねぎ').isVisible(), true, 'Correcting a check restores the ingredient to the remaining list.');
+    const remainingChecks = () => page.locator('.shopping-row:visible [data-action="shopping-check"][data-kind="bought"]');
+    while (await remainingChecks().count()) {
+      await remainingChecks().first().focus();
+      await page.keyboard.press('Space');
+    }
+    assert.equal(await page.locator('.shopping-row:visible').count(), 0);
+    assert.equal(await page.locator('[data-shopping-aisle]:visible').count(), 0, 'An aisle with no remaining items is hidden.');
+    assert.equal(await page.locator('.shopping-empty').isVisible(), true, 'Completing every item shows the empty-list explanation.');
+    assert.equal(await view('all').evaluate(button => document.activeElement === button), true, 'After the last item, focus moves to the show-all button.');
+    assert.equal(await page.locator('#extra-form').isVisible(), true, 'Adding another item remains possible after the list is complete.');
+    await page.emulateMedia({ media: 'print' });
+    assert.equal(await page.locator('.shopping-row:visible').count(), 0, 'Printing the remaining view does not reveal completed items.');
+    assert.equal(await page.locator('[data-shopping-aisle]:visible').count(), 0);
+    await page.emulateMedia({ media: 'screen' });
+    await page.locator('[data-action="reset-checks"]').click();
+    assert.equal(await page.locator('.shopping-row:visible [data-action="shopping-check"][data-kind="bought"]').count(), ingredientCount, 'Reset clears hidden ingredient checks as well as visible ones.');
+    assert.equal(await page.locator('.shopping-empty').isVisible(), false);
+    assert.equal(await extra().isVisible(), false, 'Resetting recipe materials leaves the separate extra-item purchase intact.');
+    await noOverflow(page, '320px restored shopping list');
+
+    await goto(page, 'shopping/?remaining=1');
+    await page.locator('[data-action="from-day"]').selectOption('1');
+    await page.locator('[data-action="to-day"]').selectOption('1');
+    await rowFor('ご飯').locator('[data-kind="pantry"]').check();
+    assert.equal(await rowFor('ご飯').isVisible(), false, 'The standard date-range list applies the same remaining filter.');
+    await page.locator('[data-action="from-day"]').selectOption('2');
+    assert.equal(await rowFor('ご飯').isVisible(), true, 'A different purchase period brings items needing reconfirmation back into view.');
+    assert.match(await rowFor('ご飯').locator('.review-tag').textContent(), /再確認/);
+    assert.equal(await view('remaining').getAttribute('aria-pressed'), 'true');
+    await page.locator('a[href$="guide/#pantry-basics"]').click();
+    await page.waitForURL(new URL('guide/#pantry-basics', base).href);
+    assert.equal(await page.locator('#pantry-basics').isVisible(), true, 'The shopping list links directly to the home basics guide.');
+    await noOverflow(page, '320px pantry basics guide');
+    console.log('PASS: remaining-only shopping, both purchase states, extras and drafts, URL persistence, quantity/period reconfirmation, empty/reset recovery, keyboard focus, print visibility, and basics guide');
+  } catch (error) {
+    await page.screenshot({ path: resolve(qa, 'failure-remaining-shopping.png'), fullPage: true }).catch(() => {});
+    throw error;
+  } finally {
+    await context.close();
+  }
+}
+
 async function exceptionalContexts() {
   const noJsContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const noJsPage = watch(await noJsContext.newPage(), 'JavaScript disabled');
@@ -412,6 +517,7 @@ async function responsiveScreenshots(page) {
     if(process.env.PRINT_ONLY!=='1'){
       await mainFlow(mainPage);
       await ingredientShoppingFlow();
+      await remainingShoppingFlow();
       await exceptionalContexts();
       await imageChecks(mainPage);
       await responsiveScreenshots(mainPage);
