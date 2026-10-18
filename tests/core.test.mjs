@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { aggregateShopping, clearAppState, createDefaultState, getCounts, loadState, recipeShoppingKey, reconcileChecks, recordCook, saveState, shoppingPeriod, storageKey, swapSlots, updateProgress, validateState } from '../src/core.mjs';
+import { aggregateShopping, clearAppState, createDefaultState, getCounts, loadState, PANTRY_BASICS, recipeShoppingKey, reconcileChecks, recordCook, resetShoppingChecks, saveState, setPantryBasic, setShoppingCheck, shoppingPeriod, storageKey, swapSlots, updateProgress, validateState } from '../src/core.mjs';
 
 const TODAY = '2026-10-17';
 const ingredient = (name, quantity, unit, state = '', note = '') => ({ name, quantity, unit, state, aisle: 'テスト', note });
@@ -267,6 +267,157 @@ test('recipe checks survive storage alongside old schema-1 checks and reject unk
   assert.throws(() => aggregateShopping(data, state, 1, 1, 'missing'));
   assert.throws(() => shoppingPeriod(state, 1, 1, 'missing'));
   assert.throws(() => recipeShoppingKey(data.recipes[0].ingredients[0], '__proto__'));
+});
+
+test('all twelve basic staples apply across recipe and period lists, including optional amounts', () => {
+  const data = fixture();
+  assert.deepEqual(PANTRY_BASICS.map(item => item.name).sort(), ['しょうゆ', 'サラダ油', '塩', '砂糖', 'こしょう', 'ケチャップ', '酒', '片栗粉', 'みりん', 'ごま油', 'みそ', '酢'].sort());
+  for (const item of PANTRY_BASICS) assert.equal(item.state, item.name === '片栗粉' ? '乾燥' : '製品');
+  data.recipes[0].ingredients = PANTRY_BASICS.map(item => ingredient(item.name, 1, 'g', item.state));
+  data.recipes[1].ingredients = PANTRY_BASICS.map(item => ingredient(item.name, null, '適量', item.state));
+  data.recipes[2].ingredients = PANTRY_BASICS.map(item => ingredient(item.name, 2, 'g', item.state));
+  const original = createDefaultState(data, TODAY);
+  const state = PANTRY_BASICS.reduce((next, item) => setPantryBasic(next, item.name, true), original);
+  for (const [from, to, recipeId] of [[1, 1, 'dish-1'], [1, 1, 'dish-2'], [1, 1, null], [2, 2, null]]) {
+    const rows = aggregateShopping(data, state, from, to, recipeId);
+    assert.ok(rows.length >= 12);
+    assert.ok(rows.every(row => row.check === 'pantry' && row.checkSource === 'basic' && row.basicPantry && !row.needsReview));
+  }
+  assert.deepEqual(original.pantryBasics, {});
+  assert.deepEqual(state.shoppingChecks, {}, 'Inherited checks do not create local purchase records.');
+  assert.deepEqual(validateState(state, data), state);
+});
+
+test('shared basics require exact names and preparation states and can be turned off', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('塩', 1, 'g', '製品'), ingredient('塩', 1, 'g', '生'), ingredient('塩こしょう', 1, 'g', '製品'), ingredient('片栗粉', 5, 'g', '乾燥'), ingredient('片栗粉', 5, 'g', '製品'), ingredient('卵', 1, '個', '生')];
+  let state = setPantryBasic(setPantryBasic(createDefaultState(data, TODAY), '塩', true), '片栗粉', true);
+  let rows = aggregateShopping(data, state, 1, 1);
+  assert.equal(rows.filter(row => row.check === 'pantry').length, 2);
+  assert.ok(rows.filter(row => row.check === null).every(row => !row.basicPantry && row.checkSource === null));
+  state = setPantryBasic(state, '塩', false);
+  rows = aggregateShopping(data, state, 1, 1);
+  assert.ok(rows.filter(row => row.name === '塩').every(row => row.check === null));
+  assert.equal(rows.find(row => row.name === '片栗粉' && row.state === '乾燥').check, 'pantry');
+  assert.deepEqual(state.pantryBasics, { 片栗粉: true });
+});
+
+test('local bought and pantry checks take priority and survive changing the shared basic set', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('しょうゆ', 15, 'ml', '製品'), ingredient('塩', null, '適量', '製品')];
+  let state = setPantryBasic(setPantryBasic(createDefaultState(data, TODAY), 'しょうゆ', true), '塩', true);
+  const period = shoppingPeriod(state, 1, 1, 'dish-1');
+  for (const row of aggregateShopping(data, state, 1, 1, 'dish-1')) state = setShoppingCheck(state, row, row.name === '塩' ? 'pantry' : 'bought', true, period);
+  for (const name of ['しょうゆ', '塩']) state = setPantryBasic(state, name, false);
+  const rows = aggregateShopping(data, state, 1, 1, 'dish-1');
+  assert.equal(rows.find(row => row.name === 'しょうゆ').check, 'bought');
+  assert.equal(rows.find(row => row.name === '塩').check, 'pantry');
+  assert.ok(rows.every(row => row.checkSource === 'local' && !row.basicPantry));
+});
+
+test('a shared staple can be needed for one recipe while other lists inherit it', () => {
+  const data = fixture();
+  for (const recipe of data.recipes.slice(0, 2)) recipe.ingredients = [ingredient('しょうゆ', 15, 'ml', '製品')];
+  let state = setPantryBasic(createDefaultState(data, TODAY), 'しょうゆ', true);
+  const first = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  const period = shoppingPeriod(state, 1, 1, 'dish-1');
+  state = setShoppingCheck(state, first, 'pantry', false, period);
+  assert.equal(state.shoppingChecks[first.key].kind, 'needed');
+  let row = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  assert.equal(row.check, null);
+  assert.equal(row.checkSource, 'override');
+  assert.equal(row.needsReview, false);
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-2')[0].checkSource, 'basic');
+  assert.equal(aggregateShopping(data, state, 1, 1)[0].checkSource, 'basic');
+  state.servings = 4;
+  row = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  assert.equal(row.checkSource, 'override');
+  assert.equal(row.quantity, 60);
+  assert.deepEqual(reconcileChecks(state, [row]).shoppingChecks, state.shoppingChecks);
+  const restored = validateState(JSON.parse(JSON.stringify(state)), data);
+  assert.equal(aggregateShopping(data, restored, 1, 1, 'dish-1')[0].checkSource, 'override');
+  state.startDate = '2026-10-18';
+  row = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  assert.equal(row.checkSource, 'basic', 'A needed override is limited to its dated list.');
+  assert.equal(row.needsReview, false);
+  assert.equal(state.pantryBasics['しょうゆ'], true);
+});
+
+test('resetting a list removes local checks and overrides shared basics only in that list', () => {
+  const data = fixture();
+  for (const recipe of data.recipes.slice(0, 2)) recipe.ingredients = [ingredient('塩', null, '適量', '製品'), ingredient('卵', 1, '個', '生')];
+  let state = setPantryBasic(createDefaultState(data, TODAY), '塩', true);
+  for (const recipeId of ['dish-1', 'dish-2']) {
+    const egg = aggregateShopping(data, state, 1, 1, recipeId).find(row => row.name === '卵');
+    state = setShoppingCheck(state, egg, 'bought', true, shoppingPeriod(state, 1, 1, recipeId));
+  }
+  const original = structuredClone(state);
+  const rows = aggregateShopping(data, state, 1, 1, 'dish-1');
+  const next = resetShoppingChecks(state, rows, shoppingPeriod(state, 1, 1, 'dish-1'));
+  assert.ok(aggregateShopping(data, next, 1, 1, 'dish-1').every(row => row.check === null));
+  const otherRows = aggregateShopping(data, next, 1, 1, 'dish-2');
+  assert.equal(otherRows.find(row => row.name === '卵').check, 'bought');
+  assert.equal(otherRows.find(row => row.name === '塩').checkSource, 'basic');
+  assert.deepEqual(next.pantryBasics, { 塩: true });
+  assert.deepEqual(state, original, 'Reset never mutates the previous state.');
+  const uncheckedEgg = setShoppingCheck(state, rows.find(row => row.name === '卵'), 'bought', false, shoppingPeriod(state, 1, 1, 'dish-1'));
+  assert.equal(uncheckedEgg.shoppingChecks[rows.find(row => row.name === '卵').key], undefined);
+});
+
+test('a stale local amount or period remains visible for reconfirmation despite shared stock', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('しょうゆ', 15, 'ml', '製品')];
+  let state = setPantryBasic(createDefaultState(data, TODAY), 'しょうゆ', true);
+  const row = aggregateShopping(data, state, 1, 1)[0];
+  state = setShoppingCheck(state, row, 'bought', true, shoppingPeriod(state, 1, 1));
+  for (const update of [next => { next.servings = 2; }, next => { next.startDate = '2026-10-18'; }]) {
+    const changed = structuredClone(state);
+    update(changed);
+    const stale = aggregateShopping(data, changed, 1, 1)[0];
+    assert.equal(stale.basicPantry, true);
+    assert.equal(stale.needsReview, true);
+    assert.equal(stale.check, null);
+    assert.equal(stale.checkSource, null);
+  }
+  assert.equal(aggregateShopping(data, state, 1, 2)[0].needsReview, true);
+});
+
+test('schema-1 backups without basics preserve personal records and new basics survive storage', () => {
+  const data = fixture();
+  let state = recordCook(createDefaultState(data, TODAY), 'dish-1', TODAY);
+  state.extraItems = [{ id: 'remember', name: '買い足すもの', done: true }];
+  state.shoppingChecks.legacy = { kind: 'pantry', quantity: null };
+  delete state.pantryBasics;
+  const original = structuredClone(state);
+  const normalized = validateState(state, data);
+  assert.deepEqual(normalized.pantryBasics, {});
+  assert.deepEqual(normalized.progress, state.progress);
+  assert.deepEqual(normalized.extraItems, state.extraItems);
+  assert.deepEqual(normalized.shoppingChecks, state.shoppingChecks);
+  assert.deepEqual(state, original);
+  state = setPantryBasic(normalized, 'みそ', true);
+  const storage = storageFixture();
+  const key = storageKey('/cooking60/');
+  assert.equal(saveState(storage, key, state).ok, true);
+  assert.deepEqual(loadState(storage, key, data, TODAY).state, state);
+  assert.deepEqual(validateState({ ...state, pantryBasics: { みそ: true, 塩: false } }, data).pantryBasics, { みそ: true });
+});
+
+test('invalid basic sets and purchase overrides are rejected without replacing saved data', () => {
+  const data = fixture();
+  const state = createDefaultState(data, TODAY);
+  for (const pantryBasics of [null, [], true, { 卵: true }, { 塩: 'true' }, { 塩: 1 }, { 塩: null }, JSON.parse('{"__proto__":true}')]) {
+    assert.throws(() => validateState({ ...state, pantryBasics }, data));
+  }
+  for (const [name, checked] of [['卵', true], ['塩', 'true'], ['__proto__', true]]) assert.throws(() => setPantryBasic(state, name, checked));
+  for (const check of [{ kind: 'unknown', quantity: 1 }, { kind: 'needed', quantity: 1 }, { kind: 'needed', quantity: -1, period: shoppingPeriod(state, 1, 1) }]) {
+    assert.throws(() => validateState({ ...state, shoppingChecks: { row: check } }, data));
+  }
+  const key = storageKey('/cooking60/');
+  const malformed = JSON.stringify({ ...state, pantryBasics: { 未知の品: true } });
+  const storage = storageFixture({ [key]: malformed });
+  assert.equal(loadState(storage, key, data, TODAY).persistent, false);
+  assert.equal(storage.getItem(key), malformed);
 });
 
 test('cooking dates are unique per day, counts mean distinct dishes, and mastery needs cooking', () => {

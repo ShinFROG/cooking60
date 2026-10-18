@@ -268,12 +268,15 @@ details li{margin:12px 0}
 .shopping-empty{border:1px dashed #9bac9e;border-radius:14px;background:white;text-align:center;padding:28px 18px}
 .pantry-link{display:flex;align-items:center;gap:9px;font-size:13px;margin:20px 0;color:var(--green)}
 .pantry-link .icon{width:18px;height:18px}
+.basic-pantry-status,.pantry-override-status{display:block;margin-top:5px;font-size:11px;font-weight:600;color:var(--green)}
+.pantry-override-status{color:var(--accent)}
 .shopping-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;border-radius:14px;background:var(--green);color:white;padding:20px 24px;margin:26px 0 18px}
 .shopping-summary span{font-size:15px}.shopping-summary strong{font-size:29px;margin:0 5px;font-weight:600}
 .shopping-summary p{margin:0;color:#d4dfd7;font-size:12px}
 .shopping-summary progress{width:40%;height:7px;appearance:none;overflow:hidden;border:0;border-radius:8px;background:#66796c;accent-color:#dfeacf}
 .shopping-summary progress::-webkit-progress-bar{background:#66796c}.shopping-summary progress::-webkit-progress-value{background:#dfeacf}.shopping-summary progress::-moz-progress-bar{background:#dfeacf}
-.shopping-row.checked .item-name{text-decoration:line-through;color:var(--muted)}
+.shopping-row.checked .item-name{color:var(--muted)}
+.shopping-row.checked .item-name>strong{text-decoration:line-through}
 .review-tag{font-size:11px;color:#b23a21}
 .progress-row{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:22px 8px;background:transparent}
 .progress-row h3{font-size:16px;margin:0 0 6px}
@@ -306,6 +309,11 @@ th{background:var(--soft)}
 #pantry-basics td,#pantry-basics th{padding:11px 8px}
 #pantry-basics th[scope=row],#pantry-basics thead th:nth-child(2){white-space:nowrap}
 #pantry-basics caption{font-size:12px;text-align:left;color:var(--muted);margin-bottom:10px}
+.pantry-basic-label{display:flex;align-items:center;gap:7px;min-height:44px;margin-top:3px;font-size:11px;font-weight:500;color:var(--muted);cursor:pointer}
+.pantry-basic-label input{margin:0}
+#pantry-basics .pantry-basic-owned th{background:#edf3eb}
+.pantry-basic-owned .pantry-basic-label,.pantry-basic-count{color:var(--green)}
+.pantry-basic-count{font-size:13px;font-weight:600}
 .print-only{display:none}
 .cook-mode .site-header,.cook-mode .site-footer,.cook-mode .source-note,.cook-mode .breadcrumb{display:none}
 .cook-mode .recipe-layout{grid-template-columns:280px minmax(0,1fr)}

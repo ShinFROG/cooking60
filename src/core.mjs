@@ -4,6 +4,11 @@ const BREAKFASTS = new Set(['none', 'toast', 'rice']);
 const FORBIDDEN_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 const MAX_NOTE = 1000;
 
+export const PANTRY_BASICS = Object.freeze([
+  'しょうゆ', 'サラダ油', '塩', '砂糖', 'こしょう', 'ケチャップ', '酒', '片栗粉', 'みりん', 'ごま油', 'みそ', '酢',
+].map(name => Object.freeze({ name, state: name === '片栗粉' ? '乾燥' : '製品' })));
+const pantryStates = new Map(PANTRY_BASICS.map(item => [item.name, item.state]));
+
 const clone = value => JSON.parse(JSON.stringify(value));
 const own = (value, key) => Object.prototype.hasOwnProperty.call(value, key);
 const isObject = value => value !== null && typeof value === 'object' && !Array.isArray(value);
@@ -47,6 +52,7 @@ export function createDefaultState(data, today = localToday()) {
     breakfast: 'none',
     slots: defaultSlots(data),
     progress: {},
+    pantryBasics: {},
     shoppingChecks: {},
     extraItems: [],
   };
@@ -102,13 +108,20 @@ export function validateState(input, data) {
     assert(ids.has(id), '不明な料理の記録が含まれています。');
     return [id, normalizeProgress(value)];
   }));
+  const pantryInput = input.pantryBasics === undefined ? {} : input.pantryBasics;
+  assert(isObject(pantryInput), '基本セットの状態が不正です。');
+  const pantryBasics = Object.fromEntries(Object.entries(pantryInput).filter(([name, checked]) => {
+    assert(pantryStates.has(name) && typeof checked === 'boolean', '基本セットの項目が不正です。');
+    return checked;
+  }));
   assert(isObject(input.shoppingChecks) && Object.keys(input.shoppingChecks).length <= 10000, '買物チェックが不正です。');
   const shoppingChecks = Object.fromEntries(Object.entries(input.shoppingChecks).map(([key, value]) => {
     assert(key.length > 0 && key.length <= 500 && !FORBIDDEN_KEYS.has(key) && isObject(value), '買物チェックのキーが不正です。');
-    assert(value.kind === 'bought' || value.kind === 'pantry', '買物チェックの状態が不正です。');
+    assert(['bought', 'pantry', 'needed'].includes(value.kind), '買物チェックの状態が不正です。');
     assert(value.quantity === null || (Number.isFinite(value.quantity) && value.quantity >= 0), '買物チェックの数量が不正です。');
     const normalized = { kind: value.kind, quantity: value.quantity };
     if (value.period !== undefined) normalized.period = normalizeShoppingPeriod(value.period, data.days.length, ids);
+    assert(value.kind !== 'needed' || normalized.period !== undefined, '買物チェックの期間が不正です。');
     if (key.startsWith('recipe:')) {
       let parts;
       try { parts = JSON.parse(key.slice(7)); } catch { fail('買物チェックの料理キーが不正です。'); }
@@ -127,7 +140,20 @@ export function validateState(input, data) {
     extraIds.add(item.id);
     return { id: item.id, name: item.name.trim(), done: item.done };
   });
-  return { schemaVersion: 1, startDate: input.startDate, servings: input.servings, breakfast: input.breakfast, slots, progress, shoppingChecks, extraItems };
+  return { schemaVersion: 1, startDate: input.startDate, servings: input.servings, breakfast: input.breakfast, slots, progress, pantryBasics, shoppingChecks, extraItems };
+}
+
+export function setPantryBasic(state, name, checked) {
+  assert(pantryStates.has(name) && typeof checked === 'boolean', '基本セットの項目が不正です。');
+  const next = clone(state);
+  next.pantryBasics ??= {};
+  if (checked) next.pantryBasics[name] = true;
+  else delete next.pantryBasics[name];
+  return next;
+}
+
+function hasPantryBasic(state, ingredient) {
+  return own(state.pantryBasics ?? {}, ingredient.name) && state.pantryBasics[ingredient.name] === true && pantryStates.get(ingredient.name) === ingredient.state;
 }
 
 export function swapSlots(state, keyA, keyB) {
@@ -254,15 +280,43 @@ export function aggregateShopping(data, state, fromDay, toDay, recipeId = null) 
   for (const row of combined.values()) {
     const previous = own(state.shoppingChecks, row.key) ? state.shoppingChecks[row.key] : null;
     const valid = previous?.period === period && checkStillCovers(previous, row.quantity);
-    row.check = valid ? previous.kind : null;
-    row.needsReview = Boolean(previous && !valid);
+    const needed = previous?.kind === 'needed' && previous.period === period;
+    row.basicPantry = hasPantryBasic(state, row);
+    row.needsReview = Boolean(previous && previous.kind !== 'needed' && !valid);
+    row.check = valid ? previous.kind : !needed && !row.needsReview && row.basicPantry ? 'pantry' : null;
+    row.checkSource = valid ? 'local' : needed ? 'override' : row.check === 'pantry' ? 'basic' : null;
   }
   return [...combined.values()].sort((a, b) => a.aisle.localeCompare(b.aisle, 'ja') || a.name.localeCompare(b.name, 'ja') || a.state.localeCompare(b.state, 'ja') || a.unit.localeCompare(b.unit, 'ja'));
 }
 
+function writeShoppingCheck(next, row, kind, checked, period) {
+  assert(isObject(row) && typeof row.key === 'string' && row.key && !FORBIDDEN_KEYS.has(row.key), '買物チェックの項目が不正です。');
+  assert(row.quantity === null || (Number.isFinite(row.quantity) && row.quantity >= 0), '買物チェックの数量が不正です。');
+  assert(['bought', 'pantry'].includes(kind) && typeof checked === 'boolean', '買物チェックの状態が不正です。');
+  if (checked) next.shoppingChecks[row.key] = { kind, quantity: row.quantity, period };
+  else if (hasPantryBasic(next, row)) next.shoppingChecks[row.key] = { kind: 'needed', quantity: row.quantity, period };
+  else delete next.shoppingChecks[row.key];
+}
+
+/** A shared staple can be required again for this list without changing other lists. */
+export function setShoppingCheck(state, row, kind, checked, period) {
+  const next = clone(state);
+  const normalizedPeriod = normalizeShoppingPeriod(period, 30, new Set(state.slots.map(slot => slot.recipeId)));
+  writeShoppingCheck(next, row, kind, checked, normalizedPeriod);
+  return next;
+}
+
+/** Only the displayed list is reset; the household's basic set is preserved. */
+export function resetShoppingChecks(state, rows, period) {
+  const next = clone(state);
+  const normalizedPeriod = normalizeShoppingPeriod(period, 30, new Set(state.slots.map(slot => slot.recipeId)));
+  for (const row of rows) writeShoppingCheck(next, row, 'pantry', false, normalizedPeriod);
+  return next;
+}
+
 export function reconcileChecks(state, rows) {
   const next = clone(state);
-  next.shoppingChecks = Object.fromEntries(rows.filter(row => row.check !== null && own(state.shoppingChecks, row.key) && row.check === state.shoppingChecks[row.key].kind && checkStillCovers(state.shoppingChecks[row.key], row.quantity)).map(row => [row.key, clone(state.shoppingChecks[row.key])]));
+  next.shoppingChecks = Object.fromEntries(rows.filter(row => own(state.shoppingChecks, row.key) && (row.checkSource === 'override' || (row.check !== null && row.check === state.shoppingChecks[row.key].kind && checkStillCovers(state.shoppingChecks[row.key], row.quantity)))).map(row => [row.key, clone(state.shoppingChecks[row.key])]));
   return next;
 }
 

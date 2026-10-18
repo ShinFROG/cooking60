@@ -405,6 +405,153 @@ async function remainingShoppingFlow() {
   }
 }
 
+async function pantryBasicsFlow() {
+  const context = await browser.newContext({ viewport: { width: 320, height: 740 }, acceptDownloads: true });
+  const page = watch(await context.newPage(), 'Shared pantry basics');
+  const basic = name => page.locator('[data-action="pantry-basic"][data-name="' + name + '"]');
+  const ingredient = name => page.locator('.ingredient-list > li').filter({ has: page.locator('.ingredient-name', { hasText: name }) });
+  const row = name => page.locator('.shopping-row').filter({ has: page.locator('.item-name > strong', { hasText: new RegExp('^' + name + '$') }) });
+  const view = mode => page.locator('[data-action="shopping-view"][data-view="' + mode + '"]');
+  try {
+    await goto(page, 'guide/#pantry-basics');
+    assert.equal(await page.locator('[data-action="pantry-basic"]').count(), 12, 'All twelve pantry basics have an at-home checkbox.');
+    assert.equal(await basic('しょうゆ').isChecked(), false);
+    const shoppingTab = watch(await context.newPage(), 'Pantry shopping tab');
+    const recipeTab = watch(await context.newPage(), 'Pantry recipe tab');
+    await goto(shoppingTab, 'shopping/?recipe=dish-02');
+    await goto(recipeTab, 'recipes/dish-02/');
+    const tabRow = name => shoppingTab.locator('.shopping-row').filter({ has: shoppingTab.locator('.item-name > strong', { hasText: new RegExp('^' + name + '$') }) });
+    const tabIngredient = name => recipeTab.locator('.ingredient-list > li').filter({ has: recipeTab.locator('.ingredient-name', { hasText: name }) });
+    const tabSoy = () => tabRow('しょうゆ').locator('[data-kind="pantry"]');
+    const recipeDraft = '別タブで基本セットを変更しても、このメモを残す。';
+    const extraDraft = '買物下書きの保存容器';
+    const draftDate = '2026-10-16';
+    await shoppingTab.locator('#extra-form input[name="name"]').fill(extraDraft);
+    await recipeTab.locator('#note').fill(recipeDraft);
+    await recipeTab.locator('#record-form input[name="date"]').fill(draftDate);
+    await recipeTab.locator('[data-step="0"]').check();
+    await page.evaluate(key => {
+      window.__pantryStorageEvents = 0;
+      addEventListener('storage', event => { if (event.key === key) window.__pantryStorageEvents++; });
+    }, storageKey);
+    await basic('しょうゆ').focus();
+    await page.keyboard.press('Space');
+    await tabRow('しょうゆ').locator('[data-kind="pantry"]:checked').waitFor();
+    await tabIngredient('しょうゆ').locator('.pantry-status').waitFor();
+    assert.equal(await tabSoy().isChecked(), true, 'A basic selected in the guide updates an already open shopping tab without reload.');
+    assert.match(await tabIngredient('しょうゆ').locator('.pantry-status').textContent(), /基本セット/, 'An already open recipe inherits the same shared pantry change.');
+    await tabRow('玉ねぎ').locator('[data-kind="bought"]').check();
+    const tabOnionKey = await tabRow('玉ねぎ').locator('[data-kind="bought"]').getAttribute('data-key');
+    await page.waitForFunction(() => window.__pantryStorageEvents > 0);
+    await tabIngredient('玉ねぎ').locator('[data-kind="bought"]:checked').waitFor();
+    await basic('しょうゆ').uncheck();
+    await tabRow('しょうゆ').locator('[data-kind="pantry"]:not(:checked)').waitFor();
+    await tabIngredient('しょうゆ').locator('.pantry-status').waitFor({ state: 'detached' });
+    assert.equal(await tabSoy().isChecked(), false, 'Turning a shared basic off updates the other shopping tab immediately.');
+    assert.equal((await saved(page)).shoppingChecks[tabOnionKey].kind, 'bought', 'Editing the guide after another tab saves does not overwrite that tab’s purchase.');
+    await basic('しょうゆ').check();
+    await tabRow('しょうゆ').locator('[data-kind="pantry"]:checked').waitFor();
+    await tabIngredient('しょうゆ').locator('.pantry-status').waitFor();
+    assert.equal((await saved(page)).pantryBasics['しょうゆ'], true, 'The guide keeps saving after receiving another tab’s purchase change.');
+    assert.equal(await shoppingTab.locator('#extra-form input[name="name"]').inputValue(), extraDraft, 'Cross-tab pantry updates preserve an unfinished extra shopping item.');
+    assert.equal(await recipeTab.locator('#note').inputValue(), recipeDraft, 'Cross-tab pantry updates preserve an unsaved recipe note.');
+    assert.equal(await recipeTab.locator('#record-form input[name="date"]').inputValue(), draftDate, 'Cross-tab pantry updates preserve an unsaved cooking date.');
+    assert.equal(await recipeTab.locator('[data-step="0"]').isChecked(), true, 'Cross-tab pantry updates preserve checked cooking steps.');
+    await shoppingTab.close();
+    await recipeTab.close();
+    await basic('砂糖').check();
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await basic('しょうゆ').isChecked(), true, 'A pantry-basic check survives reload.');
+    assert.equal(await basic('砂糖').isChecked(), true);
+    assert.equal((await saved(page)).pantryBasics['しょうゆ'], true);
+    await noOverflow(page, '320px shared pantry basics');
+    await page.screenshot({ path: resolve(qa, 'mobile-320-shared-pantry-basics.png'), fullPage: true });
+
+    for (const recipeId of ['dish-02', 'dish-25']) {
+      await goto(page, 'recipes/' + recipeId + '/');
+      assert.match(await ingredient('しょうゆ').locator('.pantry-status').textContent(), /基本セット/, 'The recipe explains that soy sauce is available from the shared basics.');
+      assert.equal(await ingredient('しょうゆ').locator('[data-kind="bought"]').isChecked(), false, 'Shared at-home ingredients are not presented as purchased for this recipe.');
+    }
+    await goto(page, 'shopping/?recipe=dish-02');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), true);
+    assert.match(await row('しょうゆ').locator('.basic-pantry-status').textContent(), /基本セット/);
+    const recipeSoyKey = await row('しょうゆ').locator('[data-kind="pantry"]').getAttribute('data-key');
+    await row('しょうゆ').locator('[data-kind="pantry"]').uncheck();
+    assert.equal((await saved(page)).shoppingChecks[recipeSoyKey].kind, 'needed', 'Unchecking an inherited item records a recipe-specific need.');
+    assert.equal((await saved(page)).pantryBasics['しょうゆ'], true, 'A recipe-specific exception does not empty the shared pantry.');
+    await page.locator('[data-action="servings"]').selectOption('2');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), false, 'Changing servings does not remove the recipe-specific need.');
+    await view('remaining').click();
+    assert.equal(await row('しょうゆ').isVisible(), true, 'A recipe-specific exception appears among ingredients still to buy.');
+    assert.equal(await row('砂糖').isVisible(), false, 'Other shared basics remain hidden in the remaining-only list.');
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await row('しょうゆ').isVisible(), true);
+    await noOverflow(page, '320px shopping with shared pantry exceptions');
+
+    await goto(page, 'shopping/?recipe=dish-25');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), true, 'Another recipe still inherits the shared pantry.');
+    await row('しょうゆ').locator('[data-kind="bought"]').check();
+    const boughtKey = await row('しょうゆ').locator('[data-kind="bought"]').getAttribute('data-key');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), false, 'An explicit purchase takes priority over shared pantry availability.');
+    assert.equal((await saved(page)).shoppingChecks[boughtKey].kind, 'bought');
+
+    await goto(page, 'shopping/');
+    await page.locator('[data-action="from-day"]').selectOption('1');
+    await page.locator('[data-action="to-day"]').selectOption('1');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), true, 'The combined period list also inherits pantry basics.');
+    await view('remaining').click();
+    assert.equal(await row('しょうゆ').isVisible(), false, 'The combined list hides inherited pantry items in its remaining view.');
+    await page.locator('[data-action="reset-checks"]').click();
+    assert.equal(await row('しょうゆ').isVisible(), true, 'Resetting the displayed list also clears inherited pantry checks for that list.');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), false);
+    const afterPeriodReset = await saved(page);
+    assert.equal(afterPeriodReset.pantryBasics['しょうゆ'], true, 'Resetting one list retains the global pantry selection.');
+    assert.equal(afterPeriodReset.shoppingChecks[boughtKey].kind, 'bought', 'Resetting the period list preserves purchases in another recipe.');
+
+    await goto(page, 'shopping/?recipe=dish-02');
+    await row('みりん').locator('[data-kind="pantry"]').check();
+    const manualPantryKey = await row('みりん').locator('[data-kind="pantry"]').getAttribute('data-key');
+    await goto(page, 'guide/#pantry-basics');
+    await basic('みりん').check();
+    await basic('みりん').uncheck();
+    await basic('しょうゆ').uncheck();
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await basic('しょうゆ').isChecked(), false);
+    assert.equal(await basic('砂糖').isChecked(), true, 'Turning off one basic leaves other pantry selections intact.');
+    await goto(page, 'shopping/?recipe=dish-01');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), false, 'Turning a basic off removes availability from a recipe without an explicit local check.');
+    assert.equal(await row('しょうゆ').locator('.basic-pantry-status').count(), 0);
+    await goto(page, 'shopping/?recipe=dish-25');
+    assert.equal(await row('しょうゆ').locator('[data-kind="bought"]').isChecked(), true, 'Turning a basic off preserves a recipe-specific purchase.');
+    await goto(page, 'shopping/?recipe=dish-02');
+    assert.equal(await row('みりん').locator('[data-kind="pantry"]').isChecked(), true, 'Turning a basic off preserves an explicit recipe-specific pantry check.');
+    assert.equal((await saved(page)).shoppingChecks[manualPantryKey].kind, 'pantry');
+    assert.equal(await row('しょうゆ').locator('[data-kind="pantry"]').isChecked(), false);
+
+    await goto(page, 'progress/');
+    const downloadPromise = page.waitForEvent('download');
+    await page.locator('[data-action="export"]').click();
+    const exported = await readDownload(await downloadPromise);
+    assert.equal(exported.pantryBasics['砂糖'], true, 'Backups include the shared pantry selection.');
+    assert.equal(exported.shoppingChecks[recipeSoyKey].kind, 'needed', 'Backups include recipe-specific exceptions.');
+    await goto(page, 'guide/#pantry-basics');
+    await basic('砂糖').uncheck();
+    await goto(page, 'progress/');
+    await page.locator('#import-file').setInputFiles(inputFile('pantry-basics-restore.json', exported));
+    await page.locator('#dialog-confirm').click();
+    await page.waitForFunction(key => JSON.parse(localStorage.getItem(key)).pantryBasics['砂糖'] === true, storageKey);
+    assert.deepEqual(await saved(page), exported, 'Restoring a backup retains pantry basics and local exceptions together.');
+    await goto(page, 'guide/#pantry-basics');
+    assert.equal(await basic('砂糖').isChecked(), true);
+    console.log('PASS: shared pantry basics, live cross-tab updates and draft preservation, recipe/period inheritance, remaining filter, scoped exceptions and reset, serving changes, explicit local purchases/pantry, reload, backup restore, and 320px layout');
+  } catch (error) {
+    await page.screenshot({ path: resolve(qa, 'failure-pantry-basics.png'), fullPage: true }).catch(() => {});
+    throw error;
+  } finally {
+    await context.close();
+  }
+}
+
 async function exceptionalContexts() {
   const noJsContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const noJsPage = watch(await noJsContext.newPage(), 'JavaScript disabled');
@@ -415,8 +562,14 @@ async function exceptionalContexts() {
   assert.ok(await noJsPage.locator('.steps li').count() >= 3);
   assert.match(await noJsPage.locator('#app').textContent(), /未試作/);
   await noOverflow(noJsPage, 'Static recipe at 390px');
+  await goto(noJsPage, 'guide/#pantry-basics');
+  const staticBasics = noJsPage.locator('[data-action="pantry-basic"]');
+  assert.equal(await staticBasics.count(), 12, 'The static guide includes all twelve basics.');
+  assert.equal(await staticBasics.evaluateAll(inputs => inputs.every(input => input.disabled)), true, 'Without JavaScript, unavailable pantry persistence is not presented as an active control.');
+  await noJsPage.setViewportSize({ width: 320, height: 740 });
+  await noOverflow(noJsPage, 'Static pantry basics at 320px');
   await noJsContext.close();
-  console.log('PASS: complete static recipe with JavaScript disabled');
+  console.log('PASS: complete static recipe and disabled pantry controls with JavaScript disabled');
 
   const deniedContext = await browser.newContext();
   await deniedContext.addInitScript(() => {
@@ -518,6 +671,7 @@ async function responsiveScreenshots(page) {
       await mainFlow(mainPage);
       await ingredientShoppingFlow();
       await remainingShoppingFlow();
+      await pantryBasicsFlow();
       await exceptionalContexts();
       await imageChecks(mainPage);
       await responsiveScreenshots(mainPage);

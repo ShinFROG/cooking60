@@ -93,19 +93,27 @@ function shopping(){
  const groups=aisles.map(a=>'<section class="shopping-group" data-shopping-aisle><h2>'+esc(a)+'</h2>'+rows.filter(r=>r.aisle===a).map(r=>{
   const hint=measureHint(r);
   const checkbox=kind=>'<label class="purchase-check"><input type="checkbox" data-action="shopping-check" data-kind="'+kind+'" data-key="'+esc(r.key)+'" aria-label="'+esc(r.name)+(kind==='bought'?'を買った':'が家にある')+'"'+(r.check===kind?' checked':'')+'> '+(kind==='bought'?'買った':'家にある')+'</label>';
-  return '<div class="shopping-row'+(r.check?' checked':'')+'"><div class="item-name"><strong>'+esc(r.name)+'</strong> <small>'+esc(r.state)+'</small><p class="fine">'+esc(r.notes.join(' / '))+'</p>'+(r.needsReview?'<span class="review-tag">対象期間または必要量が変わりました。再確認してください</span>':'')+'</div><div class="shopping-quantity"><strong class="amount">'+qty(r.quantity)+(r.quantity===null?'':esc(r.unit))+'</strong>'+(hint?'<small class="measure-hint">'+esc(hint)+'</small>':'')+'</div><div class="purchase-actions">'+checkbox('bought')+checkbox('pantry')+'</div></div>';
+  return '<div class="shopping-row'+(r.check?' checked':'')+'"><div class="item-name"><strong>'+esc(r.name)+'</strong> <small>'+esc(r.state)+'</small><p class="fine">'+esc(r.notes.join(' / '))+'</p>'+(r.checkSource==='basic'?'<span class="basic-pantry-status">基本セットから反映</span>':r.checkSource==='override'?'<span class="pantry-override-status">このリストでは購入する</span>':'')+(r.needsReview?'<span class="review-tag">対象期間または必要量が変わりました。再確認してください</span>':'')+'</div><div class="shopping-quantity"><strong class="amount">'+qty(r.quantity)+(r.quantity===null?'':esc(r.unit))+'</strong>'+(hint?'<small class="measure-hint">'+esc(hint)+'</small>':'')+'</div><div class="purchase-actions">'+checkbox('bought')+checkbox('pantry')+'</div></div>';
  }).join('')+'</section>').join('');
  return headline('SHOPPING LIST',recipe?esc(recipe.title)+'の買物リスト':'買うものを、ひとまとめに。',recipe?'この料理に必要な材料をチェックできます。材料ページとも連動します。':'選んだ期間の「作る」予定から、必要な材料を集計します。')+
  '<div class="shopping-scope no-print">'+(recipe?'<a href="'+link('recipes/'+recipe.id+'/#ingredients')+'">← 材料・作り方に戻る</a><a href="'+link('shopping/')+'">数日分をまとめて買う →</a>':'<a href="'+link('recipes/')+'">1品だけ買うときは、料理の材料欄へ →</a>')+'</div>'+
  '<div class="settings no-print">'+(recipe?'':rangeControls)+servings()+(recipe?'':breakfastControl)+'</div><div class="toolbar no-print">'+(recipe?'':'<button data-action="range" data-days="3">開始日から3日分</button><button data-action="range" data-days="7">開始日から7日分</button>')+'<button data-action="print">印刷</button><button data-action="reset-checks">このリストのチェックを外す</button></div>'+
  '<div class="shopping-view no-print"><div role="group" aria-label="買物リストの表示"><button data-action="shopping-view" data-view="remaining" aria-pressed="'+shoppingRemainingOnly+'">まだ買うものだけ</button><button data-action="shopping-view" data-view="all" aria-pressed="'+!shoppingRemainingOnly+'">すべて</button></div><p id="shopping-visible-count" class="fine" role="status"></p></div>'+
  '<div class="shopping-summary"><div><span>あと <strong>'+ (rows.length-ready)+'</strong> 材料</span><p>'+ready+' / '+rows.length+' 材料を用意済み</p></div><progress value="'+ready+'" max="'+Math.max(1,rows.length)+'" aria-label="材料の準備状況"></progress></div>'+
- '<p class="pantry-link no-print">'+icon('shopping')+'<a href="'+link('guide/#pantry-basics')+'">何をそろえる？ 家に置く基本セット</a></p><p class="result-count">'+(recipe?'この料理1品':'DAY '+fromDay+'〜'+toDay)+' · '+state.servings+'人分 · '+rows.length+'材料</p><p class="fine">「買った」か「家にある」をチェックすると、この端末に保存します。料理ごとのチェックと、数日分のまとめ買いのチェックは別に管理します。</p><p class="fine measure-note">個数・枚数は目安です。商品や大きさで変わるため、調理にはg表記を優先してください。<a href="'+link('about/#ingredient-measures')+'">目安の基準・出典</a></p><p class="fine">炊いたご飯と生米、乾麺とゆで麺は別集計です。適量は必要に応じて用意してください。生鮮品は保存期限を確認し、小分けの買物も検討してください。</p><p class="shopping-empty empty" hidden>買うものはありません。すべて用意できました。<br><span class="fine">チェックを見直すときは「すべて」を選んでください。</span></p>'+groups+(!rows.length?'<p class="empty">この期間は調理する予定がありません。</p>':'')+
+ '<p class="pantry-link no-print">'+icon('shopping')+'<a href="'+link('guide/#pantry-basics')+'">基本セットの「家にある」を確認・変更</a></p><p class="result-count">'+(recipe?'この料理1品':'DAY '+fromDay+'〜'+toDay)+' · '+state.servings+'人分 · '+rows.length+'材料</p><p class="fine">基本セットの「家にある」を共通で反映します。足りないものはチェックを外すと、このリストだけ購入対象に戻せます。ここで付け外ししたチェックを優先し、同じブラウザに保存します。</p><p class="fine measure-note">個数・枚数は目安です。商品や大きさで変わるため、調理にはg表記を優先してください。<a href="'+link('about/#ingredient-measures')+'">目安の基準・出典</a></p><p class="fine">炊いたご飯と生米、乾麺とゆで麺は別集計です。適量は必要に応じて用意してください。生鮮品は保存期限を確認し、小分けの買物も検討してください。</p><p class="shopping-empty empty" hidden>買うものはありません。すべて用意できました。<br><span class="fine">チェックを見直すときは「すべて」を選んでください。</span></p>'+groups+(!rows.length?'<p class="empty">この期間は調理する予定がありません。</p>':'')+
  '<section class="shopping-group'+(state.extraItems.length?'':' no-print')+'" data-shopping-extras><h2>追加の買物</h2><p class="fine">自分で追加したものは、どの買物リストにも共通で表示します。</p><form id="extra-form" class="toolbar no-print"><label>品物 <input name="name" required maxlength="100" placeholder="例：台所用スポンジ"></label><button>追加</button></form>'+state.extraItems.map(i=>'<div class="shopping-row'+(i.done?' checked':'')+'"><label><input type="checkbox" data-action="extra-done" data-id="'+esc(i.id)+'"'+(i.done?' checked':'')+'> '+esc(i.name)+'</label><button class="no-print" data-action="extra-remove" data-id="'+esc(i.id)+'">削除</button></div>').join('')+'</section>';
 }
 function progress(){
  const list=data.recipes.filter(r=>progressFilter==='all'||status(state.progress[r.id])===progressFilter);
  return headline('MY COOKING LOG','できた料理が、増えていく。','作った日と小さなコツを残して、自分の定番に。')+stats()+'<div class="toolbar no-print"><label>記録を絞る <select data-action="progress-filter">'+option('all','すべて',progressFilter)+['未着手','作った','再現できる','もう一度練習'].map(x=>option(x,x,progressFilter)).join('')+'</select></label></div><div>'+list.map(r=>{const p=state.progress[r.id];return '<article class="progress-row"><div><h3><a href="'+link('recipes/'+r.id+'/#record')+'">'+esc(r.title)+'</a></h3>'+(p?.note?'<p>'+esc(p.note)+'</p>':'')+'<p class="fine">'+(p?.dates.length?'作った日：'+p.dates.join('、'):'まだ記録はありません')+'</p></div><span class="status">'+status(p)+'</span></article>';}).join('')+(!list.length?'<p class="empty">この状態の料理はまだありません。</p>':'')+'</div><section class="inset no-print"><h2>記録のバックアップ</h2><p>記録はこのブラウザの保存領域にあります。ブラウザのデータを消すと失われます。JSONを書き出して別の端末へ移せます。メモは公開リポジトリへ入れないでください。</p><div class="toolbar"><button class="primary" data-action="export">JSONを書き出す</button><label class="button">JSONを読み込む <input type="file" id="import-file" accept=".json,application/json"></label><button data-action="reset">このサイトの記録を初期化</button></div><p class="fine">読込上限1MB。読み込む内容を確認してから現在の記録を置き換えます。</p></section>';
+}
+function renderPantryBasics(){
+ for(const input of app.querySelectorAll('[data-action="pantry-basic"]')){
+  input.checked=!!state.pantryBasics[input.dataset.name];input.disabled=false;
+  input.closest('tr').classList.toggle('pantry-basic-owned',input.checked);
+ }
+ const count=app.querySelector('#pantry-basic-count');
+ if(count){count.hidden=false;count.textContent='家にある '+Object.keys(state.pantryBasics).length+' / '+core.PANTRY_BASICS.length+'品';}
 }
 function render(){
  if(page==='home')app.innerHTML=home();
@@ -114,8 +122,60 @@ function render(){
  if(page==='recipe'){const r=byId(document.body.dataset.recipeId);app.innerHTML=recipeBody(r,state.servings,shoppingRows());document.querySelector('#recipe-record').innerHTML=recordPanel(r.id);}
  if(page==='shopping'){app.innerHTML=shopping();applyShoppingVisibility();}
  if(page==='progress')app.innerHTML=progress();
+ if(page==='guide')renderPantryBasics();
  const cookButton=app.querySelector('[data-action="cook-mode"]');
  if(cookButton&&document.body.classList.contains('cook-mode'))cookButton.innerHTML=icon('recipes')+'通常表示に戻す';
+}
+// Other tabs share saved state. Keep unfinished form entries and cooking steps local.
+function syncStoredState(event){
+ if(event.storageArea&&event.storageArea!==storage)return;
+ if(event.key!==key&&event.key!==null)return;
+ if(!persistent)return;
+ if(unsaved||pendingImport){
+  persistent=false;
+  alert('別の画面で記録が変更されました。保存前の内容を守るため、自動保存を停止しました。必要な記録をJSONで保存してから再読み込みしてください。');
+  return;
+ }
+ let next;
+ try{
+  // Read the newest value rather than replaying an older queued storage event.
+  const raw=storage.getItem(key);
+  next=raw===null?core.createDefaultState(data,today()):core.validateState(JSON.parse(raw),data);
+ }catch{
+  persistent=false;
+  try{protectedRaw=storage.getItem(key);}catch{}
+  alert('別の画面で保存データが変更され、読み込めませんでした。元のデータを守るため自動保存を停止しました。JSONを保存してから再読み込みしてください。');
+  return;
+ }
+ const drafts=[];
+ for(const selector of ['#note','#record-form input[name="date"]','#extra-form input[name="name"]','#swap-form select']){
+  for(const input of app.querySelectorAll(selector)){
+   if(input.id==='note'&&input.value===(state.progress[document.body.dataset.recipeId]?.note||''))continue;
+   drafts.push({selector:input.name?selector+'[name="'+input.name+'"]':selector,value:input.value});
+  }
+ }
+ const steps=[...app.querySelectorAll('[data-step]:checked')].map(input=>input.dataset.step);
+ const details=[...app.querySelectorAll('details')].map(el=>el.open);
+ const focused=document.activeElement;
+ const focusId=focused.id,focusAction=focused.dataset?.action,focusData={...focused.dataset};
+ const focusForm=focused.form?.id,focusName=focused.name,focusStep=focused.dataset?.step;
+ const focusLink=focused.closest('a[href]'),linkHref=focusLink?.getAttribute('href');
+ const linkIndex=[...app.querySelectorAll('a[href]')].filter(el=>el.getAttribute('href')===linkHref).indexOf(focusLink);
+ const summaryIndex=[...app.querySelectorAll('summary')].indexOf(focused);
+ const formButtonIndex=focused.form?[...focused.form.querySelectorAll('button')].indexOf(focused):-1;
+ const selection={start:focused.selectionStart,end:focused.selectionEnd};
+ state=next;lastSwap=null;render();
+ for(const draft of drafts){const input=app.querySelector(draft.selector);if(input)input.value=draft.value;}
+ for(const input of app.querySelectorAll('[data-step]'))input.checked=steps.includes(input.dataset.step);
+ [...app.querySelectorAll('details')].forEach((el,i)=>{if(i<details.length)el.open=details[i];});
+ const restored=focusId?document.getElementById(focusId):linkIndex>=0?[...app.querySelectorAll('a[href]')].filter(el=>el.getAttribute('href')===linkHref)[linkIndex]:summaryIndex>=0?app.querySelectorAll('summary')[summaryIndex]:formButtonIndex>=0?document.getElementById(focusForm)?.querySelectorAll('button')[formButtonIndex]:[...app.querySelectorAll('input,select,button,textarea')].find(el=>
+  focusAction?el.dataset.action===focusAction&&Object.entries(focusData).every(([key,value])=>el.dataset[key]===value):
+  focusStep!==undefined?el.dataset.step===focusStep:focusForm&&focusName&&el.form?.id===focusForm&&el.name===focusName);
+ if(restored){
+  if(focusAction==='shopping-check'||focusAction==='extra-done')focusShoppingControl(restored);
+  else restored.focus({preventScroll:true});
+  if(selection.start!==null&&selection.start!==undefined&&typeof restored.setSelectionRange==='function')restored.setSelectionRange(selection.start,selection.end);
+ }
 }
 function download(){
  const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
@@ -123,7 +183,7 @@ function download(){
 }
 function dialog(title,body,confirmLabel,onConfirm){
  const el=document.createElement('dialog');el.innerHTML='<h2>'+esc(title)+'</h2><p>'+esc(body)+'</p><div class="toolbar"><button class="primary" id="dialog-confirm">'+esc(confirmLabel)+'</button><button id="dialog-cancel">キャンセル</button></div>';
- document.body.append(el);el.addEventListener('close',()=>el.remove());el.querySelector('#dialog-confirm').onclick=()=>{el.close();onConfirm();};el.querySelector('#dialog-cancel').onclick=()=>el.close();el.showModal();el.querySelector('#dialog-cancel').focus();
+ document.body.append(el);el.addEventListener('close',()=>el.remove());el.querySelector('#dialog-confirm').onclick=()=>{el.close();onConfirm();};el.querySelector('#dialog-cancel').onclick=()=>el.close();el.showModal();el.querySelector('#dialog-cancel').focus();return el;
 }
 window.addEventListener('beforeunload',e=>{if(unsaved){e.preventDefault();e.returnValue='';}});
 const printedDetails=new Map();
@@ -137,9 +197,10 @@ document.addEventListener('change',async e=>{
  if(el.id==='import-file'){
   const file=el.files[0];if(!file)return;
   if(file.size>1048576)throw new Error('1MB以下のJSONを選んでください。');
-  pendingImport=core.validateState(JSON.parse(await file.text()),data);
-  const c=core.getCounts(pendingImport);
-  dialog('バックアップを読み込みますか？','作った料理 '+c.cooked+'品、再現できる '+c.mastered+'品。開始日 '+pendingImport.startDate+'。現在の記録を置き換えます。','読み込んで置き換える',()=>{persistent=!!storage;protectedRaw=null;alert('');commit(pendingImport,'バックアップを読み込みました。');pendingImport=null;});
+  const imported=core.validateState(JSON.parse(await file.text()),data);pendingImport=imported;
+  const c=core.getCounts(imported);
+  const modal=dialog('バックアップを読み込みますか？','作った料理 '+c.cooked+'品、再現できる '+c.mastered+'品。開始日 '+pendingImport.startDate+'。現在の記録を置き換えます。','読み込んで置き換える',()=>{persistent=!!storage;protectedRaw=null;alert('');commit(imported,'バックアップを読み込みました。');pendingImport=null;});
+  modal.addEventListener('close',()=>{pendingImport=null;});
  }
  if(a==='servings')commit({...state,servings:Number(el.value)},'人数を変更しました。');
  if(a==='start-date')commit({...state,startDate:el.value},'開始日を変更しました。');
@@ -148,12 +209,12 @@ document.addEventListener('change',async e=>{
  if(a==='from-day'){fromDay=Number(el.value);toDay=Math.max(toDay,fromDay);render();}
  if(a==='to-day'){toDay=Number(el.value);fromDay=Math.min(fromDay,toDay);render();}
  if(a==='breakfast')commit({...state,breakfast:el.value},'朝食の設定を変更しました。');
+ if(a==='pantry-basic'){commit(core.setPantryBasic(state,el.dataset.name,el.checked),'基本セットを更新しました。',false);renderPantryBasics();}
  if(a==='shopping-check'){
-  const r=shoppingRows().find(r=>r.key===el.dataset.key),n=copy(state);
+  const r=shoppingRows().find(r=>r.key===el.dataset.key);
   if(!r)return;
   const recipeId=page==='recipe'?document.body.dataset.recipeId:shoppingRecipeId;
-  if(el.checked)n.shoppingChecks[r.key]={kind:el.dataset.kind,quantity:r.quantity,period:core.shoppingPeriod(state,fromDay,toDay,recipeId)};else delete n.shoppingChecks[r.key];
-  commit(n,'買物チェックを更新しました。',false);
+  commit(core.setShoppingCheck(state,r,el.dataset.kind,el.checked,core.shoppingPeriod(state,fromDay,toDay,recipeId)),'買物チェックを更新しました。',false);
   const fragment=document.createElement('template');
   if(page==='recipe'){
    fragment.innerHTML=recipeBody(byId(recipeId),state.servings,shoppingRows());
@@ -183,11 +244,11 @@ document.addEventListener('click',e=>{
  if(a==='range'){toDay=Math.min(30,fromDay+Number(el.dataset.days)-1);render();}
  if(a==='remove-date'){const id=document.body.dataset.recipeId;commit(core.updateProgress(state,id,{dates:state.progress[id].dates.filter(d=>d!==el.dataset.date)}),'記録日を削除しました。');}
  if(a==='extra-remove'){commit({...state,extraItems:state.extraItems.filter(i=>i.id!==el.dataset.id)},'追加項目を削除しました。');}
- if(a==='reset-checks'){const n=copy(state);for(const row of shoppingRows())delete n.shoppingChecks[row.key];commit(n,'このリストのチェックを外しました。');}
+ if(a==='reset-checks')commit(core.resetShoppingChecks(state,shoppingRows(),core.shoppingPeriod(state,fromDay,toDay,shoppingRecipeId)),'このリストのチェックを外しました。基本セットはそのままです。');
  if(a==='undo-swap'&&lastSwap){const n=core.swapSlots(state,...lastSwap);lastSwap=null;commit(n,'交換を戻しました。');}
  if(a==='export')download();
  if(a==='export-original'&&protectedRaw!==null){const url=URL.createObjectURL(new Blob([protectedRaw],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='cooking60-protected-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
- if(a==='reset')dialog('このサイトの記録を初期化しますか？','献立の変更、調理記録、メモ、買物チェックを削除します。必要な記録は先にJSONを書き出してください。','初期化する',()=>{const result=core.clearAppState(storage,key);persistent=result.ok;protectedRaw=null;state=core.createDefaultState(data,today());commit(state,'このサイトの記録を初期化しました。');alert(result.ok?'':'保存領域を操作できません。この画面内だけ初期化しました。');});
+ if(a==='reset')dialog('このサイトの記録を初期化しますか？','献立の変更、調理記録、メモ、基本セットと買物のチェックを削除します。必要な記録は先にJSONを書き出してください。','初期化する',()=>{const result=core.clearAppState(storage,key);persistent=result.ok;protectedRaw=null;state=core.createDefaultState(data,today());commit(state,'このサイトの記録を初期化しました。');alert(result.ok?'':'保存領域を操作できません。この画面内だけ初期化しました。');});
  }catch(err){message(err.message);}
 });
 document.addEventListener('submit',e=>{
@@ -212,7 +273,7 @@ async function start(){
   fromDay=activeDay();toDay=Math.min(30,fromDay+6);
   render();
   if(page==='shopping'&&requestedShoppingRecipe&&!shoppingRecipeId)message('指定された料理が見つからないため、期間の買物リストを表示しています。');
-  window.addEventListener('storage',e=>{if(e.key===key){persistent=false;alert('別の画面で記録が変更されました。この画面の自動保存を停止しました。変更を反映するには再読み込みしてください。');}});
+  window.addEventListener('storage',syncStoredState);
  }catch(err){alert('記録機能を読み込めませんでした。レシピ本文は読めます。通信状況を確認して再読み込みしてください。');console.error(err);}
 }
 start();
