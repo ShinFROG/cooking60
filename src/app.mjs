@@ -41,13 +41,15 @@ function plan(){
 function catalogue(){
  const forms=[...new Set(data.recipes.map(r=>r.mealForm))];
  const equipment=[...new Set(data.recipes.flatMap(r=>r.equipment))].sort();
- return headline('RECIPE COLLECTION','作れるようになる、60品。','料理名や食材で探して、今日の一品を選びましょう。')+'<div class="filters no-print"><label class="search">料理名・材料 <input type="search" id="search" placeholder="例：鶏肉、卵、うどん" value="'+esc(filter.q)+'"></label><label>料理の種類 <select data-filter="form">'+option('','すべて',filter.form)+forms.map(x=>option(x,x,filter.form)).join('')+'</select></label><label>目安時間 <select data-filter="time">'+option('','すべて',filter.time)+option('30','30分以内',filter.time)+option('15','15分以内',filter.time)+'</select></label><label>使う道具 <select data-filter="equipment">'+option('','すべて',filter.equipment)+equipment.map(x=>option(x,x,filter.equipment)).join('')+'</select></label><label>記録 <select data-filter="progress">'+option('','すべて',filter.progress)+['未着手','作った','再現できる','もう一度練習'].map(x=>option(x,x,filter.progress)).join('')+'</select></label><button data-action="clear-filter">条件をクリア</button></div><p id="result-count" class="result-count" role="status"></p><div id="recipe-grid" class="grid"></div>';
+ return headline('RECIPE COLLECTION','作れるようになる、60品。','完成イメージから、今日の一品を。料理名や食材でも探せます。')+'<div class="catalogue-tools no-print"><label class="catalogue-search">料理名・材料 <input type="search" id="search" placeholder="例：鶏肉、卵、うどん" value="'+esc(filter.q)+'"></label><details class="catalogue-filters"><summary>条件で絞り込む <span id="filter-active"></span></summary><div class="filters"><label>料理の種類 <select data-filter="form">'+option('','すべて',filter.form)+forms.map(x=>option(x,x,filter.form)).join('')+'</select></label><label>目安時間 <select data-filter="time">'+option('','すべて',filter.time)+option('30','30分以内',filter.time)+option('15','15分以内',filter.time)+'</select></label><label>使う道具 <select data-filter="equipment">'+option('','すべて',filter.equipment)+equipment.map(x=>option(x,x,filter.equipment)).join('')+'</select></label><label>記録 <select data-filter="progress">'+option('','すべて',filter.progress)+['未着手','作った','再現できる','もう一度練習'].map(x=>option(x,x,filter.progress)).join('')+'</select></label><button data-action="clear-filter">条件をクリア</button></div></details></div><p id="result-count" class="result-count" role="status"></p><div id="recipe-grid" class="grid"></div>';
 }
 function filterRecipes(){
  const q=filter.q.trim().toLowerCase().normalize('NFKC');
  const matches=data.recipes.filter(r=>(!q||[r.title,...r.ingredients.map(i=>i.name)].join(' ').normalize('NFKC').toLowerCase().includes(q))&&(!filter.form||r.mealForm===filter.form)&&(!filter.time||r.estimatedTotalMinutes<=Number(filter.time))&&(!filter.equipment||r.equipment.includes(filter.equipment))&&(!filter.progress||status(state.progress[r.id])===filter.progress));
+ const activeFilters=Object.entries(filter).filter(([key,value])=>key!=='q'&&value).length;
+ document.querySelector('#filter-active').textContent=activeFilters?'選択中 '+activeFilters+'件':'';
  document.querySelector('#result-count').textContent=matches.length+'品 / 全60品（調理時間は未実測の目安）';
- document.querySelector('#recipe-grid').innerHTML=matches.length?matches.map(r=>card(r,root.pathname,state.progress[r.id])).join(''):'<p class="empty">該当する料理がありません。検索語や条件を減らしてください。</p>';
+ document.querySelector('#recipe-grid').innerHTML=matches.length?matches.map(r=>card(r,root.pathname,state.progress[r.id],true)).join(''):'<p class="empty">該当する料理がありません。検索語や条件を減らしてください。</p>';
 }
 function recordPanel(id){
  const p=state.progress[id]||{dates:[],mastered:false,practice:false,note:''};
@@ -117,7 +119,7 @@ document.addEventListener('click',e=>{
  try{
  if(a==='print')window.print();
  if(a==='cook-mode'){const on=document.body.classList.toggle('cook-mode');el.innerHTML=icon(on?'recipes':'play')+(on?'通常表示に戻す':'調理表示にする');}
- if(a==='clear-filter'){Object.keys(filter).forEach(k=>filter[k]='');render();}
+ if(a==='clear-filter'){Object.keys(filter).forEach(k=>filter[k]='');render();document.querySelector('#search').focus();}
  if(a==='range'){toDay=Math.min(30,fromDay+Number(el.dataset.days)-1);render();}
  if(a==='remove-date'){const id=document.body.dataset.recipeId;commit(core.updateProgress(state,id,{dates:state.progress[id].dates.filter(d=>d!==el.dataset.date)}),'記録日を削除しました。');}
  if(a==='extra-remove'){commit({...state,extraItems:state.extraItems.filter(i=>i.id!==el.dataset.id)},'追加項目を削除しました。');}

@@ -1,0 +1,1330 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-18",
+  "method": "built-in image_gen; one original image per recipe; WebP resizing and compression",
+  "imageType": "AI-generated finished-dish illustration; not a photograph of a cooking trial",
+  "images": [
+    {
+      "recipeId": "dish-01",
+      "title": "卵チャーハン",
+      "prompt": "Use case: photorealistic-natural.\nAsset type: finished-dish image for a Japanese beginner cooking website, recipe dish-01 卵チャーハン.\nScene/backdrop: neutral warm off-white tabletop, simple matte white ceramic plate, no props.\nSubject: one modest home-cooked serving of Japanese egg fried rice. Loose separated short-grain white rice lightly colored with soy sauce, fully cooked golden scrambled egg pieces, tiny 3 mm orange carrot cubes and finely chopped Japanese long onion mixed evenly. A relaxed low rounded mound, not an elaborate restaurant presentation. Only rice, egg, carrot and long onion are visible ingredients; no meat, shrimp, peas, parsley, lettuce, pickles or extra garnish.\nStyle/medium: photorealistic modern editorial food photography with natural grain and believable cooked textures.\nComposition/framing: landscape 3:2, slightly elevated 45-degree view, complete plate centered, roughly 10% breathing room around plate edges so thumbnail crops retain the whole dish.\nLighting/mood: soft natural daylight, appetizing and clean, gentle shadows, consistent neutral color.\nConstraints: a single completed dish, no collage; no text, logos, watermarks, people, hands, cutlery, raw ingredients, packages or side dishes. Do not add a soup or drinks.",
+      "visualReview": "ご飯・固まった卵・小さなにんじん・長ねぎのチャーハンを確認。具の混在、焼き色、器、文字や余計な副菜のないことを確認。",
+      "files": [
+        {
+          "file": "dish-01.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 60740,
+          "sha256": "7bdd9ca21ae467d63371e1e5b16f4be210e5ce9c98683a962429d87697a8f37e"
+        },
+        {
+          "file": "dish-01-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21580,
+          "sha256": "d5773f860d6bf271e7bffd5209ab862cb2652bd5d4272fd2bd92bffc8857c34b"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-02",
+      "title": "豚のしょうが焼きとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe image, landscape 3:2. A modern editorial home-cooking food photograph of Japanese pork ginger stir fry (豚のしょうが焼きとご飯), one ordinary appetizing serving. Main matte white ceramic plate holds 120g thin pork loin slices cut about 4–5cm, cooked fully and lightly browned then glazed with soy-ginger-mirin sauce, mixed with translucent cooked 5mm onion slices. Beside the pork on the same plate is a modest mound of very thin fresh shredded cabbage, 50g. The only other dish is a small matte white ceramic bowl of plain steamed Japanese white rice, 150g. Neutral warm off-white tabletop, slightly elevated 45-degree viewpoint, soft natural daylight, entire main plate and rice bowl centered with 10 percent breathing room from every edge. Natural food texture, realistic proportions and gloss, premium yet simple home cooking. No text, labels, logos, watermark, people, hands, utensils, chopsticks, cutlery, soup, extra side dishes, cherry tomatoes, lemon, parsley, sesame, green herbs or any unlisted garnish. This is a conceptual AI-generated completed-dish image, not a documented cooking test photo.",
+      "visualReview": "豚薄切り肉と半透明の玉ねぎにしょうが焼きのたれ、千切りキャベツ、小茶碗の白飯を確認。未記載の副菜・薬味・文字はなく破綻なし。",
+      "files": [
+        {
+          "file": "dish-02.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 65924,
+          "sha256": "ce30663ca1ccee1f759c90c5b213f010c487b373e0e5b6a998709422bffcdbdd"
+        },
+        {
+          "file": "dish-02-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21238,
+          "sha256": "4e53422c4d016699c2c34651a66eb755c2101d750d57d81c108cf67f479276df"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-03",
+      "title": "焼きうどん",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese yaki udon. One matte white shallow plate of thick chewy udon noodles 200g, stir fried with fully cooked thin irregular pork slices (80g, 3cm pieces), wilted 3cm cabbage squares (80g), narrow flat 2mm-thick carrot strips (30g), translucent 5mm onion slices (40g). A light soy-mirin glaze coats the noodles, no pooled soup. Finish with a light scattering of delicate shaved bonito flakes 2g on top. No nori, green onion, sesame, ginger pickles, egg or other garnish. No rice bowl.",
+      "visualReview": "太いうどん、豚薄切り、キャベツ、人参短冊、玉ねぎ、仕上げのかつお節を確認。汁なしの炒め麺で未記載の具なし。",
+      "files": [
+        {
+          "file": "dish-03.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 76154,
+          "sha256": "c88645834f890c47f6c3b901d6fa01b36548c2eb0dd987e80dd00dd9f1916355"
+        },
+        {
+          "file": "dish-03-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25792,
+          "sha256": "4f6156e50145ab9c366593ca12efeae8d140a173fdaef05123ec152aabb09105"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-04",
+      "title": "鮭のホイル蒸しとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese salmon steamed in foil with rice (鮭のホイル蒸しとご飯). A matte white main plate carries an opened crinkled aluminium foil packet, containing a single 120g cooked salmon fillet skin side down, resting on soft thin onion slices (60g), with clusters of cooked shimeji mushrooms (50g) and narrow 2mm-thick carrot strips (30g) around/on the fish. A little butter has fully melted into the cooking juices; light soy sauce drizzled over, salmon is opaque pale orange, moist flaky cooked texture, NOT raw. The only separate item is one small matte white ceramic bowl of plain steamed white rice 150g. No lemon, herbs, green onion, extra vegetables, soup or other garnish. Whole foil packet and rice bowl fully in frame.",
+      "visualReview": "開いたホイル内の鮭切り身、玉ねぎ、しめじ、人参と白飯を確認。バターは溶けた汁として描写、余計な副菜や薬味なし。",
+      "files": [
+        {
+          "file": "dish-04.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 78420,
+          "sha256": "9b8e9298bcebb9bb12a672ace5b0cd557e6824f9491d4c750afc5651bb5d7e18"
+        },
+        {
+          "file": "dish-04-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 24204,
+          "sha256": "7d2faad857504ffd8a6b73c1aca1e69c6c09f44485bfee056ee1675142442884"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-05",
+      "title": "親子丼",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: oyakodon, Japanese chicken and egg rice bowl. A single matte white ceramic donburi bowl with 200g cooked Japanese white rice visible at the rim, topped with chicken thigh cut into about 2cm bite-size pieces (100g), tender translucent onion slices (60g), and TWO eggs gently cooked together in light soy-mirin-dashi sauce. The egg forms soft yellow and white curds wrapping around the meat and onion; both yolk and white are fully set with NO raw egg, runny yolk or transparent egg white. Moist glossy simmered topping with little brown broth lightly soaking the rice. No garnish, herbs, green scallions, seaweed, sesame, red pickles or other dishes.",
+      "visualReview": "鶏肉・玉ねぎ・黄色と白の固まった卵がご飯を覆う親子丼。生卵や未記載の薬味なし、器や具に破綻なし。",
+      "files": [
+        {
+          "file": "dish-05.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 55646,
+          "sha256": "18de56a2f38ba3aa5b5e1cf41d5403f57d51aacf3fda90ace2f6cd6ec6343e9a"
+        },
+        {
+          "file": "dish-05-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19178,
+          "sha256": "f8d5b6a75bf9f9bcced67a43641797dd01911451d9bb8962565c06045295b8d1"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-06",
+      "title": "麻婆豆腐とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: mild Japanese-style mapo tofu with rice, 麻婆豆腐とご飯. A matte white shallow bowl holding 200g firm white tofu in intact 2cm cubes with 80g finely crumbled cooked ground pork and fine minced cooked Japanese long onion, garlic and ginger in a glossy lightly thickened medium brown miso-soy sauce with just a touch of muted red chili bean paste. Sauce should coat the tofu, not a bright oily red Sichuan chili soup. Ground pork and fine minced aromatics distributed throughout. The only additional dish is a small matte white bowl with 150g plain steamed white rice. No green scallion garnish, chili pepper pieces, sesame, cilantro, extra vegetable, soup or side dishes.",
+      "visualReview": "角切り豆腐、ほぐれた豚ひき肉、刻み長ねぎ、茶褐色のあん、別茶碗の白飯を確認。未記載の薬味や副菜なし。白飯茶碗の外縁は画面右上に近いが料理は視認できる。",
+      "files": [
+        {
+          "file": "dish-06.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 76886,
+          "sha256": "7f730669b429bc8d55b7d8eaf7ebadaaf73c41b07f02b13c5744533adaaddb4b"
+        },
+        {
+          "file": "dish-06-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25608,
+          "sha256": "d24ddd3c262d7ae22783186a919921b2b14bcdca921af234105d0797596bfb56"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-07",
+      "title": "ナポリタン",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese napolitan spaghetti. One matte white shallow plate with a normal single serving of spaghetti (100g dry weight), evenly coated in glossy orange-red pan-fried ketchup sauce, mixed with 50g cooked wiener sausage cut into thin diagonal 5mm slices, translucent 5mm onion slices and cooked green bell pepper strips. Black pepper tiny flecks. No grated cheese, parsley, basil, mushrooms, seafood, tomato chunks or any garnish. No rice or side dish.",
+      "visualReview": "ケチャップ色のスパゲティ、斜め切りソーセージ、玉ねぎ、ピーマン、こしょうを確認。粉チーズやパセリなどの追加なし。",
+      "files": [
+        {
+          "file": "dish-07.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 79346,
+          "sha256": "5a3f8a715dc2ebc7c56e45a227355654ad56943d164023235b0dba077f346098"
+        },
+        {
+          "file": "dish-07-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25230,
+          "sha256": "519a89bd07f5014abe60b5a55bd5562d1649d6003e45ecb20d5e7c16d32f1436"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-08",
+      "title": "鶏の照り焼きとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese chicken teriyaki with rice. Main matte white plate holding ONE boneless chicken thigh 150g, skin pan-seared golden brown then glazed in reduced soy-mirin sauce, cut crosswise into easy-to-eat strips and arranged together skin side up, cooked opaque interior visible. Beside the chicken on this same plate is thinly shredded fresh cabbage 60g. The only separate dish is a small matte white bowl of plain steamed white rice 150g. No sesame, scallions, broccoli, lemon, tomatoes, herbs, sauce ramekins, soup or extra side dishes.",
+      "visualReview": "焼き色とたれの付いた切り分けた鶏肉、千切りキャベツ、白飯のみを確認。鶏肉断面は白く加熱済みの表現。未記載の薬味なし。",
+      "files": [
+        {
+          "file": "dish-08.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 69508,
+          "sha256": "7abad1433c8bc720d48e0b774760450e528464128d67cbe2da8c9b4587273a37"
+        },
+        {
+          "file": "dish-08-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22642,
+          "sha256": "e3c4e94d2bff03a920fd9e86ca213f652f89aaea48b53e219c881ef30a8a814a"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-09",
+      "title": "ツナと野菜のサンドイッチ",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese tuna and vegetable sandwich. One sandwich made from TWO slices of soft untoasted Japanese white sandwich bread WITH thin golden crusts still intact, filled with 70g drained canned tuna mixed with mayonnaise and a little black pepper, crisp green lettuce 20g and 2mm thin diagonal cucumber slices 40g. Sandwich cut cleanly in half into two triangular halves, placed on ONE simple matte white ceramic plate, the cut faces clearly show tuna filling, lettuce and cucumber. Modest realistic one-person portion. No extra bread sandwiches, tomato, cheese, egg, avocado, carrots, fruit, fries, salad or other garnish.",
+      "visualReview": "耳付き食パン2枚分を半分に切ったサンドイッチ。ツナマヨ、レタス、斜め薄切りきゅうりの断面が見える。トマトや卵などの追加具なし。",
+      "files": [
+        {
+          "file": "dish-09.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 67178,
+          "sha256": "860c8bdc21e071cf5abb4de55f9f3f34e2ee3e5e821795c22bd34e10eb2377f8"
+        },
+        {
+          "file": "dish-09-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22256,
+          "sha256": "92b55a415c2dfe779c3aee944ae6d52707df9e5a3a757c13689747b138838f2f"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-10",
+      "title": "チキンと野菜のカレーライス",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese chicken and vegetable curry rice. One matte white shallow plate holds a small mound of steamed white rice 150g on one side and thick smooth medium-brown Japanese curry on the other. In the curry are cooked chicken thigh pieces about 2cm, peeled potato chunks about 2cm, carrot quarter-round slices about 1cm thick, and softened onion strips; ingredients tender but recognizable. Typical ordinary home-style Japanese roux curry, not an Indian curry, natural glossy sauce. No red pickles, green peas, cilantro, parsley, naan, egg, cutlet or side dishes.",
+      "visualReview": "白飯と茶色のカレールウ、鶏肉、じゃがいも、人参、玉ねぎの具を確認。付け合わせや薬味なし。食器と料理に破綻なし。",
+      "files": [
+        {
+          "file": "dish-10.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 64144,
+          "sha256": "db2b342465b7807fb33388010bdc93a948f16c97ba93bff55c319c1c2521288f"
+        },
+        {
+          "file": "dish-10-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21330,
+          "sha256": "f6e70acfebd9f76ddb298a037bda830942d7acaabdedce9b32e0f3dc354ae714"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-11",
+      "title": "オムライス",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: beginner home-style Japanese omurice. A low mound of ketchup chicken fried rice (180g cooked rice with tiny 1cm chicken pieces and finely diced onion) on a simple matte white plate is COVERED by a wide, thin round fully set yellow omelet made with two eggs, slid flat over the mound rather than folded into a football. Slight irregular natural edge, a little orange-red rice visible below the edge, a simple small line of red ketchup over the top. Egg surface opaque cooked, not runny, not a soufflé and not split open. No herb garnish, salad, tomato wedges, cheese, vegetables or side dishes.",
+      "visualReview": "チキンと玉ねぎ入りケチャップライスに丸く焼き固めた薄い卵をのせた方式を確認。卵で包む方式や半熟オムレツではなく現工程どおり。上にケチャップ、未記載の付け合わせなし。",
+      "files": [
+        {
+          "file": "dish-11.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 50810,
+          "sha256": "c3a324debfe712d8769bc139af3a02d971b11b0c20968ad1bad9708d50e70133"
+        },
+        {
+          "file": "dish-11-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17200,
+          "sha256": "c5457e9003523c26324dcbd827eb50f9d99bcaaf17a0335534e2129b75435df7"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-12",
+      "title": "サバのみそ煮とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese mackerel simmered in miso, with rice. A single 120g mackerel fillet skin side up, one shallow scored line across the silvery dark blue patterned skin, fully cooked tender flesh, placed in a small matte white shallow bowl with a modest pool of glossy brown miso simmering sauce. A few thin pale cooked ginger slices from the sauce lie alongside the fish. The only separate dish is a small matte white ceramic bowl of plain steamed Japanese white rice 150g. No green onion, sesame, green leaves, carrots, radish, lemon, pickles, soup or other side dishes.",
+      "visualReview": "皮を上にしたサバ切り身、皮の切れ目、みそ煮汁、薄切りしょうがと白飯を確認。青ねぎや青菜などの追加なし。茶碗外縁は左端に近いが料理は視認できる。",
+      "files": [
+        {
+          "file": "dish-12.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 62134,
+          "sha256": "ee7aefc580d32ddbdf75ec511c46cc1d22e1b2bc02ce4353d634fbb823f18c98"
+        },
+        {
+          "file": "dish-12-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18106,
+          "sha256": "5eed84b7c65e1f8a97150cc6a5ec7c07158d96e647105ddf0b62c29dec2b5b04"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-13",
+      "title": "豚汁うどん",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: tonjiru udon Japanese pork miso soup noodles. A single matte white deep bowl with thick pale udon noodles 200g in warm cloudy light-brown miso broth. Ingredients visible among noodles: fully cooked small thin pork slices 70g about 3cm pieces, tender daikon quarter-round slices 2–3mm thick, orange carrot quarter-round slices 2–3mm thick, and cooked Japanese long onion cross-sections about 5mm thick. Broth about 350ml, a hearty soup noodle lunch. No tofu, mushrooms, potatoes, chili powder, raw garnish, boiled egg, seaweed or side dishes.",
+      "visualReview": "太いうどん、薄い豚肉、大根・にんじん・長ねぎのみそ汁を確認。未記載の豆腐やきのこ、薬味なし。",
+      "files": [
+        {
+          "file": "dish-13.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 52066,
+          "sha256": "74dc70e0c635b8a7a2e0995ae5e6346cd73920adf50b6e8a2f51a1c75198e6ad"
+        },
+        {
+          "file": "dish-13-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17986,
+          "sha256": "f646dbe6dabd5e25e395ac291f72097cef2f59d3a936f8b0be2e730305c26b10"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-14",
+      "title": "焼き餃子とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: Japanese pan-fried gyoza and rice. Exactly TEN modest crescent-shaped gyoza dumplings on a single matte white ceramic plate, natural handmade sealed edges with simple folds, realistic pale steamed wrappers and crisp golden-brown pan-fried bases visible, arranged in two gently curved rows of five. Filling hidden inside wrappers is cooked ground pork, finely chopped cabbage and Chinese chives with ginger. The only separate dish is a small matte white ceramic bowl of plain steamed white rice 150g. No dipping sauce bowl (not part of recipe), garnishes, lettuce, sesame, chili oil, lemon, soup or extra food. No sprawling lacy pancake connecting dumplings.",
+      "visualReview": "餃子10個を2列に並べ、薄い皮ときつね色の焼き面、ご飯を確認。未記載のたれ皿や薬味なし。",
+      "files": [
+        {
+          "file": "dish-14.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 71822,
+          "sha256": "1ca0918870a910803887b6fbb258e2c74c1dccc8b01b71706bb308187f6dc23c"
+        },
+        {
+          "file": "dish-14-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20696,
+          "sha256": "c001c025380165bd78adabe6cf7f374283319d258835e59d60651102101e8e22"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-15",
+      "title": "ビビンバ",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: simple Japanese home-style bibimbap. One matte white rice bowl holds 180g steamed Japanese white rice topped with a section of fine fully cooked browned ground beef 80g and a separate section of mixed blanched vegetables: orange carrot julienne 4cm long, pale mung bean sprouts, dark green komatsuna leaves and green stems cut 4cm. Vegetables lightly dressed with sesame oil and tiny white roasted sesame seeds. A small dollop of deep-red gochujang placed beside the toppings. Rice partly visible. NO egg of any kind, no spinach substitution, kimchi, cucumber, mushrooms, nori or other toppings. Simple bowl rather than black stone pot.",
+      "visualReview": "ご飯、炒めた牛ひき肉、混ぜた小松菜・もやし・にんじん、ごま、コチュジャンを確認。未記載の卵やキムチなし。",
+      "files": [
+        {
+          "file": "dish-15.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 72024,
+          "sha256": "3d0abd2be67f410c8a00fa746a75dd7714719f7e30aa0cf5481241dee23d9e2f"
+        },
+        {
+          "file": "dish-15-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 24650,
+          "sha256": "301fb356e63f3af9f1139536ced6e79614acfcf6fa193e218bf5ff5c1b097a2a"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-16",
+      "title": "鶏肉のトマト煮とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe website completed-dish image. Landscape 3:2, modern editorial home cooking food photography. Neutral warm off-white tabletop, simple matte white ceramic dishes, slightly elevated 45-degree viewpoint, soft natural daylight, entire dish centered with 10 percent breathing room around the outer edges. An appetizing ordinary one-person serving; natural realistic textures, restrained styling. No text, logos, watermarks, people, hands, utensils, cutlery, chopsticks, extra side dishes, decorative ingredients or unlisted garnish. This is a conceptual AI-generated image, not a documented cooking test. Subject: chicken simmered in tomato sauce and rice. Main matte white shallow bowl contains fully cooked chicken thigh pieces approximately 3cm wide, lightly browned skin, tender translucent 5mm onion slices and small clusters of cooked shimeji mushrooms in a thick chunky red tomato sauce, with tiny minced garlic cooked into the sauce. Ordinary single serving 150g chicken, 70g onion, 50g mushrooms and 150g canned tomatoes. The only separate dish is one small matte white ceramic bowl of plain steamed Japanese white rice 150g. No basil, parsley, cheese, black olives, bell pepper, carrots, broccoli, soup or extra side dishes.",
+      "visualReview": "小さく切った鶏肉・玉ねぎ・しめじをトマトソースで煮た姿と白ご飯を確認。未記載のハーブやチーズなし。",
+      "files": [
+        {
+          "file": "dish-16.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 78654,
+          "sha256": "51f9be2ca65a9d28d6b9d481174da2becf2e53072df77f2db21aac81847aa7cf"
+        },
+        {
+          "file": "dish-16-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21848,
+          "sha256": "3620d3f6ab29f54e30674b488012cd05d535cc77bffbb4d2e83c9eeceda29ebf"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-17",
+      "title": "和風きのこパスタ",
+      "prompt": "Use case: photorealistic-natural. Asset type: AI-generated finished-dish illustration for a beginner Japanese cooking website, not a photograph of a cooking trial. Modern editorial home-cooking food photography, landscape 3:2. Neutral warm off-white tabletop, simple matte white ceramic serving ware, slightly elevated 45-degree viewpoint, soft natural daylight, gently shaded realistic cooked textures. One modest ordinary serving. Entire dish centered with breathing room from edges. No text, labels, logos, watermark, people, hands, utensils, raw ingredient props or unlisted garnish. Subject: 和風きのこパスタ, Japanese soy butter mushroom spaghetti. A modest nest of cooked spaghetti evenly mixed with plentiful cooked shimeji mushrooms (small brown caps on pale stems), thin slices of shiitake mushrooms, translucent 5mm onion strips and tiny thin cooked garlic slices. Light golden-brown soy sauce butter sheen, a little ground pepper. A single white ceramic plate only. No cream sauce, tomato sauce, parsley, basil, seaweed, spring onion, meat, shrimp, cheese, rice or sides. Actual ingredients: spaghetti100g, shimeji70g, shiitake30g,onion40g,garlic3g,olive oil,soy sauce,butter,salt,pepper.",
+      "visualReview": "しめじ・しいたけの薄切り・玉ねぎ・にんにくが混ざったしょうゆ色のスパゲティを確認。チーズ・のりなど未記載の薬味なし。",
+      "files": [
+        {
+          "file": "dish-17.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 68276,
+          "sha256": "c461c2f6d8dba9ca9f7e497ced3381f99b6f77383c6cc653e31c7a8e361fe60d"
+        },
+        {
+          "file": "dish-17-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22100,
+          "sha256": "9580948591d580f85794b1c20bcac156b00529343601e3b62f7a90140d1d1bc3"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-18",
+      "title": "回鍋肉とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: AI-generated finished-dish illustration for a beginner Japanese cooking website, not a photograph of a cooking trial. Modern editorial home-cooking food photography, landscape 3:2. Neutral warm off-white tabletop, simple matte white ceramic serving ware, slightly elevated 45-degree viewpoint, soft natural daylight, gently shaded realistic cooked textures. One modest ordinary serving. Entire dish centered with breathing room from edges. No text, labels, logos, watermark, people, hands, utensils, raw ingredient props or unlisted garnish. Subject: 回鍋肉とご飯, home-style Japanese twice-cooked-style pork and cabbage stir-fry with rice. Main white ceramic plate with fully cooked thin pork belly slices about4cm long, irregular 4cm squares of softened cabbage, broad 2cm green bell pepper strips, diagonal long-onion slices and minced garlic, tossed together and coated in a glossy dark reddish brown miso-soy-chili sauce with very little pooling liquid. Alongside this main plate, one small white bowl of plain Japanese steamed rice. Pork100g, cabbage120g, pepper40g, onion20g,rice150g. No shredded raw cabbage garnish, no carrot, mushrooms, sesame, parsley, soup, drink or extra side dish.",
+      "visualReview": "豚肉・大きめのキャベツ・ピーマン・斜め切り長ねぎにみそだれが絡み、ご飯を別椀に添えている。余計な副菜なし。",
+      "files": [
+        {
+          "file": "dish-18.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 66614,
+          "sha256": "1b45eb75575a053d7d0dce755a5719198d4b748e7cb2175f2bf1f67c2e74244e"
+        },
+        {
+          "file": "dish-18-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22298,
+          "sha256": "2c24d3ccec3af56e00e4f1cb4d619a64b2bd55295e5584005a12ec0972902e4e"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-19",
+      "title": "天津飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: AI-generated finished-dish illustration for a beginner Japanese cooking website, not a photograph of a cooking trial. Modern editorial home-cooking food photography, landscape 3:2. Neutral warm off-white tabletop, simple matte white ceramic serving ware, slightly elevated 45-degree viewpoint, soft natural daylight, gently shaded realistic cooked textures. One modest ordinary serving. Entire dish centered with breathing room from edges. No text, labels, logos, watermark, people, hands, utensils, raw ingredient props or unlisted garnish. Subject: 天津飯, Japanese-style Tenshinhan egg and rice with glossy sweet sour soy gravy. Single shallow white ceramic plate. A modest mound of white rice200g entirely capped by a round, fully set two-egg omelette containing thin red-and-white imitation crab shreds40g and small chopped Japanese long-onion pieces20g. Omelette is yellow with small natural folds, no runny/raw egg. A generous translucent amber light brown sweet-sour starch gravy poured over the omelette and pooling shallowly around it. Plate edge remains clean. No peas, mushrooms, shrimp, seafood other than imitation crab, scallion garnish piled on top, sesame, parsley, tomato ketchup, sides or extra rice bowl.",
+      "visualReview": "ご飯の上に固まった卵、かに風味かまぼこ、刻み長ねぎを確認。透明感のある茶色いあんで、グリーンピース等の未記載具なし。",
+      "files": [
+        {
+          "file": "dish-19.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 47914,
+          "sha256": "ed953ea42b74c54273bb060f2dbbed8bd92be54c0826314846eeae565110be47"
+        },
+        {
+          "file": "dish-19-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16518,
+          "sha256": "e9c1349fd66a09e8c1c40510e44e3794ac1752b93228696474698faf66d488b1"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-20",
+      "title": "肉じゃがとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: AI-generated finished-dish illustration for a beginner Japanese cooking website, not a photograph of a cooking trial. Modern editorial home-cooking food photography, landscape 3:2. Neutral warm off-white tabletop, simple matte white ceramic serving ware, slightly elevated 45-degree viewpoint, soft natural daylight, gently shaded realistic cooked textures. One modest ordinary serving. Entire dish centered with breathing room from edges. No text, labels, logos, watermark, people, hands, utensils, raw ingredient props or unlisted garnish. Subject: 肉じゃがとご飯, Japanese home-style nikujaga beef and potato stew with rice. One white ceramic shallow bowl holds fully cooked thinly sliced beef100g, peeled soft potato pieces about3cm150g, 1cm-thick carrot pieces50g, soft thick onion wedges70g, simmered in a small amount of clear brown soy-mirin broth. Ingredients are mixed naturally, tender soft potatoes keep their shape with lightly uneven edges; beef is brown and folded, not pink. Alongside it is a small white ceramic bowl of plain Japanese steamed white rice150g. No green beans, snow peas, scallions, parsley, sesame, shirataki noodles, tofu, soup, drink or additional side dish.",
+      "visualReview": "牛薄切り肉・じゃがいも・にんじん・玉ねぎの煮物と白ご飯を確認。少量の煮汁、追加の緑の薬味やしらたきなし。",
+      "files": [
+        {
+          "file": "dish-20.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 47582,
+          "sha256": "d29b8cfe8ac188bdeb40770fc3a5d4597f685f05065ee284aa7c7654a124f812"
+        },
+        {
+          "file": "dish-20-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 15524,
+          "sha256": "061e302072bc4f6cfc3ec70b2c662841e4ef606367bf8c6cc77ae52c9f64ea8d"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-21",
+      "title": "チキンと野菜のラップサンド",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: チキンと野菜のラップサンド, two small tortilla wraps made from two 20 cm tortillas, filled with cooked chicken breast cut into 1 cm strips, green lettuce, small 1 cm red tomato cubes, modest pink mayonnaise-ketchup sauce. Tortillas are folded in at both sides then rolled with seam underneath. Show two realistic closed rolls lying on white plate, with a modest peek of filling at one open edge (do not cut into four halves). Chicken is fully cooked white inside with pale light browned surface, not breaded. No cheese, onion, avocado, fries, or side dishes. Two small wraps together are one person's meal.",
+      "visualReview": "2本のトルティーヤ、加熱済み鶏むね肉、レタス、角切りトマト、ソースを確認。余分な具や文字、破綻なし。",
+      "files": [
+        {
+          "file": "dish-21.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 52736,
+          "sha256": "f7aa157d292dd4c4ccbdb84095a36da25cd5ce4e7db9c67a72004ece3c2f2671"
+        },
+        {
+          "file": "dish-21-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19500,
+          "sha256": "8568962fb93c30f131c95f29cbdd9c0fc1630cb4e905c2abbfa9eb97130fa27d"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-22",
+      "title": "白身魚のムニエルとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 白身魚のムニエルとご飯. A single 120 g cod fillet with a thin flour coating pan fried to light golden brown, glossy lemon-butter sauce, beside softened cabbage cut 2 cm wide on a white plate. A small separate plain white bowl of 150 g steamed white rice. Fish is a natural flaky white cod portion, not breaded. Only the fish, cooked cabbage and rice. No lemon slices because the recipe uses juice, no herbs.",
+      "visualReview": "タラの切り身、薄い焼き色、加熱済みキャベツ、レモンバター、ご飯を確認。レモン飾りなど余分な具なし。",
+      "files": [
+        {
+          "file": "dish-22.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 60974,
+          "sha256": "507799455d6b4876d546281b0e821d0d2dda403840280568686f80f6f9440ccd"
+        },
+        {
+          "file": "dish-22-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 15964,
+          "sha256": "f90d05f106714be403226ee961cc34db8b193c094b1d917f766b55b3a416f46f"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-23",
+      "title": "ソース焼きそば",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: ソース焼きそば. One person's portion of Japanese stir fried yakisoba noodles, glossy medium brown Worcestershire-soy coating. Curly noodles mixed evenly with fully cooked thin 3 cm pork slices, 3 cm cabbage squares, thin carrot batons, and bean sprouts. Sprinkle a little fine green aonori over the noodles; no pink pickled ginger, no egg, no mayonnaise. Served as a modest mound on one white plate.",
+      "visualReview": "焼きそば麺、豚肉、キャベツ、にんじん、もやし、青のりを確認。食材の破綻や余分なトッピングなし。",
+      "files": [
+        {
+          "file": "dish-23.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 84150,
+          "sha256": "c7977fabc7ec06b92e56f4e4c41a3ce4fc925bff2ac81a1386ed3c258eb13cf2"
+        },
+        {
+          "file": "dish-23-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 26952,
+          "sha256": "6d3d3829983bdd6e2ac8c1a62308a6af099814a64965bf1e95419aa361496005"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-24",
+      "title": "ハンバーグとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: ハンバーグとご飯. Japanese hamburger steak meal: exactly TWO SMALL oval patties about 1.5 cm thick, made from 120 g mixed mince total and finely chopped onion, cooked through with browned surfaces. Thin glossy dark red ketchup-brown sauce over each patty, fine shredded raw cabbage next to them, all on one white plate. A small separate plain white bowl of 150 g steamed white rice. No fried egg, no fries, no broccoli, no parsley.",
+      "visualReview": "小さめハンバーグ2個、ソース、生キャベツ、ご飯を確認。卵や記載外の付け合わせなし。",
+      "files": [
+        {
+          "file": "dish-24.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 56342,
+          "sha256": "196417d373410b7e9e758a340e6290f5195f94fda5cd0dea07aa140a470aa0b3"
+        },
+        {
+          "file": "dish-24-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18096,
+          "sha256": "8f0adb8bbc8b202dace4451dfd5177156f90cbc733c222225f510c48958fc0ce"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-25",
+      "title": "中華丼",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 中華丼. One white bowl of cooked rice topped with glossy translucent pale brown thickened Chinese style sauce containing cooked thin 3 cm pork slices, softened napa cabbage (1 cm white stem strips and 3 cm green leaves), thin carrot batons, thin shiitake mushroom slices. A little white rice visible around the topping edges. Sauce clings to ingredients and spreads over rice, rice is not drowned in soup. No shrimp, squid, quail eggs, peas or garnish.",
+      "visualReview": "豚肉、白菜、にんじん、しいたけ、とろみのあるあん、ご飯を確認。海鮮や卵の混入なし。",
+      "files": [
+        {
+          "file": "dish-25.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 52666,
+          "sha256": "8a0216a9b12aa92d90f15b1ffe6a58f8081dacc1a473f063074f1ece972fe7ba"
+        },
+        {
+          "file": "dish-25-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18660,
+          "sha256": "a0ca9b0e9a4c6b79fc16eb6b4ae00447cdd43dded597e59fcb87933dd3919d50"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-26",
+      "title": "鶏大根とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 鶏大根とご飯. Japanese soy simmered chicken and daikon in a shallow white bowl: browned fully cooked chicken thigh 3 cm pieces, tender translucent daikon in 1.5 cm thick half rounds, a few thin slices of ginger, modest light brown soy-mirin braising liquid. All daikon is skinless with natural pale amber edges, not carrot or potato. A small separate plain white bowl of 150 g steamed white rice. No green garnish or extra sides.",
+      "visualReview": "鶏もも肉、大根の半月切り、薄切りしょうが、煮汁、ご飯を確認。緑の飾りなし。",
+      "files": [
+        {
+          "file": "dish-26.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 68630,
+          "sha256": "b290f765afb84fa3b7cf2f1d419c6fe7254b09db10b6e664c901ffd8046da3b7"
+        },
+        {
+          "file": "dish-26-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17756,
+          "sha256": "b3b5d4430adeb7979784f6169ed8298b64111ca8dfb3b78cff43cc2c775d7541"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-27",
+      "title": "ミートソーススパゲティ",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: ミートソーススパゲティ. One white plate with ordinary single portion of spaghetti topped with thick rich tomato-red meat sauce, crumbled browned mixed beef-pork mince and very finely diced onion and carrot, with a modest dusting of grated pale cheese. Distinct spaghetti strands partly visible around sauce, sauce not watery, no meatballs. No basil, parsley, garlic bread or side dishes.",
+      "visualReview": "スパゲティ、ひき肉と細かい野菜入りトマトソース、粉チーズを確認。麺は隠れすぎず、水っぽさや余分なハーブなし。",
+      "files": [
+        {
+          "file": "dish-27.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 82234,
+          "sha256": "c598c83b04ca476bbf064c87aac288e5ad244d33435c98895bc2de6a3b31151c"
+        },
+        {
+          "file": "dish-27-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 27198,
+          "sha256": "ad39741272313ad26662f945f77ba87cb7cdb763660318b8191185d5a1bd90fb"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-28",
+      "title": "豚肉と白菜の重ね蒸しとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 豚肉と白菜の重ね蒸しとご飯. Japanese steamed layered pork belly and napa cabbage served in a shallow white bowl. Alternating pale fully cooked thin pork slices and tender pale green-white cabbage layered in upright 4 cm wide bundles with cross sections facing upward, a few fine ginger strips, a small amount of clear cooking juices with ponzu sauce lightly added. A small separate plain white bowl of 150 g steamed white rice. Pork is fully opaque beige not raw pink. No mushrooms, carrots, scallions or other garnish.",
+      "visualReview": "白菜と加熱済み豚バラ肉の交互の層、しょうがの細切り、煮汁、ご飯を確認。記載外食材なし。",
+      "files": [
+        {
+          "file": "dish-28.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 74358,
+          "sha256": "fe33c86a6324b7aabb431bf5880d933b998dcc531bcbdf56cb1d7fa443200868"
+        },
+        {
+          "file": "dish-28-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19606,
+          "sha256": "11b3d0983f443cee875580d1337549c846c0d01122658c042c677448808366ca"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-29",
+      "title": "焼きおにぎりのだし茶漬け",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 焼きおにぎりのだし茶漬け. A white bowl containing exactly two small flat triangular grilled rice balls (200 g cooked rice total), both with golden browned soy-brushed crispy crust, sitting partially submerged in clear light amber dashi broth. Small thin pale green-white Japanese long onion rings cooked in broth, a little torn roasted nori and white toasted sesame scattered over rice and broth. Rice balls remain shaped and partly above broth. No fish, salmon, wasabi or extra toppings.",
+      "visualReview": "焼きおにぎり2個、だし、長ねぎ、ちぎりのり、ごまを確認。おにぎりの形と焼き色が明瞭、余分な具なし。",
+      "files": [
+        {
+          "file": "dish-29.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 71658,
+          "sha256": "b2099e17483a5356122538b6fe4449ddf0b393811f0321428e28315100b5c7f1"
+        },
+        {
+          "file": "dish-29-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23562,
+          "sha256": "506e945ce71a3f8c3d1448ade7abe7f91adc7b73267af924126e48a1fb276e8f"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-30",
+      "title": "チキン南蛮とご飯",
+      "initialPrompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: チキン南蛮とご飯. Japanese chicken nanban: several 1 cm thick diagonal chicken breast pieces with thin flour-and-egg golden coating, lightly glossy sweet soy-vinegar glaze, modest chunky pale tartar sauce spooned across the top. Fine raw shredded cabbage next to chicken on a white plate. A small separate plain white bowl of 150 g steamed white rice. No breadcrumb crust, no whole chicken cutlet, no lemon wedge, tomato, parsley or side salad.",
+      "prompt": "Use case: precise-object-edit. Change ONLY the chicken pieces in this chicken nanban meal. The recipe slices raw chicken breast diagonally into several 1 cm thick pieces BEFORE applying flour-and-egg coating and frying. Show 5–6 distinct, separate, thin oval diagonal slices of chicken breast, each fried independently with golden thin egg coating covering all edges and faces. They must NOT look like a single whole chicken cutlet that was sliced after cooking, no exposed broad white sliced vertical faces. Keep the light sweet-vinegar glaze and modest tartar sauce on top, shredded cabbage, rice bowl, white ceramic plate, warm off-white background, soft natural daylight and landscape 3:2 composition. No added garnish, objects, text or people.",
+      "visualReview": "初稿は一枚肉を後から切った見え方だったため、そぎ切りした肉の各切れに衣を付けた形へ画像編集。個別の薄い切れ、甘酢、タルタル、キャベツ、ご飯を確認。",
+      "files": [
+        {
+          "file": "dish-30.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 58984,
+          "sha256": "cee3748f2b9d110e8f29ae155f91b3bd23f071cf9175ff469c93a08a2a7349b3"
+        },
+        {
+          "file": "dish-30-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21240,
+          "sha256": "3e15d2d1f4c75a52d391fb7a16acbc990443969690a3b823d2344dae106488d5"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-31",
+      "title": "タコライス",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: タコライス. Okinawan Japanese taco rice: white rice at bottom of a shallow white bowl, thin 1 cm strips of fresh green lettuce and 1 cm cubes of red tomato arranged on rice, with fully cooked crumbly beef-pork mince and finely diced onion in a glossy ketchup-Worcestershire-curry coating on top. The mince has a modest 20 g portion of melted pale pizza cheese spread on it, visibly melted not loose raw shreds. One-person portion. No tortilla chips, beans, avocado, corn, cilantro or salsa.",
+      "visualReview": "ご飯、細切りレタス、角切りトマト、玉ねぎ入りひき肉、溶けたチーズを確認。生のシュレッドチーズや余分な具なし。",
+      "files": [
+        {
+          "file": "dish-31.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 82726,
+          "sha256": "51c78c67f8955bf3b2b5c886dacee0594f7e71db452e5e61cc9f039f456789cc"
+        },
+        {
+          "file": "dish-31-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 26910,
+          "sha256": "3e8c6272dfa09250b55a873d42351d452e536bd3bb090790011ea1be00e2ec70"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-32",
+      "title": "サバの竜田揚げとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: サバの竜田揚げとご飯. Several bite-sized diagonal slices of boneless mackerel about 1.5 cm thick, marinated in soy and ginger then coated in potato starch and deep fried. Craggy dry crisp pale golden-brown crust with some visible dark blue-silver mackerel skin edges. Fine shredded raw cabbage beside the fried fish on a white plate. Small separate white bowl of steamed white rice. No lemon wedge, parsley, dipping sauce, tomato or other side dishes.",
+      "visualReview": "皮付きサバのそぎ切りの竜田揚げ、千切りキャベツ、ご飯を確認。揚げ衣が見え、余分な飾りなし。",
+      "files": [
+        {
+          "file": "dish-32.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 69028,
+          "sha256": "da91e389bfda1f726029f98027b9da52ecacf235ee5e4c4fe0fdd45bba3d1f40"
+        },
+        {
+          "file": "dish-32-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22036,
+          "sha256": "8c6621f8686b886873ed04c34ab97963a3c593106ae4f0caab82d8d6090ca6b1"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-33",
+      "title": "あんかけかた焼きそば",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: あんかけかた焼きそば. A round flattened nest of Japanese yakisoba noodles pan fried until golden crisp on both sides (not brittle thin deep-fried noodles). Clearly visible crisp brown noodle edges, covered in the middle with glossy translucent light brown thickened sauce containing fully cooked thin pork slices, napa cabbage in white strips and green leaves, thin carrot batons, sliced shiitake mushrooms. Served on a white plate, ordinary one-person portion. No seafood, quail eggs, peas, green onion or garnish.",
+      "visualReview": "焼き固めた太めの麺、豚肉・白菜・にんじん・しいたけのあんを確認。揚げた細麺や余分な海鮮になっていない。",
+      "files": [
+        {
+          "file": "dish-33.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 71496,
+          "sha256": "24f7b334b32711d84726d68d49eb1a221c5b82866f2e29d063c017b480e37a0f"
+        },
+        {
+          "file": "dish-33-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 25184,
+          "sha256": "c6ca5f9612722ea3b479bf566656b41506575add0f833d5a0733b02175c850f7"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-34",
+      "title": "ロールキャベツとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: ロールキャベツとご飯. Exactly two compact oblong stuffed cabbage rolls simmered whole, soft pale green cabbage leaves wrapped around cooked mixed mince and finely diced onion, resting in a shallow white bowl of rustic tomato-red broth with small tomato pieces. Intact seams underneath, no toothpicks, no exposed raw filling. A small separate white bowl of steamed white rice. No parsley, basil, bacon or additional vegetables.",
+      "visualReview": "ロールキャベツ2個、トマトの煮汁、ご飯を確認。ベーコンやハーブなどの記載外食材なし。",
+      "files": [
+        {
+          "file": "dish-34.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 51656,
+          "sha256": "0c1bef6025191ed15192e718b2b316a4fb88cd70985a38ec6915ebcf789f600f"
+        },
+        {
+          "file": "dish-34-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16048,
+          "sha256": "7ba3653adfbaab395695507e6d2eff53f168311d066645417b00e2de0c5baa38"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-35",
+      "title": "卵と野菜のホットサンド",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 卵と野菜のホットサンド. One Japanese pan-toasted sandwich made from exactly two slices of shokupan bread, cut in half to form two halves, golden buttery toasted exterior without grill ridges. Cut faces show a firm cooked egg filling mixed with thin soft cabbage and carrot strips, modest mayonnaise and ketchup inside. White plate, simple one-person meal. No runny egg, no cheese, ham, lettuce, tomatoes, pickles or fries.",
+      "visualReview": "焼いた食パンを半分に切った2切れ、卵・キャベツ・にんじん、マヨネーズとケチャップを確認。ハムやチーズ、格子状の焼き目なし。",
+      "files": [
+        {
+          "file": "dish-35.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 73018,
+          "sha256": "92e9fde2231da99d9711370d6e815224f7bbb4264c3348a33f481a569dcf5684"
+        },
+        {
+          "file": "dish-35-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22432,
+          "sha256": "270cec4a3e3ea44d0f814d7ccf2b0dabd610f236055e7fba6da0026b18cc9f5b"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-36",
+      "title": "厚揚げと小松菜の煮物とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 厚揚げと小松菜の煮物とご飯. Japanese simmered thick fried tofu atsuage cut into 1 cm thick rectangular pieces, golden brown fried exterior and pale tofu interior, mixed with tender dark green komatsuna leaves and green stems in 4 cm pieces and thin orange carrot batons. Modest clear light brown soy-dashi broth in a shallow white bowl. Small separate white bowl of steamed white rice. No sesame, scallions, mushrooms or extra sides.",
+      "visualReview": "切った厚揚げ、小松菜の茎と葉、にんじん、煮汁、ご飯を確認。記載外のトッピングなし。",
+      "files": [
+        {
+          "file": "dish-36.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 88588,
+          "sha256": "3a39a1f5f9b923e0fa7aeb982188a07b2ddbf45335d2963ef27f1c2db7f12382"
+        },
+        {
+          "file": "dish-36-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21692,
+          "sha256": "d9a1fa0bff9e018fdfeccea8a0f55de08107c9855589fce410b63b06f22641a4"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-37",
+      "title": "五目炊き込みご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 五目炊き込みご飯. One plain white rice bowl of Japanese mixed seasoned rice: individual light tan glossy grains cooked with small 1 cm pieces of fully cooked chicken thigh, thin carrot strips, thin shiitake mushroom slices, fine shaved burdock pieces and tiny strips of fried tofu aburaage, five ingredients distributed naturally through the rice. Modest ordinary one-person portion, no additional bowl of plain rice. No green peas, edamame, scallions, sesame, seaweed or herb garnish.",
+      "visualReview": "ご飯と鶏肉・にんじん・しいたけ・ごぼう・油揚げを確認。盛り付けは茶碗1つで、余分な青菜やごまなし。",
+      "files": [
+        {
+          "file": "dish-37.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 66782,
+          "sha256": "ee9b392cf97e7e5e642a745c8f2670bbe4279708669059f00e267d8746d7fcc7"
+        },
+        {
+          "file": "dish-37-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21764,
+          "sha256": "374b488e45817ff14099cc4a40f16d24c7d9433ae4b90145bc7ef1b5beb2a32c"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-38",
+      "title": "酢豚とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: 酢豚とご飯. Japanese sweet-and-sour pork: fully cooked pork loin pieces cut 2 cm squares and 1 cm thick with a thin fried starch coating, mixed with 2 cm green pepper pieces, 2 cm translucent onion squares and 5 mm thick orange carrot half moons. All coated in glossy translucent reddish-brown ketchup-vinegar sauce, served on a white plate. A small separate white bowl of steamed white rice. No pineapple, red bell pepper, sesame or scallion garnish.",
+      "visualReview": "衣付き豚肉、玉ねぎ、ピーマン、にんじんの半月切り、甘酢あん、ご飯を確認。パイナップルなど記載外の具なし。",
+      "files": [
+        {
+          "file": "dish-38.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 57044,
+          "sha256": "86554876a891e673aedd22c2d149139b4701012845254774eb01d8b99555108b"
+        },
+        {
+          "file": "dish-38-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18950,
+          "sha256": "455ec16c1682b3c10b7472bd0c502e033da53a5e93b745370d8e4e1fe5b98510"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-39",
+      "title": "カレーうどん",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: カレーうどん. A white ceramic bowl of thick Japanese udon noodles in smooth moderately thick golden brown curry dashi soup, with fully cooked thin 3 cm pork slices, translucent 5 mm onion strips, thin carrot batons. Thick white udon curves partly emerge through the curry soup so the noodle dish is recognizable. No potatoes, green onion, scallion, egg, tempura, rice or additional garnish.",
+      "visualReview": "太いうどん、豚肉、玉ねぎ、にんじん入りのカレー汁を確認。ねぎや卵、じゃがいもなど記載外の具なし。",
+      "files": [
+        {
+          "file": "dish-39.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 52512,
+          "sha256": "83a3deb89d4534961bbd91e8b10c07c05f70167cf2226a8b4d8c039be11736c0"
+        },
+        {
+          "file": "dish-39-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17990,
+          "sha256": "267eaac0eb07526bcaac1f7299e08d9bb63084e32d5a8c655dde9df13a1f186f"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-40",
+      "title": "チキンクリームシチューとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset: recipe completion image for a beginner Japanese home-cooking website, AI illustrative image, not a test-cooked photograph. Modern editorial home-cooking food photography, landscape 3:2 composition, neutral warm off-white tabletop, simple matte white ceramic dish, slightly elevated 45-degree viewpoint, soft natural daylight, whole dish centered with 10% edge breathing room, appetizing ordinary one-person portion. No text, logos, watermarks, people, hands, utensils, decorative props, or unlisted garnish. Subject: チキンクリームシチューとご飯. Japanese chicken cream stew in a white bowl: smooth creamy off-white sauce with fully cooked 2 cm chicken thigh pieces, peeled 2 cm potato cubes, 1 cm thick carrot half moons, translucent onion strips and several tender green broccoli florets. Moderate thick but fluid creamy sauce, not cheese sauce. Small separate white bowl of steamed white rice. No bread, mushrooms, peas, parsley, pepper garnish or extra sides.",
+      "visualReview": "鶏肉、じゃがいも、玉ねぎ、にんじん、ブロッコリーのクリームシチューとご飯を確認。文字や余分な飾りなし。",
+      "files": [
+        {
+          "file": "dish-40.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 45500,
+          "sha256": "778f311e85b8896eeadd48b63f7fd01305d99ff5a653b3e168d2b58847a6d227"
+        },
+        {
+          "file": "dish-40-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 16194,
+          "sha256": "b0f8c84abbb4ec4ab175f3aa8e1aa4a370520e1286774c5c495c315290d7193e"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-41",
+      "title": "サバ缶のトマトパスタ",
+      "prompt": "Use case: photorealistic-natural. Asset type: Japanese beginner cooking recipe completion image, an AI-generated serving suggestion, not evidence of a cooked trial. Subject: one ordinary serving of サバ缶のトマトパスタ, spaghetti coated in a thick red cooked tomato sauce with visible large flakes of cooked canned mackerel, including some silver-gray skin, soft 5mm sliced onion and tiny garlic slices; lightly speckled black pepper. Based on 100g dry spaghetti, 100g drained canned mackerel, 150g chopped canned tomato and 50g onion. Sauce clings to the noodles and is not soupy. Styling: modern editorial home cooking, appetizing realistic food textures; simple shallow matte white ceramic pasta plate, neutral warm off-white tabletop. Slightly elevated 45-degree viewpoint, landscape 3:2, entire plate centered with 10% edge breathing room. Soft natural daylight, restrained warm colors. No text, logos, watermarks, people, hands, utensils, extra dishes, herbs, basil, parsley, cheese or unlisted garnishes.",
+      "visualReview": "サバの皮付きの大きなほぐし身、トマトソース、薄切り玉ねぎ、スパゲティが一致。余分な薬味・チーズなし。料理全体はフレーム内。",
+      "files": [
+        {
+          "file": "dish-41.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 94590,
+          "sha256": "7adc91b8aaba938d6cc3066ba41a67eafceb50e44f820e84bf2c73642f06b61d"
+        },
+        {
+          "file": "dish-41-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 29086,
+          "sha256": "45580dad145d0bd315dd9ca0fde356af49d5222f3c73d12565fb0bd4b8d3e1ad"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-42",
+      "title": "鶏ささみのピカタとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website recipe serving suggestion, AI-generated, not an actual trial photograph. Subject: 鶏ささみのピカタとご飯. An ordinary single portion of two butterflied chicken tenderloins (120g total), flattened to under 1cm thick, fully cooked inside, coated with thin flour and egg mixed with grated cheese. The irregular golden pale yellow egg coating has lightly browned patches, not breadcrumbs. Serve on a matte white plate with a modest pile of finely shredded raw cabbage (60g) and a small dollop of red ketchup (10g), plus a separate small matte white bowl of white rice (150g). Only these two dishes. Modern editorial home-cooking food photography, natural real textures, neutral warm off-white tabletop, soft natural daylight. Slightly elevated 45-degree viewpoint, landscape 3:2, all crockery fully in frame and centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils, lemon, tomato wedges, parsley, extra sauces, soup, or unlisted garnishes.",
+      "visualReview": "薄く開いたささみ2枚の卵衣、千切りキャベツ、ケチャップ、小さなご飯茶碗。材料と盛付けが一致。パン粉衣や余分な付合せなし。",
+      "files": [
+        {
+          "file": "dish-42.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 56140,
+          "sha256": "d0973a2fe9f966e35882d9651e5043ac23648092b95500635193beae36e29dae"
+        },
+        {
+          "file": "dish-42-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17906,
+          "sha256": "3519e7554d69727b2cc92c530b9c69d88fbb5a43a57d5f86ce48335fd5451b59"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-43",
+      "title": "ガパオライス",
+      "prompt": "Use case: photorealistic-natural. Asset type: recipe completion image for a cooking website, an AI serving suggestion. Subject: ガパオライス, ordinary single portion. One matte white ceramic dinner plate contains a mound of cooked white rice (180g), a neighboring scoop of glossy stir-fried ground chicken (100g) with 1cm diced green bell pepper and onion (40g each), finely chopped garlic and torn wilted green basil leaves. The lightly brown soy and oyster sauce coats the mince with little loose liquid. A single fried egg with completely set white AND firm opaque yellow yolk rests partly over the rice; yolk is cooked solid, no runny liquid. Scene: neutral warm off-white tabletop, soft natural daylight, modern editorial home-cooking food photography with natural texture. Slightly elevated 45-degree viewpoint, landscape 3:2. Entire plate centered, edge breathing room at least 10%, camera far enough away to include plate rim. No text, logos, watermarks, people, hands, utensils, raw basil garnish, red chili, lime, tomatoes or extra dishes.",
+      "visualReview": "鶏ひき肉・1cm角のピーマンと玉ねぎ・しんなりしたバジル、ご飯、目玉焼き1個が一致。卵黄は不透明な固い見た目で流出なし。",
+      "files": [
+        {
+          "file": "dish-43.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 69848,
+          "sha256": "1d530139d057e8395040d0e0331a4d948fcca52e8702b165b3c9c9d65890d76f"
+        },
+        {
+          "file": "dish-43-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22276,
+          "sha256": "f7941cb73052d926f796ed0ba627dfa9111486422073d930b9f2c2b212003799"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-44",
+      "title": "焼売とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: 焼売とご飯. Exactly eight small steamed Japanese shumai pork dumplings on a simple matte white ceramic plate, accompanied only by a small matching bowl of white rice (150g). The eight shumai have thin creamy off-white wrappers pleated loosely up the sides, flat bases and open tops showing fully cooked pale gray-beige ground pork and fine onion filling; each about 2.5cm tall. One person's filling is 120g ground pork, 60g chopped onion, tiny ginger, starch and soy-sesame seasoning. Moist just-steamed texture, not browned or fried. No peas, shrimp toppings, cabbage leaves, dipping sauce, soup or side dishes.",
+      "visualReview": "8個の蒸し焼売を確認。皮の上面が開き、豚ひき肉・玉ねぎが見える。ご飯以外の付合せ・グリーンピースなし。",
+      "files": [
+        {
+          "file": "dish-44.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 41920,
+          "sha256": "247700581c926b3ff5107b9f9c83d66ad06a6f7100dde251575d3b31e36bdbb9"
+        },
+        {
+          "file": "dish-44-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 14998,
+          "sha256": "d438aca3db7c5e94d603f6ce47650f5789dd7fcdf685cfcf049a1a7a41fde1f9"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-45",
+      "title": "とろろそば",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: とろろそば. A single serving of chilled gray-brown buckwheat soba noodles (100g dry) in a shallow matte white ceramic noodle bowl, topped with a substantial soft white mound of freshly grated Japanese nagaimo yam (100g), thin small rings of long green onion (10g), and a little torn black toasted nori (1g). The yam is a naturally viscous smooth lightly bubbly puree, not a solid chunk and not grated cheese. Soba remains visible around the topping. A separate small matching white sauce cup holds dark brown mentsuyu dipping sauce (100ml), not yet poured over the noodles. No egg, wasabi, tempura, sesame, extra toppings or vegetables.",
+      "visualReview": "そば・とろろ・ねぎ・のりと別添えのつゆが一致。卵など材料にない具なし。のりは細い破片状の表現。",
+      "files": [
+        {
+          "file": "dish-45.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 51544,
+          "sha256": "7b21b650fd39e6183e4edbf963251801c4fbc5249c0d3f8fb2eda754371b01d5"
+        },
+        {
+          "file": "dish-45-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17076,
+          "sha256": "60aac96040f55323ceda6b74c43814388113c9e87f7e589c4305dc375fb9a6f8"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-46",
+      "title": "ニラ玉とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: ニラ玉とご飯. One ordinary portion of Japanese stir-fried Chinese chives and scrambled egg on a matte white plate, alongside a separate small bowl of plain steamed white rice (150g). Main dish includes large soft fully set golden-yellow pieces of two eggs, 70g Chinese garlic chives cut to 4cm lengths and 80g crisp cooked pale bean sprouts. Vegetables lightly glossy with soy and oyster sauce; no pool of sauce. Clearly visible flat dark green chive leaves and pale sprouts mixed with the yellow curds. Eggs are completely cooked with no transparent liquid. Only plate and rice bowl, no meat, chili, mushrooms, sesame, soup or side dishes.",
+      "visualReview": "ニラ4cm・もやし・しっかり固まった卵の大きな塊と別のご飯が一致。肉や余分な薬味なし。",
+      "files": [
+        {
+          "file": "dish-46.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 65350,
+          "sha256": "8f979b9e25aea9b63e8c32aca6f594e90ff8350c87ceac6835155e056e2d5857"
+        },
+        {
+          "file": "dish-46-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22842,
+          "sha256": "8f0e2632736b497d5bdda14b7fc4f2fdb3cea718b6318666d4f9f43da6183983"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-47",
+      "title": "フライパンピザ",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: フライパンピザ. One homemade thin 18cm no-yeast skillet pizza served on a matte white plate. Thin roughly circular rustic 3mm crust with lightly golden cooked edges, not a puffy Neapolitan crust. Topped with a modest red ketchup layer, thin 2mm onion slices and green bell pepper slices, narrow 1cm strips of pink ham, and 40g melted pale cream cheese. Skillet steam-cooked cheese is melted, mostly pale and glossy, not heavily oven charred. One pizza made from 80g flour. Show the whole round pizza, no missing slice; no utensils or pan. No pepperoni, basil, parsley, olives, mushrooms, tomato chunks, extra toppings or side dishes.",
+      "visualReview": "薄めの丸いピザ、細いハム・玉ねぎ・ピーマン、溶けたチーズ、赤いケチャップが一致。炭火風の焦げや余分な具なし。",
+      "files": [
+        {
+          "file": "dish-47.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 69058,
+          "sha256": "16b84ed87293f317c35a66735689db7daa316b9ef79f4b471427cdb88680d028"
+        },
+        {
+          "file": "dish-47-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23358,
+          "sha256": "2ef461f5adf1f15c3fd13f3fc0b66bc360ea4bfa69b5918534d2834c32248c65"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-48",
+      "title": "エビチリとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: エビチリとご飯. One small shallow matte white plate of ebi chili, peeled fully cooked curled shrimp (150g) coated in a thick glossy red-orange ketchup chili sauce, with tiny visible chopped long onion, garlic and ginger in the sauce, served with a separate small matte white bowl of plain white rice (150g). Shrimp are plump opaque pale pink under the red-orange sauce, no heads or shells or tails. The sauce is softly thickened, not watery or a red soup. Main seasoning ketchup, small doubanjiang, soy and sugar. Only these two dishes, no lettuce, peas, broccoli, sesame, chopped green herb garnish, side dishes or soup.",
+      "visualReview": "むきエビに赤橙色のとろみのあるソース、ご飯の別盛りが一致。刻んだねぎ・香味野菜が見える。殻・余分な薬味なし。",
+      "files": [
+        {
+          "file": "dish-48.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 60112,
+          "sha256": "c8d112369e0c0663afdf90826d5219f609618316c2d416249abcafa85ed3188d"
+        },
+        {
+          "file": "dish-48-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18960,
+          "sha256": "85325f93c3b3a71f1d4f79ea3c3dd8e4961f1869ff196c577967b11535ba45af"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-49",
+      "title": "ツナとコーンのピラフ",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: ツナとコーンのピラフ. One ordinary single serving of butter-cooked rice pilaf on a shallow matte white ceramic plate. Fluffy lightly glossy cooked short-grain rice, made from 75g uncooked rice, mixed with visible beige tuna flakes (50g), golden yellow sweet corn kernels (40g), and small translucent cooked 5mm onion pieces (30g); a little ground black pepper. Rice is pale buttery ivory, individual grains visible, not mashed or porridge. The tuna is moist flaky canned tuna, not meat cubes. Only one plate. No parsley, peas, carrots, egg, green vegetables, herbs, ketchup or extra dishes.",
+      "visualReview": "ほぐれたツナ、コーン、半透明の玉ねぎとバター色の米が一致。卵・パセリなど余分な具なし。",
+      "files": [
+        {
+          "file": "dish-49.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 64538,
+          "sha256": "4ba8a90f90666ddb2ec54670bbd07457d1d0e8d2868348b0a97da70e8cc6dffa"
+        },
+        {
+          "file": "dish-49-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 22280,
+          "sha256": "8ffd1f083429eea3ca8bc2731ab9aa32a0361522709f54c8a68cfc1984df78a5"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-50",
+      "title": "とんかつとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: とんかつとご飯. An ordinary single portion of Japanese pork loin tonkatsu on one matte white dinner plate, accompanied only by a small matching bowl of plain steamed white rice (150g). The cutlet is made from one 120g pork loin, coated in fine flour and egg then coarse panko and fried golden brown. Slice it into six bite-sized strips arranged in the original cutlet shape, showing white fully cooked pork in the cuts, no pink center. A modest mound of finely shredded raw cabbage (60g) and a small pool of dark brown tonkatsu sauce (15ml) sit on the same main plate. Crisp irregular panko texture, drained of oil. No lemon, parsley, tomatoes, sesame, mustard, miso soup, extra side dishes or utensils.",
+      "visualReview": "6切れのパン粉衣のとんかつ、白い肉の断面、千切りキャベツ・ソース・ご飯が一致。余分な副菜なし。",
+      "files": [
+        {
+          "file": "dish-50.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 54050,
+          "sha256": "294c457f67c057ff0d66cde40931637112053d1745aeae89a42092d843ef344c"
+        },
+        {
+          "file": "dish-50-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 17876,
+          "sha256": "354d7d3004fb1db46f0568cbfcd3f3037bb012a3922907c7c890c8e6647dc973"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-51",
+      "title": "豆乳担々麺",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: 豆乳担々麺. One matte white ceramic ramen bowl of Japanese soy milk tantan noodles. Yellow wavy Chinese wheat noodles made from one 130g fresh serving are visible in creamy pale tan soy-milk sesame broth. Cooked brown crumbled ground pork (80g), chopped long onion, and cooked komatsuna greens (60g) cut into 4cm lengths are distributed naturally across the broth. Some bright green stalks and dark green leaves visible. Broth is smooth uncurdled soy milk with finely ground white sesame and miso, lightly speckled; a few small droplets of red chili oil float on the surface. All pork is fully cooked, no raw meat. No egg, bamboo shoots, seaweed, sesame seeds, red sliced peppers, bok choy heads, extra dishes or garnish. Slight noodle mound ensures the noodles can be recognized, not hidden completely by opaque soup.",
+      "visualReview": "中華麺、小松菜の茎と葉、ひき肉、刻みねぎ、淡い豆乳ごまスープと少量のラー油が一致。卵など追加具なし。",
+      "files": [
+        {
+          "file": "dish-51.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 69152,
+          "sha256": "d898b542f39c0d2293d9a779da08e419a0c09d749dfab27e76000e9dd8ee0054"
+        },
+        {
+          "file": "dish-51-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23176,
+          "sha256": "2e257ac5b012b09ed3fdc09d488eddd2d9a6a6d84694aa6eb182f36c568cbc5b"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-52",
+      "title": "肉豆腐とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: 肉豆腐とご飯. One ordinary serving of Japanese beef and tofu simmered in a sweet soy broth, in a shallow matte white ceramic bowl, alongside a separate small white bowl of steamed white rice (150g). The main dish has 150g firm cotton tofu cut into several 3cm cubes with intact delicate porous edges, 100g fully cooked thin beef slices cut about 4cm wide and softly folded, and 70g long green onion diagonally sliced about 1cm wide, including softened white and green sections. Modest clear translucent amber brown broth pools shallowly around the tofu; not a thick gravy. Natural fully cooked gray-brown beef, no pink raw meat. No mushrooms, noodles, carrots, eggs, sesame, chili, leafy garnish, soup or additional side dishes.",
+      "visualReview": "3cm程度の木綿豆腐、薄い牛肉、斜め切り長ねぎ、醤油の煮汁、ご飯が一致。豆腐は崩れず、余分な具なし。",
+      "files": [
+        {
+          "file": "dish-52.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 58088,
+          "sha256": "3753fc521d1afa324b37801f34ab4f6f25325912d5477e1d5a7177fce6fe0270"
+        },
+        {
+          "file": "dish-52-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 18180,
+          "sha256": "7a4b1a89ed0d815dd1bcd4b7869f9507dd378148600510fbb5e2debd698df85a"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-53",
+      "title": "チキンパエリア",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: チキンパエリア. Ordinary one-person serving of home-style chicken paella transferred onto a broad shallow matte white ceramic plate. Cooked rice from 75g dry rice, colored warm golden orange by 0.5g curry powder and 60g chopped tomatoes, with translucent finely diced onion. On top, several 2cm pieces of fully cooked browned chicken thigh (100g) and softened red and yellow bell pepper strips about 1cm wide (50g). Rice grains distinct, lightly moist but no broth pooling, no creamy risotto texture. No shellfish, seafood, peas, green beans, parsley, lemon, saffron threads, chorizo, dark pan, extra dishes or garnish. Show all components clearly and the entire white plate in frame.",
+      "visualReview": "鶏肉・パプリカ・トマトの炊き込みご飯。カレー粉由来の黄橙色の米、具の切り方、皿盛りが一致。魚介やレモン・薬味なし。",
+      "files": [
+        {
+          "file": "dish-53.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 74066,
+          "sha256": "01cd7db255e2043fe8b0d2aa4279ad9ca4bc03353cdf885959dc99118efd169f"
+        },
+        {
+          "file": "dish-53-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23888,
+          "sha256": "5aed98869bc18b59c22b3de3f00cd1d66cdce0e88edd3063a795ef5bcea0bbf8"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-54",
+      "title": "青椒肉絲とご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: 青椒肉絲とご飯. One ordinary portion of Japanese-style chinjao rosu on a matte white plate, accompanied only by a small matching bowl of plain steamed white rice (150g). Main dish is a loosely tossed stir-fry of thin cooked pork loin strips (120g), bright green bell pepper strips (80g) and pale ivory bamboo shoot strips (60g), all cut about 5mm wide, lightly coated in glossy brown soy and oyster sauce. Sauce clings thinly, no large pool. Pork is fully cooked with no pink center. Ingredients remain individually recognizable, not a uniform mound of noodles. No red peppers, carrots, onion, sesame seeds, scallion garnish, soup or side dishes.",
+      "visualReview": "豚肉・ピーマン・たけのこの細切り、たれが絡む仕上がり、ご飯が一致。余分な薬味なし。",
+      "files": [
+        {
+          "file": "dish-54.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 57292,
+          "sha256": "427069b57ca29ba8f1ae7595c0f357d9d286cf18c8c1be7e4c18c4ae32d708f9"
+        },
+        {
+          "file": "dish-54-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 19064,
+          "sha256": "28e0bd367b5fb46ad330fd4217552dc3e9b961bc1fe6d7e1a7e0cb8e95674152"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-55",
+      "title": "冷やし中華",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: 冷やし中華. One ordinary single portion of chilled Japanese Chinese-style wheat noodles on a shallow matte white ceramic plate. A mound of yellow wavy Chinese noodles (130g fresh before boiling) is arranged with separate generous bands of fine julienned cucumber (50g), pink ready-to-eat ham strips (40g), and thin yellow strips of a fully cooked one-egg omelet. Tomato wedges (60g) sit at the back. Light brown soy-vinegar-sugar-sesame oil dressing lightly glosses the noodles with a little sauce visible at the base. No soup broth. Exact toppings only cucumber, ham, egg strips and tomato. No sesame seeds, seaweed, pink pickled ginger, mustard, mayonnaise, lettuce, shrimp or extra dishes.",
+      "visualReview": "細切りきゅうり・ハム・薄焼き卵、くし形トマト、黄色い中華麺、醤油系のたれが一致。紅しょうがやごま等なし。",
+      "files": [
+        {
+          "file": "dish-55.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 63832,
+          "sha256": "a197207158f976e7c041399e2c88d29cbc90e7d7e19c19808609b0c2ec651f17"
+        },
+        {
+          "file": "dish-55-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 23502,
+          "sha256": "203dbee155839579728a3bccd8b863d4924749a7753712ced33b9fb68617a1bb"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-56",
+      "title": "春巻きとご飯",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: 春巻きとご飯. Exactly four ordinary Japanese fried spring rolls on a matte white plate, accompanied only by a separate small matching bowl of steamed white rice (150g). Each is a whole neatly rolled small cylinder with folded closed ends, golden light brown crisp thin wrapper and small natural bubbles, about 10cm long. The filling, mostly enclosed, is cooked ground pork, finely shredded cabbage, carrot and bamboo shoots with soy and oyster sauce, thickened so no liquid leaks. Arrange the four rolls loosely in two rows, count clearly four, do not cut them. Wrappers cooked golden, not white raw wrappers, not battered. No transparent rice paper, noodles protruding, lettuce bed, dipping sauce, mustard, herbs, soup or other dishes.",
+      "visualReview": "春巻き4本とご飯を確認。皮はきつね色、端が閉じ、余分なつけだれ・付合せなし。中の具は皮の中にあり可視の漏れなし。",
+      "files": [
+        {
+          "file": "dish-56.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 49652,
+          "sha256": "338e07ff3e7a980a3162f5e3a0f61cab0ecca23df4afa91d60bb84f5a5b70b82"
+        },
+        {
+          "file": "dish-56-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 14872,
+          "sha256": "35da3e5a101989cb3b87a3d2427d834223bbd57c284d33be7944bc71770e3359"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-57",
+      "title": "キーマカレー",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: キーマカレー. One ordinary single portion of Japanese home-style keema curry and rice on one matte white plate. A mound of fluffy steamed white rice (180g) occupies one side and thick gently simmered reddish-brown ground meat curry occupies the other, partially over the rice. Visible finely crumbled fully cooked beef-pork mince (100g), tiny 3-5mm softened orange carrot and translucent onion pieces, cooked chopped tomato. The curry is dense and moist from curry powder, tomato, ketchup and Worcestershire sauce, not a thin soup, not a smooth brown roux sauce, no large meat cubes. No fried egg, egg yolk, peas, parsley, cilantro, yogurt, pickles, whole chili, garnish or extra dishes.",
+      "visualReview": "ひき肉、細かなにんじん・玉ねぎ・トマトの煮詰まったカレーとご飯が一致。卵・パセリ等の追加なし。",
+      "files": [
+        {
+          "file": "dish-57.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 67242,
+          "sha256": "02418243eb6abeedde419365866618649cd30fc33e98245d6d664984a28a79ec"
+        },
+        {
+          "file": "dish-57-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 21326,
+          "sha256": "ccad457696806bb9bf460afd042db96660107c5cc045d2908d1cea22feb588a0"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-58",
+      "title": "アジの南蛮漬けとご飯",
+      "initialPrompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: アジの南蛮漬けとご飯. One ordinary portion of Japanese nanbanzuke in a shallow matte white ceramic bowl with a separate small white bowl of steamed white rice (150g). Boneless horse mackerel fillets (120g total) cut into 4 to 6 medium pieces, lightly coated with potato starch and fried golden, then marinated in a shallow translucent amber sweet vinegar-soy sauce. The fish pieces are topped with softened very thin 1-2mm onion slices (50g) and fine orange carrot matchsticks (30g). Some silver-gray fish skin and golden light starch crust visible; no whole fish or head or bones. Only the fish, onion, carrot and marinade in the main bowl. No green peppers, scallions, chili, sesame, parsley, lemon, extra dipping sauce or soup.",
+      "prompt": "Use case: precise-object-edit. Edit only the appearance of fish skin in this AI-generated Japanese アジの南蛮漬け serving image. The fish is Japanese horse mackerel (aji), not chub mackerel (saba). Remove the bold dark wavy stripes or leopard patterns from the exposed fish skin and make the skin uniformly subtle silver-gray with light golden fried starch coating and a faint darker edge, typical small horse-mackerel fillet pieces. Keep every fish piece's shape and position, the carrot matchsticks, thin onion slices, amber marinade, rice, bowls, lighting, table, 3:2 framing and all other details unchanged. No new ingredients, objects or text. Keep realistic fully cooked fried fish texture.",
+      "visualReview": "初回はサバ風の皮模様が出たため、image_gen編集で銀灰色のアジの皮に修正。薄衣の切り身、薄切り玉ねぎ・千切りにんじん、浅い南蛮酢とご飯が一致。余分な具なし。",
+      "files": [
+        {
+          "file": "dish-58.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 46740,
+          "sha256": "e15b75d09f9c9130272d0c17fe68d74283a5d0edab1f701290fd30600afdc2de"
+        },
+        {
+          "file": "dish-58-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 15908,
+          "sha256": "8aa5cc6365e556d9ae2f2970b64d514f63411770e65d332632269b5d7b4d3878"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-59",
+      "title": "トマトリゾット",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: トマトリゾット. One ordinary single portion of creamy tomato risotto in a shallow matte white ceramic bowl. Clearly visible short rice grains cooked from 75g uncooked rice in tomato stock, with diced translucent onion (40g) and small brown-capped shimeji mushrooms (50g). Warm red-orange rice is moist and flows gently across the plate, with a little creamy liquid between grains, not a dry mound and not a soup. Butter and finely grated cheese have been fully mixed into the finished rice, no decorative cheese pile. A few tiny black pepper specks. No basil, parsley, whole tomatoes, peas, meat, extra mushrooms of other types, garnish or side dishes.",
+      "visualReview": "米粒を残す汁気のあるトマトリゾット、しめじ・玉ねぎ・こしょうが一致。粉チーズは混ぜ込まれ、パセリなど余分な薬味なし。",
+      "files": [
+        {
+          "file": "dish-59.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 75466,
+          "sha256": "3df078cc1976774abdb30f570f13e90f0e072cca3fd7295144ca484690cefb31"
+        },
+        {
+          "file": "dish-59-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 24060,
+          "sha256": "767ad1d9c752a572f836b7a5374b6f65818b3c83b09ca9d2b7044908ed50fd04"
+        }
+      ]
+    },
+    {
+      "recipeId": "dish-60",
+      "title": "チキンマカロニグラタン",
+      "prompt": "Use case: photorealistic-natural. Asset type: cooking website AI-generated recipe serving suggestion, not a photograph documenting an actual cooked trial. Style: modern editorial home-cooking food image; realistic appetizing ordinary single-person portion. Scene: neutral warm off-white tabletop, soft natural daylight; simple matte white ceramic dishes. Composition: slightly elevated 45-degree viewpoint, landscape 3:2, camera far enough away that all dishes are entirely in frame, centered with 10% edge breathing room. No text, logos, watermarks, people, hands, utensils or unlisted garnish. Subject: チキンマカロニグラタン. One ordinary single portion of Japanese chicken macaroni gratin in a small matte white ceramic oval ovenproof baking dish with subtle handles, on the warm off-white table. A modest 60g dry macaroni portion is cooked and combined with 100g fully cooked chicken thigh in 2cm pieces, translucent thin onion slices, and small brown-capped shimeji mushrooms. Smooth creamy milk white sauce surrounds these ingredients. Top with 30g cheese, oven-baked until mottled golden brown with some creamy white patches, edges gently bubbly. Some curved macaroni tubes, chicken and shimeji remain visible near edges so the dish is identifiable. One intact baked serving, not scooped out. No parsley, green garnish, breadcrumbs, rice, tomato, broccoli, extra plate or utensils.",
+      "visualReview": "白い耐熱皿にマカロニ、鶏肉、玉ねぎ、しめじ、ホワイトソース、焼き目付きチーズが一致。ご飯やパセリなど追加なし。",
+      "files": [
+        {
+          "file": "dish-60.webp",
+          "width": 960,
+          "height": 640,
+          "bytes": 60358,
+          "sha256": "005d188f418818e0819fd3c3317e1b8541446cf4000127a031972b8a67777e2d"
+        },
+        {
+          "file": "dish-60-480.webp",
+          "width": 480,
+          "height": 320,
+          "bytes": 20542,
+          "sha256": "160ed2cf08b418fda46a8ec47a4806fcba85a93bafd1ac937c288b21389d1787"
+        }
+      ]
+    }
+  ]
+}

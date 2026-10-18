@@ -69,6 +69,7 @@ async function mainFlow(page) {
 
   await goto(page, 'recipes/');
   assert.equal(await page.locator('#recipe-grid .recipe-card').count(), 60);
+  await page.locator('.catalogue-filters summary').click();
   await page.locator('[data-filter="time"]').selectOption('30');
   assert.equal(await page.locator('#recipe-grid .recipe-card').count(), within30);
   await page.locator('#search').fill('うどん');
@@ -240,6 +241,31 @@ async function printChecks(page){
   await goto(page,'recipes/dish-01/');await page.screenshot({path:resolve(qa,'print-recipe.png'),fullPage:true});await page.emulateMedia({media:'screen'});console.log('PASS: recipe, plan, and shopping print CSS; keyboard dialog cancellation');
 }
 
+async function imageChecks(page){
+  await page.setViewportSize({width:1280,height:900});
+  await goto(page,'recipes/');
+  const cards=page.locator('#recipe-grid .recipe-card');
+  assert.equal(await cards.count(),60);
+  const images=await cards.locator('img').evaluateAll(items=>items.map(img=>({src:img.getAttribute('src'),alt:img.alt,loading:img.loading,width:img.width,height:img.height,ready:img.complete&&img.naturalWidth>0})));
+  assert.equal(new Set(images.map(img=>img.src)).size,60,'Every card has its own dish image.');
+  assert.ok(images.every(img=>img.loading==='lazy'&&img.alt.includes('AI生成')));
+  assert.ok(images.some(img=>!img.ready),'Off-screen recipe images are not all downloaded up front.');
+  await cards.first().locator('img').evaluate(img=>img.decode());
+  const photo=await cards.first().locator('img').boundingBox();
+  await page.mouse.click(photo.x+photo.width/2,photo.y+photo.height/2);
+  await page.waitForURL(new URL('recipes/dish-01/',base).href);
+  await page.locator('.recipe-visual img').evaluate(img=>img.decode());
+  assert.match(await page.locator('.recipe-visual figcaption').textContent(),/AI生成.*実際の調理写真ではありません/);
+  await page.locator('[data-action="cook-mode"]').click();
+  assert.equal(await page.locator('.recipe-visual').isVisible(),false,'Cooking mode keeps the instructions in focus.');
+  await page.locator('[data-action="cook-mode"]').click();
+  assert.equal(await page.locator('.recipe-visual').isVisible(),true);
+  await page.emulateMedia({media:'print'});
+  assert.equal(await page.locator('.recipe-visual').isVisible(),false,'Print omits the generated image.');
+  await page.emulateMedia({media:'screen'});
+  console.log('PASS: 60 distinct AI-labeled images, lazy loading, image navigation, cooking and print modes');
+}
+
 async function responsiveScreenshots(page) {
   await page.setViewportSize({ width: 1440, height: 1000 });
   await goto(page);
@@ -268,6 +294,7 @@ async function responsiveScreenshots(page) {
     if(process.env.PRINT_ONLY!=='1'){
       await mainFlow(mainPage);
       await exceptionalContexts();
+      await imageChecks(mainPage);
       await responsiveScreenshots(mainPage);
     }
     await printChecks(mainPage);
