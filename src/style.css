@@ -181,9 +181,20 @@ h2 small{font-size:13px;font-weight:500;letter-spacing:0;color:var(--muted)}
 .ingredients h3{font-size:13px;margin:25px 0 8px}
 .ingredients>p:not(.fine){font-size:12px;color:var(--muted);line-height:1.95;margin:0}
 .ingredient-list{list-style:none;padding:0;margin:0 0 16px}
-.ingredient-list li{display:flex;align-items:start;justify-content:space-between;gap:12px;border-bottom:1px solid #edf0ec;padding:13px 0;font-size:13px}
+.ingredient-list li{display:grid;grid-template-columns:minmax(0,1fr) minmax(70px,.9fr);align-items:start;gap:10px;border-bottom:1px solid #edf0ec;padding:13px 0;font-size:13px}
+.ingredient-list.has-checks li:has(.ingredient-buy){grid-template-columns:24px minmax(0,1fr) minmax(70px,.9fr);column-gap:7px}
 .ingredient-list li:last-child{border-bottom:0}
-.ingredient-list li span{min-width:0;flex:1}
+.ingredient-name{min-width:0;overflow-wrap:anywhere}
+.ingredient-quantity{min-width:0;text-align:right}
+.ingredient-list .ingredient-buy{min-height:44px;margin-top:-8px;cursor:pointer}
+.ingredient-list .ingredient-buy input{margin:0}
+.ingredient-list .ingredient-ready .ingredient-name{color:var(--muted)}
+.ingredient-list .pantry-status{color:var(--green);font-weight:600}
+.ingredient-shopping{margin-bottom:16px}
+.ingredient-shopping .button{width:100%;padding:10px;font-size:12px}
+.ingredient-shopping .fine{margin:8px 0;font-size:11px}
+.measure-hint{display:block;color:var(--muted);font-size:11px;line-height:1.6;font-weight:400;overflow-wrap:anywhere;margin-top:4px}
+.measure-note{line-height:1.8}
 .ingredient-list small{display:block;color:var(--muted);font-size:11px;line-height:1.8;margin-top:3px}
 .ingredient-list strong{white-space:nowrap;font-weight:600;font-variant-numeric:tabular-nums;font-size:14px}
 .ingredients>.fine{font-size:11px}
@@ -243,6 +254,16 @@ details li{margin:12px 0}
 .shopping-row .item-name p:empty{display:none}
 .shopping-row .amount{font-size:15px;font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
 .shopping-row label{font-size:12px;white-space:nowrap}
+.shopping-quantity{flex:0 1 175px;text-align:right;min-width:80px}
+.purchase-actions{display:flex;gap:10px;flex-shrink:0}
+.shopping-row .purchase-check{min-height:44px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;cursor:pointer}
+.purchase-check:has(:checked){background:var(--soft);border-color:#879b8b}
+.shopping-scope{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;margin-bottom:20px}
+.shopping-summary{display:flex;align-items:center;justify-content:space-between;gap:24px;border-radius:14px;background:var(--green);color:white;padding:20px 24px;margin:26px 0 18px}
+.shopping-summary span{font-size:15px}.shopping-summary strong{font-size:29px;margin:0 5px;font-weight:600}
+.shopping-summary p{margin:0;color:#d4dfd7;font-size:12px}
+.shopping-summary progress{width:40%;height:7px;appearance:none;overflow:hidden;border:0;border-radius:8px;background:#66796c;accent-color:#dfeacf}
+.shopping-summary progress::-webkit-progress-bar{background:#66796c}.shopping-summary progress::-webkit-progress-value{background:#dfeacf}.shopping-summary progress::-moz-progress-bar{background:#dfeacf}
 .shopping-row.checked .item-name{text-decoration:line-through;color:var(--muted)}
 .review-tag{font-size:11px;color:#b23a21}
 .progress-row{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:22px 8px;background:transparent}
@@ -310,7 +331,7 @@ th{background:var(--soft)}
  #steps>.section-heading{margin:0 0 24px}#steps>.section-heading h2{font-size:23px}.step-check{grid-template-columns:18px 22px minmax(0,1fr);gap:8px}.step-check input{width:18px;height:18px;min-height:18px;margin-top:5px}.step-number{font-size:17px;line-height:1.85}.step-check strong{font-size:14px;line-height:1.95}.step-meta{font-size:10px}.cue{font-size:12px;line-height:1.9;padding-left:10px}.steps li{padding-bottom:24px;margin-bottom:24px}
  .record-panel{padding:23px 20px;border-radius:14px}.record-panel h2{font-size:21px}.record-panel .toolbar{align-items:start}.record-panel .toolbar label{font-size:12px}.source-note{margin-top:36px;padding-top:22px;font-size:11px}.source-note h2{font-size:17px}
  .day-block{padding:20px;border-radius:14px}.day-heading{gap:12px;padding-bottom:15px}.day-heading h2{font-size:17px}.day-heading>span{font-size:10px}.day-meals{grid-template-columns:1fr;gap:22px}.meal-line+.meal-line{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:21px}.meal-line h3{font-size:17px}.meal-line label{margin-left:12px}
- .shopping-group{padding:20px 18px;border-radius:14px}.shopping-row{flex-wrap:wrap;gap:10px 14px}.shopping-row .item-name{flex-basis:65%}.shopping-row .amount{margin-left:auto}.shopping-row label{font-size:11px;margin-right:5px}.shopping-row .fine{font-size:11px}
+ .shopping-group{padding:20px 18px;border-radius:14px}.shopping-row{flex-wrap:wrap;gap:10px 14px}.shopping-row .item-name{flex:1 1 calc(55% - 14px)}.shopping-quantity{flex:0 1 45%;margin-left:auto}.purchase-actions{width:100%;justify-content:flex-end}.shopping-row label{font-size:12px}.shopping-row .fine{font-size:11px}.shopping-summary{padding:16px 18px;gap:16px}.shopping-summary strong{font-size:26px}
  .progress-row{padding:20px 0;align-items:start;gap:12px}.progress-row h3{font-size:15px}.progress-row p{font-size:11px}.progress-row>.status{font-size:9px;padding:5px 7px}
  .flow{grid-template-columns:1fr;gap:22px}.flow h2{font-size:18px}.prose{font-size:14px}.prose h2{font-size:21px}.prose .lead{font-size:14px}
  .site-footer{padding:24px 20px 104px;flex-direction:column;gap:12px;font-size:10px}.site-footer>div{gap:18px}#toast{bottom:90px;font-size:12px;width:max-content;max-width:calc(100vw - 32px)}#app-alert:not(:empty){padding:14px 20px;font-size:12px}

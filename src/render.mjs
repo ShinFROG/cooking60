@@ -1,3 +1,6 @@
+import {measureHint} from './measures.mjs';
+import {recipeShoppingKey} from './core.mjs';
+
 export const esc = value => String(value ?? '').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function qty(n){return n===null?'適量':Number(n.toFixed(2)).toLocaleString('ja-JP');}
 export function status(p){return p?.mastered?'再現できる':p?.practice?'もう一度練習':p?.dates?.length?'作った':'未着手';}
@@ -58,15 +61,22 @@ export function reviewBody(r) {
  '<h3>食品の取り扱いの参考</h3>'+links(safetySources)+'<p>参照先の分量・人数・器具・調味料はこのレシピと異なる場合があります。リンクは試作済みの認定や、第三者の文章・写真の利用許諾を意味しません。</p></section>';
 }
 
-export function recipeBody(r,servings=1){
+export function recipeBody(r,servings=1,shoppingRows=null){
  const text = value => esc(scaleText(value,r,servings));
  const multiplier = servings / (r.baseServings ?? 1);
- const ingredients = r.ingredients.map(i => '<li><span>'+esc(i.name)+(i.note?'<small>'+text(i.note)+'</small>':'')+'</span><strong>'+qty(i.quantity===null?null:i.quantity*multiplier)+(i.quantity===null?'':esc(i.unit))+'</strong></li>').join('');
+ const ingredients = r.ingredients.map(i => {
+  const quantity=i.quantity===null?null:i.quantity*multiplier;
+  const hint=measureHint(i,quantity);
+  const row=shoppingRows?.find(row=>row.key===recipeShoppingKey(i,r.id));
+  return '<li'+(row?.check?' class="ingredient-ready"':'')+'>'+
+   (row?'<label class="ingredient-buy"><input type="checkbox" data-action="shopping-check" data-kind="bought" data-key="'+esc(row.key)+'" aria-label="'+esc(i.name)+'を買った"'+(row.check==='bought'?' checked':'')+'></label>':'')+
+   '<div class="ingredient-name">'+esc(i.name)+(i.note?'<small>'+text(i.note)+'</small>':'')+(row?.check==='pantry'?'<small class="pantry-status">家にある</small>':'')+(row?.needsReview?'<small class="review-tag">必要量・日付を再確認</small>':'')+'</div><div class="ingredient-quantity"><strong>'+qty(quantity)+(quantity===null?'':esc(i.unit))+'</strong>'+(hint?'<small class="measure-hint">'+esc(hint)+'</small>':'')+'</div></li>';
+ }).join('');
  const steps = r.steps.map((s,i)=>'<li><label class="step-check"><input type="checkbox" data-step="'+i+'"><span class="step-number">'+String(i+1).padStart(2,'0')+'</span><span><strong>'+text(s.instruction)+'</strong><span class="step-meta">'+esc(s.heat||'')+(s.durationMinutes?' · 目安'+s.durationMinutes+'分':'')+'</span><span class="cue">目印：'+text(s.cue)+'</span></span></label></li>').join('');
  return '<nav class="breadcrumb no-print" aria-label="パンくず"><a href="../">60品のレシピ</a><span aria-hidden="true">/</span><span>'+esc(r.title)+'</span></nav><div class="recipe-intro"><div class="recipe-summary"><div class="recipe-heading"><div><p class="eyebrow">THE RECIPE COLLECTION <span>'+esc(r.mealForm)+'</span></p><h1>'+esc(r.title)+'</h1><p class="lead">'+esc(r.skill)+'を覚える一品。</p></div><span class="recipe-index" aria-hidden="true">'+esc(r.id.slice(-2))+'</span></div><div class="recipe-metrics"><div><span>総時間の目安</span><strong>'+r.estimatedTotalMinutes+'<small>分</small></strong></div><div><span>実作業の目安</span><strong>'+r.estimatedActiveMinutes+'<small>分</small></strong></div><div><span>難易度</span><strong class="metric-level">'+esc(r.difficulty)+'</strong></div></div><a class="recipe-jump no-print" href="#ingredients">材料・作り方を見る ↓</a></div><figure class="recipe-visual">'+recipeImage(r,'../../',true)+'<figcaption>完成イメージ（AI生成）。実際の調理写真ではありません。</figcaption></figure></div>'+
  '<div class="recipe-context"><details class="recipe-disclosure"><summary><span class="draft-dot" aria-hidden="true"></span><strong>未試作のレシピ草稿</strong><span>分量・時間は目安です</span></summary><p>表示時間は1人分を作る場合で、分けて調理する時間は追加でかかります。材料と工程内の分量は選んだ人数に合わせています。人数を増やす場合は器具の容量に合わせて分けて調理し、加熱時間は火の通りを見て調整してください。温度・厚さ・加熱時間は自動換算しません。</p></details>'+(r.sourceReview?.status==='reviewed'?'<p class="review-status"><a href="#source-review">材料・手順を公開情報と照合しました '+icon('arrow')+'</a><span>'+esc(r.sourceReview.checkedAt)+' · 実調理は未実施</span></p>':'')+'</div>'+
  '<div class="toolbar recipe-toolbar no-print"><label>人数 <select id="servings" data-action="servings">'+[1,2,3,4].map(n=>'<option value="'+n+'"'+(n===servings?' selected':'')+'>'+n+'人分</option>').join('')+'</select></label><button data-action="cook-mode" class="primary">'+icon('play')+'調理表示にする</button><button data-action="print">'+icon('print')+'印刷</button><a class="button quiet" href="#record">作った記録へ '+icon('arrow')+'</a></div><p class="prep-note">'+text(r.prepNote)+'</p>'+
- '<div class="recipe-layout"><section id="ingredients" class="ingredients"><h2>材料 <small>'+servings+'人分</small></h2><ul class="ingredient-list">'+ingredients+'</ul><p class="fine">端数の卵などは必要量に合わせて取り分けます。加熱は中心まで確認してください。</p><h3>使う道具</h3><p>'+r.equipment.map(text).join('・')+'</p></section>'+
+ '<div class="recipe-layout"><section id="ingredients" class="ingredients"><h2>材料 <small>'+servings+'人分</small></h2><div class="ingredient-shopping no-print"><a class="button" href="../../shopping/?recipe='+esc(r.id)+'">'+icon('shopping')+'この料理の買物リスト</a><p class="fine">'+(shoppingRows?'買ったものにチェック。家にあるものは買物リストで設定できます。':'買物リストで購入済み・家にあるものをチェックできます。')+'</p></div><ul class="ingredient-list'+(shoppingRows?' has-checks':'')+'">'+ingredients+'</ul><p class="fine measure-note">個数・枚数は大きさをつかむ目安です。個体差があるため、調理にはg表記を優先してください。<a href="../../about/#ingredient-measures">目安の基準・出典</a></p><p class="fine">端数の卵などは必要量に合わせて取り分けます。加熱は中心まで確認してください。</p><h3>使う道具</h3><p>'+r.equipment.map(text).join('・')+'</p></section>'+
  '<section id="steps"><div class="section-heading"><h2>作り方</h2><a href="#ingredients" class="no-print">材料を見る ↑</a></div><ol class="steps">'+steps+'</ol><section class="inset"><h3>上手に作るコツ</h3><ul>'+r.tips.map(x=>'<li>'+text(x)+'</li>').join('')+'</ul></section><details><summary>代用のヒントと食品の取り扱い</summary><ul>'+[...r.substitutions,...r.safetyNotes].map(x=>'<li>'+text(x)+'</li>').join('')+'</ul></details></section></div>'+
  '<section id="record" class="record-panel no-print"><h2>作った記録</h2><div id="recipe-record"><p>記録機能はJavaScriptを有効にしてお使いください。記録はこのブラウザに保存されます。</p></div></section>'+reviewBody(r);
 }

@@ -1,9 +1,12 @@
 import * as core from './core.mjs';
 import {esc,qty,status,card,recipeBody,icon} from './render.mjs';
+import {measureHint} from './measures.mjs';
 
 const root = new URL('../', import.meta.url);
 const app = document.querySelector('#app');
 const page = document.body.dataset.page;
+const requestedShoppingRecipe = new URL(location.href).searchParams.get('recipe');
+let shoppingRecipeId = null;
 const today = () => { const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); };
 const copy = value => JSON.parse(JSON.stringify(value));
 const link = path => root.pathname+path;
@@ -55,10 +58,24 @@ function recordPanel(id){
  const p=state.progress[id]||{dates:[],mastered:false,practice:false,note:''};
  return '<p>同じ料理を何度作っても「作った料理」は1品として数えます。「再現できる」は作った後の自己評価です。</p><form id="record-form" class="toolbar"><label>作った日 <input name="date" type="date" value="'+today()+'" required></label><button class="primary">作った日を記録</button></form><div class="dates">'+p.dates.map(d=>'<span class="date-chip">'+d+' <button data-action="remove-date" data-date="'+d+'" aria-label="'+d+'の記録を削除">×</button></span>').join('')+'</div><div class="toolbar"><label><input type="checkbox" data-action="mastered"'+(p.mastered?' checked':'')+(!p.dates.length?' disabled':'')+'> 再現できる</label><label><input type="checkbox" data-action="practice"'+(p.practice?' checked':'')+'> もう一度練習</label></div><form id="note-form"><label for="note">次に作るときのメモ（この端末内だけに保存）</label><textarea id="note" maxlength="1000" rows="3" placeholder="火を少し弱める、など">'+esc(p.note)+'</textarea><button>メモを保存</button></form>';
 }
+function shoppingRows(){return core.aggregateShopping(data,state,fromDay,toDay,page==='recipe'?document.body.dataset.recipeId:shoppingRecipeId);}
 function shopping(){
- const rows=core.aggregateShopping(data,state,fromDay,toDay);
+ const rows=shoppingRows(),recipe=shoppingRecipeId?byId(shoppingRecipeId):null;
  const aisles=[...new Set(rows.map(r=>r.aisle))];
- return headline('SHOPPING LIST','買うものを、ひとまとめに。','選んだ期間の「作る」予定から、必要な材料を集計します。')+'<div class="settings no-print"><label>開始 <select data-action="from-day">'+Array.from({length:30},(_,i)=>option(i+1,'DAY '+(i+1),fromDay)).join('')+'</select></label><label>終了 <select data-action="to-day">'+Array.from({length:30},(_,i)=>option(i+1,'DAY '+(i+1),toDay)).join('')+'</select></label>'+servings()+'<label>毎日の朝食 <select data-action="breakfast">'+option('none','含めない',state.breakfast)+option('toast','パン・ヨーグルト・バナナ',state.breakfast)+option('rice','ご飯・納豆',state.breakfast)+'</select></label></div><div class="toolbar no-print"><button data-action="range" data-days="3">開始日から3日分</button><button data-action="range" data-days="7">開始日から7日分</button><button data-action="print">印刷</button><button data-action="reset-checks">買物チェックを外す</button></div><p class="result-count">DAY '+fromDay+'〜'+toDay+' · '+state.servings+'人分 · '+rows.length+'材料</p><p class="fine">炊いたご飯と生米、乾麺とゆで麺は別集計です。適量は必要に応じて用意してください。生鮮品は保存期限を確認し、小分けの買物も検討してください。</p>'+aisles.map(a=>'<section class="shopping-group"><h2>'+esc(a)+'</h2>'+rows.filter(r=>r.aisle===a).map(r=>'<div class="shopping-row'+(r.check?' checked':'')+'"><div class="item-name"><strong>'+esc(r.name)+'</strong> <small>'+esc(r.state)+'</small><p class="fine">'+esc(r.notes.join(' / '))+'</p>'+(r.needsReview?'<span class="review-tag">対象期間または必要量が変わりました。再確認してください</span>':'')+'</div><strong class="amount">'+qty(r.quantity)+(r.quantity===null?'':esc(r.unit))+'</strong><label><input type="checkbox" data-action="shopping-check" data-kind="bought" data-key="'+esc(r.key)+'"'+(r.check==='bought'?' checked':'')+'> 買った</label><label><input type="checkbox" data-action="shopping-check" data-kind="pantry" data-key="'+esc(r.key)+'"'+(r.check==='pantry'?' checked':'')+'> 家にある</label></div>').join('')+'</section>').join('')+(!rows.length?'<p class="empty">この期間は調理する予定がありません。</p>':'')+'<section class="shopping-group'+(state.extraItems.length?'':' no-print')+'"><h2>追加の買物</h2><p class="fine">自分で追加したものは期間を変えても残ります。</p><form id="extra-form" class="toolbar no-print"><label>品物 <input name="name" required maxlength="100" placeholder="例：台所用スポンジ"></label><button>追加</button></form>'+state.extraItems.map(i=>'<div class="shopping-row'+(i.done?' checked':'')+'"><label><input type="checkbox" data-action="extra-done" data-id="'+esc(i.id)+'"'+(i.done?' checked':'')+'> '+esc(i.name)+'</label><button class="no-print" data-action="extra-remove" data-id="'+esc(i.id)+'">削除</button></div>').join('')+'</section>';
+ const ready=rows.filter(r=>r.check).length;
+ const rangeControls='<label>開始 <select data-action="from-day">'+Array.from({length:30},(_,i)=>option(i+1,'DAY '+(i+1),fromDay)).join('')+'</select></label><label>終了 <select data-action="to-day">'+Array.from({length:30},(_,i)=>option(i+1,'DAY '+(i+1),toDay)).join('')+'</select></label>';
+ const breakfastControl='<label>毎日の朝食 <select data-action="breakfast">'+option('none','含めない',state.breakfast)+option('toast','パン・ヨーグルト・バナナ',state.breakfast)+option('rice','ご飯・納豆',state.breakfast)+'</select></label>';
+ const groups=aisles.map(a=>'<section class="shopping-group"><h2>'+esc(a)+'</h2>'+rows.filter(r=>r.aisle===a).map(r=>{
+  const hint=measureHint(r);
+  const checkbox=kind=>'<label class="purchase-check"><input type="checkbox" data-action="shopping-check" data-kind="'+kind+'" data-key="'+esc(r.key)+'" aria-label="'+esc(r.name)+(kind==='bought'?'を買った':'が家にある')+'"'+(r.check===kind?' checked':'')+'> '+(kind==='bought'?'買った':'家にある')+'</label>';
+  return '<div class="shopping-row'+(r.check?' checked':'')+'"><div class="item-name"><strong>'+esc(r.name)+'</strong> <small>'+esc(r.state)+'</small><p class="fine">'+esc(r.notes.join(' / '))+'</p>'+(r.needsReview?'<span class="review-tag">対象期間または必要量が変わりました。再確認してください</span>':'')+'</div><div class="shopping-quantity"><strong class="amount">'+qty(r.quantity)+(r.quantity===null?'':esc(r.unit))+'</strong>'+(hint?'<small class="measure-hint">'+esc(hint)+'</small>':'')+'</div><div class="purchase-actions">'+checkbox('bought')+checkbox('pantry')+'</div></div>';
+ }).join('')+'</section>').join('');
+ return headline('SHOPPING LIST',recipe?esc(recipe.title)+'の買物リスト':'買うものを、ひとまとめに。',recipe?'この料理に必要な材料をチェックできます。材料ページとも連動します。':'選んだ期間の「作る」予定から、必要な材料を集計します。')+
+ '<div class="shopping-scope no-print">'+(recipe?'<a href="'+link('recipes/'+recipe.id+'/#ingredients')+'">← 材料・作り方に戻る</a><a href="'+link('shopping/')+'">数日分をまとめて買う →</a>':'<a href="'+link('recipes/')+'">1品だけ買うときは、料理の材料欄へ →</a>')+'</div>'+
+ '<div class="settings no-print">'+(recipe?'':rangeControls)+servings()+(recipe?'':breakfastControl)+'</div><div class="toolbar no-print">'+(recipe?'':'<button data-action="range" data-days="3">開始日から3日分</button><button data-action="range" data-days="7">開始日から7日分</button>')+'<button data-action="print">印刷</button><button data-action="reset-checks">このリストのチェックを外す</button></div>'+
+ '<div class="shopping-summary"><div><span>あと <strong>'+ (rows.length-ready)+'</strong> 材料</span><p>'+ready+' / '+rows.length+' 材料を用意済み</p></div><progress value="'+ready+'" max="'+Math.max(1,rows.length)+'" aria-label="材料の準備状況"></progress></div>'+
+ '<p class="result-count">'+(recipe?'この料理1品':'DAY '+fromDay+'〜'+toDay)+' · '+state.servings+'人分 · '+rows.length+'材料</p><p class="fine">「買った」か「家にある」をチェックすると、この端末に保存します。料理ごとのチェックと、数日分のまとめ買いのチェックは別に管理します。</p><p class="fine measure-note">個数・枚数は目安です。商品や大きさで変わるため、調理にはg表記を優先してください。<a href="'+link('about/#ingredient-measures')+'">目安の基準・出典</a></p><p class="fine">炊いたご飯と生米、乾麺とゆで麺は別集計です。適量は必要に応じて用意してください。生鮮品は保存期限を確認し、小分けの買物も検討してください。</p>'+groups+(!rows.length?'<p class="empty">この期間は調理する予定がありません。</p>':'')+
+ '<section class="shopping-group'+(state.extraItems.length?'':' no-print')+'"><h2>追加の買物</h2><p class="fine">自分で追加したものは、どの買物リストにも共通で表示します。</p><form id="extra-form" class="toolbar no-print"><label>品物 <input name="name" required maxlength="100" placeholder="例：台所用スポンジ"></label><button>追加</button></form>'+state.extraItems.map(i=>'<div class="shopping-row'+(i.done?' checked':'')+'"><label><input type="checkbox" data-action="extra-done" data-id="'+esc(i.id)+'"'+(i.done?' checked':'')+'> '+esc(i.name)+'</label><button class="no-print" data-action="extra-remove" data-id="'+esc(i.id)+'">削除</button></div>').join('')+'</section>';
 }
 function progress(){
  const list=data.recipes.filter(r=>progressFilter==='all'||status(state.progress[r.id])===progressFilter);
@@ -68,9 +85,11 @@ function render(){
  if(page==='home')app.innerHTML=home();
  if(page==='plan')app.innerHTML=plan();
  if(page==='recipes'){app.innerHTML=catalogue();filterRecipes();}
- if(page==='recipe'){const r=byId(document.body.dataset.recipeId);app.innerHTML=recipeBody(r,state.servings);document.querySelector('#recipe-record').innerHTML=recordPanel(r.id);}
+ if(page==='recipe'){const r=byId(document.body.dataset.recipeId);app.innerHTML=recipeBody(r,state.servings,shoppingRows());document.querySelector('#recipe-record').innerHTML=recordPanel(r.id);}
  if(page==='shopping')app.innerHTML=shopping();
  if(page==='progress')app.innerHTML=progress();
+ const cookButton=app.querySelector('[data-action="cook-mode"]');
+ if(cookButton&&document.body.classList.contains('cook-mode'))cookButton.innerHTML=icon('recipes')+'通常表示に戻す';
 }
 function download(){
  const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
@@ -104,9 +123,22 @@ document.addEventListener('change',async e=>{
  if(a==='to-day'){toDay=Number(el.value);fromDay=Math.min(fromDay,toDay);render();}
  if(a==='breakfast')commit({...state,breakfast:el.value},'朝食の設定を変更しました。');
  if(a==='shopping-check'){
-  const r=core.aggregateShopping(data,state,fromDay,toDay).find(r=>r.key===el.dataset.key),n=copy(state);
-  if(el.checked)n.shoppingChecks[r.key]={kind:el.dataset.kind,quantity:r.quantity,period:core.shoppingPeriod(state,fromDay,toDay)};else delete n.shoppingChecks[r.key];
-  commit(n,'買物チェックを更新しました。');
+  const r=shoppingRows().find(r=>r.key===el.dataset.key),n=copy(state);
+  if(!r)return;
+  const recipeId=page==='recipe'?document.body.dataset.recipeId:shoppingRecipeId;
+  if(el.checked)n.shoppingChecks[r.key]={kind:el.dataset.kind,quantity:r.quantity,period:core.shoppingPeriod(state,fromDay,toDay,recipeId)};else delete n.shoppingChecks[r.key];
+  commit(n,'買物チェックを更新しました。',false);
+  const fragment=document.createElement('template');
+  if(page==='recipe'){
+   fragment.innerHTML=recipeBody(byId(recipeId),state.servings,shoppingRows());
+   document.querySelector('#ingredients').replaceWith(fragment.content.querySelector('#ingredients'));
+  }else{
+   fragment.innerHTML=shopping();
+   const replacement=[...fragment.content.querySelectorAll('[data-action="shopping-check"]')].find(input=>input.dataset.key===r.key);
+   el.closest('.shopping-row').replaceWith(replacement.closest('.shopping-row'));
+   document.querySelector('.shopping-summary').replaceWith(fragment.content.querySelector('.shopping-summary'));
+  }
+  [...document.querySelectorAll('[data-action="shopping-check"]')].find(input=>input.dataset.key===el.dataset.key&&input.dataset.kind===el.dataset.kind)?.focus({preventScroll:true});
  }
  if(a==='extra-done'){const n=copy(state);n.extraItems.find(i=>i.id===el.dataset.id).done=el.checked;commit(n);}
  if(a==='mastered'||a==='practice')commit(core.updateProgress(state,document.body.dataset.recipeId,{[a]:el.checked}),'記録を更新しました。');
@@ -123,7 +155,7 @@ document.addEventListener('click',e=>{
  if(a==='range'){toDay=Math.min(30,fromDay+Number(el.dataset.days)-1);render();}
  if(a==='remove-date'){const id=document.body.dataset.recipeId;commit(core.updateProgress(state,id,{dates:state.progress[id].dates.filter(d=>d!==el.dataset.date)}),'記録日を削除しました。');}
  if(a==='extra-remove'){commit({...state,extraItems:state.extraItems.filter(i=>i.id!==el.dataset.id)},'追加項目を削除しました。');}
- if(a==='reset-checks')commit({...state,shoppingChecks:{}},'買物チェックを外しました。');
+ if(a==='reset-checks'){const n=copy(state);for(const row of shoppingRows())delete n.shoppingChecks[row.key];commit(n,'このリストのチェックを外しました。');}
  if(a==='undo-swap'&&lastSwap){const n=core.swapSlots(state,...lastSwap);lastSwap=null;commit(n,'交換を戻しました。');}
  if(a==='export')download();
  if(a==='export-original'&&protectedRaw!==null){const url=URL.createObjectURL(new Blob([protectedRaw],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='cooking60-protected-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
@@ -143,6 +175,7 @@ async function start(){
  try{
   const response=await fetch(new URL('data.json',import.meta.url));if(!response.ok)throw new Error('data');
   data=await response.json();
+  shoppingRecipeId=data.recipes.some(r=>r.id===requestedShoppingRecipe)?requestedShoppingRecipe:null;
   try{storage=window.localStorage;}catch{storage=null;}
   key=core.storageKey(root.pathname);
   const loaded=core.loadState(storage,key,data,today());state=loaded.state;persistent=loaded.persistent;
@@ -150,6 +183,7 @@ async function start(){
   if(loaded.warnings.length)alert(loaded.warnings.join(' '));
   fromDay=activeDay();toDay=Math.min(30,fromDay+6);
   render();
+  if(page==='shopping'&&requestedShoppingRecipe&&!shoppingRecipeId)message('指定された料理が見つからないため、期間の買物リストを表示しています。');
   window.addEventListener('storage',e=>{if(e.key===key){persistent=false;alert('別の画面で記録が変更されました。この画面の自動保存を停止しました。変更を反映するには再読み込みしてください。');}});
  }catch(err){alert('記録機能を読み込めませんでした。レシピ本文は読めます。通信状況を確認して再読み込みしてください。');console.error(err);}
 }

@@ -61,11 +61,16 @@ function normalizeProgress(value) {
   return { dates, mastered: dates.length > 0 && value.mastered, practice: value.practice, note: value.note };
 }
 
-function normalizeShoppingPeriod(value, maxDay) {
+function normalizeShoppingPeriod(value, maxDay, ids) {
   assert(typeof value === 'string' && value.length <= 80, '買物チェックの期間が不正です。');
   let parts;
   try { parts = JSON.parse(value); } catch { fail('買物チェックの期間が不正です。'); }
-  assert(Array.isArray(parts) && parts.length === 3 && parts[2] <= maxDay, '買物チェックの期間が不正です。');
+  assert(Array.isArray(parts) && parts.length === 3, '買物チェックの期間が不正です。');
+  if (parts[1] === 'recipe') {
+    assert(validDate(parts[0]) && ids.has(parts[2]), '買物チェックの料理が不正です。');
+    return JSON.stringify(parts);
+  }
+  assert(parts[2] <= maxDay, '買物チェックの期間が不正です。');
   return shoppingPeriod({ startDate: parts[0] }, parts[1], parts[2]);
 }
 
@@ -103,7 +108,15 @@ export function validateState(input, data) {
     assert(value.kind === 'bought' || value.kind === 'pantry', '買物チェックの状態が不正です。');
     assert(value.quantity === null || (Number.isFinite(value.quantity) && value.quantity >= 0), '買物チェックの数量が不正です。');
     const normalized = { kind: value.kind, quantity: value.quantity };
-    if (value.period !== undefined) normalized.period = normalizeShoppingPeriod(value.period, data.days.length);
+    if (value.period !== undefined) normalized.period = normalizeShoppingPeriod(value.period, data.days.length, ids);
+    if (key.startsWith('recipe:')) {
+      let parts;
+      try { parts = JSON.parse(key.slice(7)); } catch { fail('買物チェックの料理キーが不正です。'); }
+      assert(Array.isArray(parts) && parts.length === 5 && ids.has(parts[0]) && parts.slice(1, 4).every(part => typeof part === 'string') && ['optional', 'measured'].includes(parts[4]), '買物チェックの料理キーが不正です。');
+      assert(normalized.period !== undefined && JSON.parse(normalized.period)[1] === 'recipe' && JSON.parse(normalized.period)[2] === parts[0], '買物チェックの料理が一致しません。');
+    } else if (normalized.period !== undefined) {
+      assert(JSON.parse(normalized.period)[1] !== 'recipe', '買物チェックの料理キーが不正です。');
+    }
     return [key, normalized];
   }));
   assert(Array.isArray(input.extraItems) && input.extraItems.length <= 500, '追加の買物リストが不正です。');
@@ -175,20 +188,33 @@ function checkStillCovers(check, quantity) {
 }
 
 /** A purchased amount belongs to one dated planning period, not every future meal. */
-export function shoppingPeriod(state, fromDay, toDay) {
+export function shoppingPeriod(state, fromDay, toDay, recipeId = null) {
   assert(validDate(state.startDate), '買物の開始日が正しくありません。');
+  if (recipeId !== null) {
+    hasRecipe(state, recipeId);
+    return JSON.stringify([state.startDate, 'recipe', recipeId]);
+  }
   assert(Number.isInteger(fromDay) && Number.isInteger(toDay) && fromDay >= 1 && fromDay <= toDay && toDay <= 30, '買物の対象日が正しくありません。');
   return JSON.stringify([state.startDate, fromDay, toDay]);
 }
 
+/** Match recipe ingredient controls to their combined shopping row; water is omitted. */
+export function recipeShoppingKey(ingredient, recipeId) {
+  assert(typeof recipeId === 'string' && recipeId && !FORBIDDEN_KEYS.has(recipeId), '料理が見つかりません。');
+  const name = cleanText(ingredient.name);
+  if (!name || name === '水') return null;
+  return `recipe:${JSON.stringify([recipeId, name, cleanText(ingredient.state), canonicalUnit(ingredient.unit).unit, ingredient.quantity === null ? 'optional' : 'measured'])}`;
+}
+
 /** Exact names and preparation states are kept separate; only safe units convert. */
-export function aggregateShopping(data, state, fromDay, toDay) {
-  assert(Number.isInteger(fromDay) && Number.isInteger(toDay) && fromDay >= 1 && fromDay <= toDay && toDay <= data.days.length, '買物の対象日が正しくありません。');
+export function aggregateShopping(data, state, fromDay, toDay, recipeId = null) {
+  if (recipeId === null) assert(Number.isInteger(fromDay) && Number.isInteger(toDay) && fromDay >= 1 && fromDay <= toDay && toDay <= data.days.length, '買物の対象日が正しくありません。');
+  else assert(recipeIds(data).has(recipeId), '料理が見つかりません。');
   assert(Number.isInteger(state.servings) && state.servings >= 1 && state.servings <= 4, '人数は1〜4人にしてください。');
-  const period = shoppingPeriod(state, fromDay, toDay);
+  const period = shoppingPeriod(state, fromDay, toDay, recipeId);
   const recipes = new Map(data.recipes.map(recipe => [recipe.id, recipe]));
   const combined = new Map();
-  const add = (ingredient, multiplier, recipeId = null, extraNote = '') => {
+  const add = (ingredient, multiplier, sourceRecipeId = null, extraNote = '') => {
     const name = cleanText(ingredient.name);
     if (!name || name === '水') return;
     const preparation = cleanText(ingredient.state);
@@ -196,16 +222,17 @@ export function aggregateShopping(data, state, fromDay, toDay) {
     const isOptional = ingredient.quantity === null;
     assert(isOptional || (Number.isFinite(ingredient.quantity) && ingredient.quantity >= 0), `材料「${name}」の数量が不正です。`);
     const quantity = isOptional ? null : round(ingredient.quantity * multiplier * factor);
-    const key = JSON.stringify([name, preparation, unit, isOptional ? 'optional' : 'measured']);
+    const key = recipeId === null ? JSON.stringify([name, preparation, unit, isOptional ? 'optional' : 'measured']) : recipeShoppingKey(ingredient, recipeId);
     if (!combined.has(key)) combined.set(key, { key, name, state: preparation, unit, quantity: isOptional ? null : 0, aisle: cleanText(ingredient.aisle) || 'その他', notes: [], recipeIds: [], check: null, needsReview: false });
     const row = combined.get(key);
     if (quantity !== null) row.quantity = round(row.quantity + quantity);
     for (const note of [cleanText(ingredient.note), extraNote]) if (note && !row.notes.includes(note)) row.notes.push(note);
-    if (recipeId && !row.recipeIds.includes(recipeId)) row.recipeIds.push(recipeId);
+    if (sourceRecipeId && !row.recipeIds.includes(sourceRecipeId)) row.recipeIds.push(sourceRecipeId);
   };
-  for (const slot of state.slots) {
-    if (slot.day < fromDay || slot.day > toDay || slot.mode !== 'cook') continue;
-    const recipe = recipes.get(slot.recipeId);
+  const selectedRecipes = recipeId === null
+    ? state.slots.filter(slot => slot.day >= fromDay && slot.day <= toDay && slot.mode === 'cook').map(slot => recipes.get(slot.recipeId))
+    : [recipes.get(recipeId)];
+  for (const recipe of selectedRecipes) {
     assert(recipe && Array.isArray(recipe.ingredients), '材料データが見つかりません。');
     const baseServings = recipe.baseServings ?? 1;
     assert(Number.isFinite(baseServings) && baseServings > 0, '材料の基準人数が不正です。');
@@ -223,7 +250,7 @@ export function aggregateShopping(data, state, fromDay, toDay) {
     ],
   };
   const dayCount = toDay - fromDay + 1;
-  for (const ingredient of breakfastItems[state.breakfast] ?? []) add(ingredient, dayCount * state.servings, null, `朝食${dayCount}日分を含む`);
+  if (recipeId === null) for (const ingredient of breakfastItems[state.breakfast] ?? []) add(ingredient, dayCount * state.servings, null, `朝食${dayCount}日分を含む`);
   for (const row of combined.values()) {
     const previous = own(state.shoppingChecks, row.key) ? state.shoppingChecks[row.key] : null;
     const valid = previous?.period === period && checkStillCovers(previous, row.quantity);

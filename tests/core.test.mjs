@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { aggregateShopping, clearAppState, createDefaultState, getCounts, loadState, reconcileChecks, recordCook, saveState, shoppingPeriod, storageKey, swapSlots, updateProgress, validateState } from '../src/core.mjs';
+import { aggregateShopping, clearAppState, createDefaultState, getCounts, loadState, recipeShoppingKey, reconcileChecks, recordCook, saveState, shoppingPeriod, storageKey, swapSlots, updateProgress, validateState } from '../src/core.mjs';
 
 const TODAY = '2026-10-17';
 const ingredient = (name, quantity, unit, state = '', note = '') => ({ name, quantity, unit, state, aisle: 'テスト', note });
@@ -167,6 +167,106 @@ test('recipe base servings are respected and decimal conversion stays stable', (
   assert.equal(aggregateShopping(data, state, 1, 1)[0].quantity, 3.75);
   assert.throws(() => aggregateShopping(data, state, 0, 1));
   assert.throws(() => aggregateShopping(data, state, 3, 2));
+});
+
+test('one recipe shopping ignores planning range, slot status, and fixed breakfast', () => {
+  const data = fixture();
+  data.recipes[0].baseServings = 2;
+  data.recipes[0].ingredients = [ingredient('玉ねぎ', 100, 'g', '生'), ingredient('水', 100, 'ml')];
+  data.recipes[1].ingredients = [ingredient('鶏肉', 150, 'g', '生')];
+  const state = createDefaultState(data, TODAY);
+  state.servings = 3;
+  state.breakfast = 'toast';
+  for (const mode of ['hold', 'eatout']) {
+    state.slots[0].mode = mode;
+    const rows = aggregateShopping(data, state, 20, 30, 'dish-1');
+    assert.equal(rows.length, 1);
+    assert.equal(rows[0].name, '玉ねぎ');
+    assert.equal(rows[0].quantity, 150);
+    assert.deepEqual(rows[0].recipeIds, ['dish-1']);
+    assert.deepEqual(aggregateShopping(data, state, null, null, 'dish-1'), rows);
+  }
+  assert.equal(shoppingPeriod(state, 1, 1, 'dish-1'), shoppingPeriod(state, 20, 30, 'dish-1'));
+});
+
+test('recipe ingredient keys combine compatible duplicates and isolate optional quantities and preparation states', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('しょうゆ', 1, '大さじ'), ingredient('しょうゆ', 2, '小さじ'), ingredient('ご飯', 150, 'g', '炊飯済み'), ingredient('ご飯', 75, 'g', '生米'), ingredient('塩', 1, 'g'), ingredient('塩', null, 'g')];
+  const state = createDefaultState(data, TODAY);
+  const rows = aggregateShopping(data, state, 1, 1, 'dish-1');
+  const sauce = rows.find(row => row.name === 'しょうゆ');
+  assert.equal(sauce.quantity, 25);
+  assert.equal(sauce.key, recipeShoppingKey(data.recipes[0].ingredients[0], 'dish-1'));
+  assert.equal(sauce.key, recipeShoppingKey(data.recipes[0].ingredients[1], 'dish-1'));
+  assert.equal(rows.filter(row => row.name === '塩').length, 2);
+  assert.equal(rows.filter(row => row.name === 'ご飯').length, 2);
+  assert.equal(recipeShoppingKey(ingredient('水', 100, 'ml'), 'dish-1'), null);
+  assert.equal(recipeShoppingKey(ingredient('にんじん', 0.1, 'kg'), 'dish-1'), recipeShoppingKey(ingredient('にんじん', 100, 'g'), 'dish-1'));
+});
+
+test('a recipe purchase check cannot mark another recipe or the monthly shopping list as bought', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('卵', 1, '個')];
+  data.recipes[1].ingredients = [ingredient('卵', 1, '個')];
+  const state = createDefaultState(data, TODAY);
+  const first = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  const second = aggregateShopping(data, state, 1, 1, 'dish-2')[0];
+  const periodRow = aggregateShopping(data, state, 1, 1)[0];
+  assert.equal(new Set([first.key, second.key, periodRow.key]).size, 3);
+  state.shoppingChecks[first.key] = { kind: 'bought', quantity: first.quantity, period: shoppingPeriod(state, 1, 1, 'dish-1') };
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-2')[0].check, null);
+  assert.equal(aggregateShopping(data, state, 1, 1)[0].check, null);
+  state.shoppingChecks[second.key] = { kind: 'pantry', quantity: second.quantity, period: shoppingPeriod(state, 1, 1, 'dish-2') };
+  state.shoppingChecks[periodRow.key] = { kind: 'bought', quantity: periodRow.quantity, period: shoppingPeriod(state, 1, 1) };
+  const restored = validateState(JSON.parse(JSON.stringify(state)), data);
+  assert.equal(aggregateShopping(data, restored, 1, 1, 'dish-1')[0].check, 'bought');
+  assert.equal(aggregateShopping(data, restored, 1, 1, 'dish-2')[0].check, 'pantry');
+  assert.equal(aggregateShopping(data, restored, 1, 1)[0].check, 'bought');
+});
+
+test('recipe checks require reconfirmation when quantities increase or the plan start date changes', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('玉ねぎ', 50, 'g', '生')];
+  const state = createDefaultState(data, TODAY);
+  const row = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  state.shoppingChecks[row.key] = { kind: 'pantry', quantity: 50, period: shoppingPeriod(state, 1, 1, 'dish-1') };
+  state.servings = 2;
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-1')[0].needsReview, true);
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-1')[0].check, null);
+  state.servings = 1;
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-1')[0].check, 'pantry');
+  state.startDate = '2026-10-18';
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-1')[0].check, null);
+  assert.equal(aggregateShopping(data, state, 1, 1, 'dish-1')[0].needsReview, true);
+});
+
+test('recipe checks survive storage alongside old schema-1 checks and reject unknown or mismatched recipe IDs', () => {
+  const data = fixture();
+  data.recipes[0].ingredients = [ingredient('卵', 1, '個')];
+  const state = createDefaultState(data, TODAY);
+  const row = aggregateShopping(data, state, 1, 1, 'dish-1')[0];
+  state.shoppingChecks[row.key] = { kind: 'bought', quantity: 1, period: shoppingPeriod(state, 1, 1, 'dish-1') };
+  state.shoppingChecks.legacy = { kind: 'pantry', quantity: null };
+  const storage = storageFixture();
+  const key = storageKey('/cooking60/');
+  assert.equal(saveState(storage, key, state).ok, true);
+  assert.deepEqual(loadState(storage, key, data, TODAY).state, state);
+  for (const invalidId of ['missing', '__proto__', null, 1]) {
+    const candidate = structuredClone(state);
+    candidate.shoppingChecks[row.key].period = JSON.stringify([TODAY, 'recipe', invalidId]);
+    assert.throws(() => validateState(candidate, data));
+  }
+  for (const invalidPeriod of [JSON.stringify(['2026-02-30', 'recipe', 'dish-1']), JSON.stringify([TODAY, 'recipe', 'dish-2']), shoppingPeriod(state, 1, 1)]) {
+    const candidate = structuredClone(state);
+    candidate.shoppingChecks[row.key].period = invalidPeriod;
+    assert.throws(() => validateState(candidate, data));
+  }
+  const unknownKey = structuredClone(state);
+  unknownKey.shoppingChecks[recipeShoppingKey(data.recipes[0].ingredients[0], 'missing')] = unknownKey.shoppingChecks[row.key];
+  assert.throws(() => validateState(unknownKey, data));
+  assert.throws(() => aggregateShopping(data, state, 1, 1, 'missing'));
+  assert.throws(() => shoppingPeriod(state, 1, 1, 'missing'));
+  assert.throws(() => recipeShoppingKey(data.recipes[0].ingredients[0], '__proto__'));
 });
 
 test('cooking dates are unique per day, counts mean distinct dishes, and mastery needs cooking', () => {

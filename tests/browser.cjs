@@ -183,12 +183,130 @@ async function mainFlow(page) {
   console.log('PASS: JSON export, invalid import protection, cancellation, and confirmed restore');
 }
 
+async function ingredientShoppingFlow() {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 } });
+  const page = watch(await context.newPage(), 'Ingredient shopping');
+  const ingredient = name => page.locator('.ingredient-list > li').filter({ hasText: name });
+  const shoppingRow = name => page.locator('.shopping-row').filter({ has: page.locator('.item-name > strong', { hasText: new RegExp('^' + name + '$') }) });
+  try {
+    await goto(page, 'recipes/dish-02/');
+    const onion = () => ingredient('玉ねぎ');
+    assert.equal(await onion().locator('strong').textContent(), '60g');
+    const originalHint = await onion().locator('small.measure-hint').textContent();
+    assert.ok(originalHint.trim(), 'The gram amount has a practical size estimate.');
+    const onionCheck = () => onion().locator('[data-action="shopping-check"][data-kind="bought"]');
+    const onionKey = await onionCheck().getAttribute('data-key');
+    const originalDate = await page.locator('#record-form input[name="date"]').inputValue();
+    const draftNote = 'メモの入力途中に材料をチェックしても消えない。';
+    const draftDate = '2026-10-16';
+    await page.locator('#note').fill(draftNote);
+    await page.locator('#record-form input[name="date"]').fill(draftDate);
+    await page.locator('[data-step="0"]').check();
+    await page.locator('[data-action="cook-mode"]').click();
+    await onionCheck().focus();
+    await page.keyboard.press('Space');
+    assert.equal(await onionCheck().isChecked(), true, 'An ingredient can be checked with the keyboard.');
+    assert.equal(await onionCheck().evaluate(input => document.activeElement === input), true, 'Focus returns to the ingredient checkbox after its UI is updated.');
+    assert.equal(await page.locator('[data-step="0"]').isChecked(), true, 'Checking an ingredient preserves completed cooking steps.');
+    assert.equal(await page.locator('#note').inputValue(), draftNote, 'Checking an ingredient preserves an unsaved recipe note.');
+    assert.equal(await page.locator('#record-form input[name="date"]').inputValue(), draftDate, 'Checking an ingredient preserves the unsaved cooking date.');
+    assert.equal(await page.locator('body').evaluate(body => body.classList.contains('cook-mode')), true);
+    assert.match(await page.locator('[data-action="cook-mode"]').textContent(), /通常表示に戻す/, 'The cooking-mode button retains its active label after an ingredient update.');
+    assert.equal(await page.locator('.recipe-visual').isVisible(), false, 'An ingredient update preserves the cooking-mode appearance.');
+    assert.equal((await saved(page)).shoppingChecks[onionKey].kind, 'bought');
+    await page.locator('[data-action="cook-mode"]').click();
+    await page.locator('#note').fill('');
+    await page.locator('#record-form input[name="date"]').fill(originalDate);
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await onionCheck().isChecked(), true, 'The ingredient purchase check survives a reload.');
+
+    await page.locator('.ingredient-shopping a').click();
+    await page.waitForURL(new URL('shopping/?recipe=dish-02', base).href);
+    const shoppingOnion = () => shoppingRow('玉ねぎ');
+    assert.equal(await page.locator('[data-action="from-day"]').count(), 0, 'A single-dish list does not show unrelated date-range controls.');
+    assert.equal(await shoppingOnion().locator('[data-kind="bought"]').isChecked(), true);
+    assert.equal(await shoppingOnion().locator('.measure-hint').textContent(), originalHint, 'Recipe and shopping views use the same size estimate.');
+    const extraDraft = '保存前の台所用スポンジ';
+    await page.locator('#extra-form input[name="name"]').fill(extraDraft);
+    await shoppingOnion().locator('[data-kind="pantry"]').focus();
+    await page.keyboard.press('Space');
+    assert.equal(await shoppingOnion().locator('[data-kind="pantry"]').evaluate(input => document.activeElement === input), true, 'Focus returns to the shopping checkbox after its row is updated.');
+    assert.equal(await page.locator('#extra-form input[name="name"]').inputValue(), extraDraft, 'Checking a shopping item preserves an unfinished extra-item entry.');
+    assert.equal(await shoppingOnion().locator('[data-kind="bought"]').isChecked(), false, 'Bought and already at home are mutually exclusive.');
+    assert.equal(await shoppingOnion().locator('[data-kind="pantry"]').isChecked(), true);
+    await page.locator('#extra-form input[name="name"]').fill('');
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await shoppingOnion().locator('[data-kind="pantry"]').isChecked(), true);
+    await page.locator('.shopping-scope a[href*="recipes/dish-02/"]').click();
+    await page.waitForURL(new URL('recipes/dish-02/#ingredients', base).href);
+    assert.match(await onion().locator('.pantry-status').textContent(), /家にある/);
+    assert.equal(await onionCheck().isChecked(), false);
+    await onionCheck().check();
+    assert.equal(await onion().locator('.pantry-status').count(), 0, 'Buying an ingredient replaces its pantry status in both views.');
+
+    await page.locator('#servings').selectOption('2');
+    assert.equal(await onion().locator('strong').textContent(), '120g');
+    assert.notEqual(await onion().locator('.measure-hint').textContent(), originalHint, 'Size estimates follow the chosen servings.');
+    assert.equal(await onionCheck().isChecked(), false, 'Buying one serving does not silently cover two servings.');
+    assert.match(await onion().locator('.review-tag').textContent(), /再確認/);
+    await onionCheck().check();
+    assert.equal((await saved(page)).shoppingChecks[onionKey].quantity, 120);
+    await noOverflow(page, '390px recipe ingredient checklist');
+    await page.screenshot({ path: resolve(qa, 'mobile-390-ingredient-checklist.png'), fullPage: true });
+
+    await goto(page, 'recipes/dish-01/');
+    const otherRecipeCheck = ingredient('ご飯').locator('[data-kind="bought"]');
+    const otherRecipeKey = await otherRecipeCheck.getAttribute('data-key');
+    await otherRecipeCheck.check();
+    await goto(page, 'shopping/');
+    await page.locator('[data-action="from-day"]').selectOption('1');
+    await page.locator('[data-action="to-day"]').selectOption('1');
+    const periodCheck = shoppingRow('ご飯').locator('[data-kind="bought"]');
+    const periodKey = await periodCheck.getAttribute('data-key');
+    assert.equal(await periodCheck.isChecked(), false, 'A single-dish purchase does not cover the combined period list.');
+    await periodCheck.check();
+    const beforeReset = (await saved(page)).shoppingChecks;
+    assert.equal(new Set([onionKey, otherRecipeKey, periodKey]).size, 3);
+
+    await goto(page, 'shopping/?recipe=dish-02');
+    assert.equal(await shoppingOnion().locator('[data-kind="bought"]').isChecked(), true);
+    assert.equal(Number(await page.locator('.shopping-summary progress').getAttribute('value')), 1, 'Prepared-material progress includes the recipe ingredient check.');
+    const visibleKeys = await page.locator('[data-action="shopping-check"][data-kind="bought"]').evaluateAll(inputs => inputs.map(input => input.dataset.key));
+    await page.locator('[data-action="reset-checks"]').click();
+    const afterReset = (await saved(page)).shoppingChecks;
+    assert.equal(await shoppingOnion().locator('[data-kind="bought"]').isChecked(), false);
+    for (const key of visibleKeys) assert.equal(afterReset[key], undefined, 'Reset clears the displayed recipe list.');
+    assert.deepEqual(afterReset[otherRecipeKey], beforeReset[otherRecipeKey], 'Reset preserves another recipe checklist.');
+    assert.deepEqual(afterReset[periodKey], beforeReset[periodKey], 'Reset preserves the combined period checklist.');
+    await page.setViewportSize({ width: 320, height: 740 });
+    await noOverflow(page, '320px single-dish shopping list');
+    await page.screenshot({ path: resolve(qa, 'mobile-320-single-dish-shopping.png'), fullPage: true });
+    await goto(page, 'recipes/dish-02/');
+    await noOverflow(page, '320px recipe ingredient checklist');
+
+    await goto(page, 'shopping/?recipe=not-a-dish');
+    assert.equal(await page.locator('[data-action="from-day"]').count(), 1, 'An unknown recipe falls back to the standard shopping list.');
+    assert.match(await page.locator('#toast').textContent(), /料理が見つからない/);
+    assert.ok(await page.locator('[data-action="shopping-check"]').count() > 0);
+    await page.locator('[data-action="from-day"]').selectOption('1');
+    await page.locator('[data-action="to-day"]').selectOption('1');
+    assert.equal(await shoppingRow('ご飯').locator('[data-kind="bought"]').isChecked(), true, 'The fallback retains existing period purchases.');
+    console.log('PASS: size estimates, recipe/shopping check synchronization, draft inputs, keyboard focus, cooking mode, pantry status, persistence, scoped reset, and invalid-recipe fallback');
+  } catch (error) {
+    await page.screenshot({ path: resolve(qa, 'failure-ingredient-shopping.png'), fullPage: true }).catch(() => {});
+    throw error;
+  } finally {
+    await context.close();
+  }
+}
+
 async function exceptionalContexts() {
   const noJsContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   const noJsPage = watch(await noJsContext.newPage(), 'JavaScript disabled');
   await goto(noJsPage, 'recipes/dish-01/');
   assert.match(await noJsPage.locator('h1').textContent(), /卵チャーハン/);
   assert.ok(await noJsPage.locator('.ingredient-list li').count() > 0);
+  assert.ok(await noJsPage.locator('.ingredient-list .measure-hint').count() > 0, 'Static recipes retain practical size estimates without JavaScript.');
   assert.ok(await noJsPage.locator('.steps li').count() >= 3);
   assert.match(await noJsPage.locator('#app').textContent(), /未試作/);
   await noOverflow(noJsPage, 'Static recipe at 390px');
@@ -293,6 +411,7 @@ async function responsiveScreenshots(page) {
     mainPage = watch(await context.newPage(), 'Main flow');
     if(process.env.PRINT_ONLY!=='1'){
       await mainFlow(mainPage);
+      await ingredientShoppingFlow();
       await exceptionalContexts();
       await imageChecks(mainPage);
       await responsiveScreenshots(mainPage);
